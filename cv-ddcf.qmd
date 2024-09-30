@@ -22,9 +22,9 @@ execute:
 
 ```{r}
 #| name: setup
-#| include: false
-#| message: false
-#| eval: true
+#| include: FALSE
+#| message: FALSE
+#| eval: TRUE
 
 knitr::opts_chunk$set(
 fig.path = "figs/",
@@ -60,7 +60,6 @@ gscholar_page <- paste0("https://scholar.google.com/citations?user=", gscholar_i
 \vspace{-10pt}
 
 # Education
-
 \begin{longtable}{p{4cm}p{10cm}}
 
 \textbf{Graduate} & University of Washington, Seattle, US \\
@@ -85,6 +84,7 @@ gscholar_page <- paste0("https://scholar.google.com/citations?user=", gscholar_i
 
 # Licensure and certification
 \begin{longtable}{p{2cm}p{12cm}}
+
 \textbf{2021} & Peruvian College of Physicians, Membership No. 94534 \\
 \textbf{2024} & National Registry of Investigators, RENACYT-CONCYTEC, Investigator Level VII (P0160977) \\[10pt]
 
