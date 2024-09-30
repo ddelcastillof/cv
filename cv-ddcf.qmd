@@ -1,0 +1,92 @@
+---
+format:
+  pdf:
+    toc: false
+    number-sections: false
+    colorlinks: true
+    documentclass: scrartcl
+    papersize: letter
+    pdf-engine: xelatex
+    fontsize: 10pt
+    geometry:
+      - margin=1in
+      - heightrounded
+    include-in-header:
+      - preamble.tex
+execute:
+  warning: false
+  echo: false
+  message: false
+  eval: true
+---
+
+```{r}
+#| name: setup
+#| include: false
+#| message: false
+#| eval: true
+
+knitr::opts_chunk$set(
+fig.path = "figs/",
+fig.width = 7.252,
+fig.height = 4,
+comment = "#>",
+fig.retina = 3
+)
+
+source("functions.R")
+
+# Store IDs
+
+gscholar_id <- "iNdNU5QAAAAJ"
+
+gscholar_page <- paste0("https://scholar.google.com/citations?user=", gscholar_id)
+```
+
+\par\centering{\Large{Darwin Del Castillo Fernandez, M.D.}}
+\vspace{-5pt}
+\par\centering{Department of Global Health, University of Washington}
+\vspace{-5pt}
+\par\centering{Hans Rosling Center for Population Health}
+\vspace{-5pt}
+\par\centering{3980 15th Ave NE, Seattle, WA 98105}
+\vspace{-5pt}
+\par\centering{+1 (206) 605-5077}
+\vspace{-5pt}
+\par\centering{ddelcast@uw.edu}
+\vspace{-5pt}
+\par\centering{\href{https://www.ddelcastillo.com}{www.ddelcastillo.com}}
+\rule{\textwidth}{0.5pt}
+\vspace{-10pt}
+
+# Education
+
+\begin{longtable}{p{4cm}p{10cm}}
+
+\textbf{Graduate} & University of Washington, Seattle, US \\
+& \textbf{Master in Public Health (M.P.H.), Global Health} \\
+& \textbf{Sep 2023 – June 2025} \\
+& \textit{Thesis:} “Cost-effectiveness analysis of a household salt substitute intervention on reducing community-wide blood pressure in Northern Peru” \\[10pt]
+
+& University of Washington, Seattle, US \\
+& \textbf{Certificate in Global Health on Maternal and Child Health} \\
+& \textbf{Nov 2023 – June 2025} \\[10pt]
+
+& Universidad Peruana Cayetano Heredia, Lima, Peru \\
+& \textbf{Certificate in Clinical Research} \\
+& \textbf{Sep 2021 – Apr 2022} \\[10pt]
+
+\textbf{Undergraduate} & Universidad Nacional Mayor de San Marcos, Lima, Peru \\
+& \textbf{Medical Doctor (M.D.), Medicine} \\
+& \textbf{Mar 2013 – Aug 2021} \\
+& \textit{Thesis:} "Childhood Obesity and Its Effect on Academic Achievement: An Analysis of the Young Lives Study between 2009 and 2016" \\[10pt]
+
+\end{longtable}
+
+# Licensure and certification
+\begin{longtable}{p{2cm}p{12cm}}
+\textbf{2021} & Peruvian College of Physicians, Membership No. 94534 \\
+\textbf{2024} & National Registry of Investigators, RENACYT-CONCYTEC, Investigator Level VII (P0160977) \\[10pt]
+
+\end{longtable}
+
