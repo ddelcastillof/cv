@@ -7,7 +7,7 @@ format:
     documentclass: scrartcl
     papersize: letter
     pdf-engine: xelatex
-    fontsize: 10pt
+    fontsize: 9pt
     geometry:
       - margin=1in
       - heightrounded
@@ -20,12 +20,7 @@ execute:
   eval: true
 ---
 
-```{r}
-#| name: setup
-#| include: FALSE
-#| message: FALSE
-#| eval: TRUE
-
+```{r setup, include = F, message = F, eval = T}
 knitr::opts_chunk$set(
 fig.path = "figs/",
 fig.width = 7.252,
@@ -37,9 +32,7 @@ fig.retina = 3
 source("functions.R")
 
 # Store IDs
-
 gscholar_id <- "iNdNU5QAAAAJ"
-
 gscholar_page <- paste0("https://scholar.google.com/citations?user=", gscholar_id)
 ```
 
@@ -51,42 +44,249 @@ gscholar_page <- paste0("https://scholar.google.com/citations?user=", gscholar_i
 \vspace{-5pt}
 \par\centering{3980 15th Ave NE, Seattle, WA 98105}
 \vspace{-5pt}
-\par\centering{+1 (206) 605-5077}
+\par\centering{+1 (206) 605-5077 (USA) | +51 965-006-311 (Peru)}
 \vspace{-5pt}
 \par\centering{ddelcast@uw.edu}
 \vspace{-5pt}
-\par\centering{\href{https://www.ddelcastillo.com}{www.ddelcastillo.com}}
+\par\centering{\href{https://www.darwindelcastillo.com}{www.darwindelcastillo.com}}
 \rule{\textwidth}{0.5pt}
 \vspace{-10pt}
 
 # Education
-\begin{longtable}{p{4cm}p{10cm}}
+
+\begin{longtable}{p{4cm}p{12cm}}
 
 \textbf{Graduate} & University of Washington, Seattle, US \\
 & \textbf{Master in Public Health (M.P.H.), Global Health} \\
 & \textbf{Sep 2023 – June 2025} \\
-& \textit{Thesis:} “Cost-effectiveness analysis of a household salt substitute intervention on reducing community-wide blood pressure in Northern Peru” \\[10pt]
+& \textit{Thesis:} “Cost-effectiveness analysis of a household salt substitute intervention on reducing community-wide blood pressure in Northern Peru” \\
 
-& University of Washington, Seattle, US \\
-& \textbf{Certificate in Global Health on Maternal and Child Health} \\
-& \textbf{Nov 2023 – June 2025} \\[10pt]
-
-& Universidad Peruana Cayetano Heredia, Lima, Peru \\
-& \textbf{Certificate in Clinical Research} \\
-& \textbf{Sep 2021 – Apr 2022} \\[10pt]
+& \\
 
 \textbf{Undergraduate} & Universidad Nacional Mayor de San Marcos, Lima, Peru \\
 & \textbf{Medical Doctor (M.D.), Medicine} \\
 & \textbf{Mar 2013 – Aug 2021} \\
-& \textit{Thesis:} "Childhood Obesity and Its Effect on Academic Achievement: An Analysis of the Young Lives Study between 2009 and 2016" \\[10pt]
+& \textit{Thesis:} "Childhood Obesity and Its Effect on Academic Achievement: An Analysis of the Young Lives Study between 2009 and 2016" \\
+
+\end{longtable}
+
+## Additional education
+
+\begin{longtable}{p{4cm}p{12cm}}
+\textbf{Graduate} & University of Washington, Seattle, US \\
+& \textbf{Certificate in Global Health on Maternal and Child Health} \\
+& \textbf{Nov 2023 – June 2025} \\
+
+& \\
+
+& Universidad Peruana Cayetano Heredia, Lima, Peru \\
+& \textbf{Certificate in Clinical Research} \\
+& \textbf{Sep 2021 – Apr 2022} \\
 
 \end{longtable}
 
 # Licensure and certification
-\begin{longtable}{p{2cm}p{12cm}}
+
+\begin{longtable}{p{2cm}p{10cm}}
 
 \textbf{2021} & Peruvian College of Physicians, Membership No. 94534 \\
-\textbf{2024} & National Registry of Investigators, RENACYT-CONCYTEC, Investigator Level VII (P0160977) \\[10pt]
+\textbf{2024} & National Registry of Investigators, RENACYT-CONCYTEC, Investigator Level VII (P0160977) \\
 
 \end{longtable}
 
+# Professional Experience
+
+\begin{longtable}{p{4cm}p{12cm}}
+
+\textbf{Jul 2024 - Sep 2024} & Research Assistant \\
+& Department of Global Health \\
+& University of Washington - Seattle, USA \\
+& \begin{itemize}
+\item Led the design of a mixed-method study to assess the effectiveness of implementation strategies for pediatric burn care in a Peruvian healthcare setting
+\item Collaborated with multidisciplinary teams at Seattle Children’s Hospital and the Peruvian National Hospital for Children to align study objectives and methodologies
+\item Coordinated cross-cultural research efforts to ensure the study’s relevance and applicability to both U.S. and Peruvian healthcare environments 
+\end{itemize} \\
+
+& \\
+
+\textbf{Mar 2024 - Jun 2024} & Teaching Assistant \\
+& Department of Biology \\
+& University of Washington - Seattle, USA \\
+& \begin{itemize}
+\item Instructor for BIOL 200 Introduction to Biology during the Spring 2024 quarter.
+\item Instructed wet and dry laboratory practices for two sections with 25 undergrad students each.
+\end{itemize} \\
+
+& \\
+
+\textbf{Sep 2023 - Dec 2023} & Research Assistant \\
+& Department of Health Systems and Population Health \\
+& University of Washington - Seattle, USA \\
+& \begin{itemize}
+\item Conducted on-phone interviews for the second post-survey assessment of the ReOpening Schools Safely and Educating Youth Study (ROSSEY Study)
+\item Supported submission of materials in Spanish for the IRB for the ADRC Clinical Core Study project
+\item Conducted preliminary analyses for the Outreach, Engagement, and Recruitment module of the ADRC Clinical Core Study project
+\end{itemize} \\
+
+& \\
+
+\textbf{Jun 2023 - Aug 2023} & Research Assistant \\
+& CRONICAS Center of Excellence in Chronic Diseases \\
+& Peruvian University Cayetano Heredia, Peru \\
+& \begin{itemize}
+\item Conducted semi-structured qualitative interviews for the NIHR-UK-supported IMPACT-DEMENTIA project, collaborating with researchers from Peruvian University Cayetano Heredia, Imperial College, and the University of Oxford
+\item Facilitated collaboration and communication between international research teams and local stakeholders to ensure effective project implementation
+\item Coordinated fieldwork with community health workers across diverse Lima, Iquitos, and Huancayo locations
+\end{itemize} \\
+
+& \\
+
+\textbf{Jan 2023 - Jan 2024} & Research Consultant \\
+& Health Technology Assessment and Research Unit \\
+& Social Security Health System, Peru \\
+& \begin{itemize}
+\item Assessed the benefits and drawbacks of purchasing pharmaceutical products for Peru's social health insurance through a systematic evaluation of the effectiveness and economic impact
+\item Conducted systematic reviews of anti-cancerous and immunosuppressant drugs regarding efficacy and economic impact
+\item Evaluated the budget impact of introducing new pharmacological products in the Social Security System
+\end{itemize} \\
+
+& \\
+
+\textbf{Mar 2022 - Mar 2023} & Clinical Sub-investigator \\
+& Clinical Research Unit \\
+& Via Libre Association, Peru \\
+& \begin{itemize}
+\item Via Libre is a Clinical Research Site for studies in STI and HIV prevention and treatment in queer population
+\item Performed clinical procedures and assessed clinical trial participants from the HVTN and the HPTN networks
+\item Participated and organized didactical activities in community outreach and participant retention crafted for the queer community
+\end{itemize} \\
+
+\newpage
+
+\textbf{Jun 2021 - Aug 2021} & Research Consultant \\
+& Health Technology Assessment and Research Unit \\
+& Social Security Health System, Peru \\
+& \begin{itemize}
+\item Managed and validated all data inputs using REDCap from two clinical studies related to COVID-19 vaccinations 
+\item Contributed to a randomized controlled trial assessing the efficacy and safety of convalescent plasma therapy in COVID-19-infected patients
+\item Conducted data analysis from an observational study on vaccination hesitancy among healthcare workers using Stata and R statistical packages
+\end{itemize} \\
+
+& \\
+
+\textbf{Mar 2019 - Jun 2021} & Research Assistant \\
+& CRONICAS Center of Excellence in Chronic Diseases \\
+& Peruvian University Cayetano Heredia, Peru \\
+& \begin{itemize}
+\item Conducted a systematic review with the COSMOS initiative to develop a core set of outcomes for designing multimorbidity clinical trials.
+\item Participated in the data handling and the writing phase of a research manuscript to understand the impact of preterm birth on the development of hypertension in offspring at age 22.
+\item Collaborated in the study design and manuscript preparation of other research interim products, including peer-reviewed research articles
+\end{itemize} \\
+
+& \\
+
+\textbf{Jan 2018 - Feb 2018} & Teaching Assistant \\
+& Stanford Honors Academies Program \\
+& Eduexplora, Peru \\
+& \begin{itemize}
+\item A Stanford University summer camp designed for high school students located in Peru.
+\item Adapted lectured materials and translated them from English to Spanish for the Bioscience class. 
+\item Instructed laboratory practices using neurobiological samples. 
+\end{itemize} \\
+
+& \\
+
+\textbf{Jan 2014 - Aug 2021} & Teaching Assistant \\
+& School of Medicine \\
+& National University of San Marcos, Peru \\
+& \begin{itemize}
+\item Teaching assistant in Human Development (01/2014-01/2015) and Introduction to Biostatistics (04/2020 – 08/2020)
+\item In the Human Embryology course, I guided students in identifying embryological samples in the laboratory.
+\item During the Introduction to Biostatistics course, I gave review lectures to students in preparation for their final exam.
+\end{itemize} \\
+
+\end{longtable}
+
+# Academic Honours and Awards
+
+\begin{longtable}{p{2cm} p{12cm}}
+\textbf{2018} & \begin{itemize} 
+\item Scholarship for the Young Lives Study’s Methodological Workshop, GRADE Research Group. A workshop to receive advanced training in data wrangling and longitudinal data analysis applied to the Young Lives Study.
+\end{itemize} \\
+\textbf{2021} & \begin{itemize} 
+\item Graduated with \textit{Cum Laude}, School of Medicine, Universidad Nacional Mayor de San Marcos. Grade of 17/20
+\item   Scholarship to study the Diplomate in Clinical Research at Universidad Peruana
+Cayetano Heredia. Funded by the training program NIH/FIC 2D43TW001140-21 “Training in Infectious Disease in Peru – Time for Implementation Research,” Peruvian University Cayetano Heredia
+\end{itemize} \\
+\textbf{2024} & \begin{itemize} 
+\item Department of Global Health Endowed Fellowship for Global Health Excellence, Equity and Impact, University of Washington
+\end{itemize} \\
+\end{longtable}
+
+# Skills
+
+\begin{justify}
+\textbf{Computer and programming skills:} Advanced skills in R, Stata, and SPSS for statistical analysis, data visualization, decision-making analyses, and genetic epidemiology. Intermediate skills in Python for genomic data science, epidemiologic data analysis, and data wrangling. Certificates in data management, causal inference, and machine learning applied to healthcare. \\
+Intermediate skills in qualitative data analysis, thematic coding, content analysis, and experience with the software Dedoose. \\
+Competencies in Microsoft Office Suite (Word, PowerPoint, Excel), G*Power, and REDCap.\\
+\textbf{Languages:} Spanish (native), English (fluent), French (basic)
+\end{justify}
+
+# Publications
+```{r gstext, include = F, echo = F}
+text_gs <- invisible(gscholar_stats(url = gscholar_page))
+```
+\begin{justify}
+Google Scholar Stats: `r text_gs`
+\end{justify}
+
+## Databases
+
+\begin{longtable}{p{3cm} p{12cm}}
+Pokemón GO Study & \href{https://figshare.com/articles/dataset/Personality_profiles_and_Pokemon_GO_engagement_csv/21191500?file=37569835}{Cross-sectional study: Exploratory factorial analysis database}
+\end{longtable}
+
+```{r importing pubs, include = F, echo = F}
+pubs <- get_cv_sheet('pubs') %>%
+  mutate(
+    journal  = ifelse(is.na(journal_abbv), '', paste0('_', journal_abbv, '_.')),
+    number   = ifelse(is.na(number), '', paste0(number, '.')),
+    doi      = ifelse(
+               is.na(doi), '',
+               paste0('Available at: [', doi, '](', 'https://doi.org/', doi, ')')),
+    year     = paste0("(", year, ")"),
+    title    = enquote(title),
+    citation = paste(author, year, title, journal, number, doi)
+  ) %>% 
+  arrange(desc(pub_date))
+```
+
+## Submitted
+```{r incoming}
+#| results: asis
+make_ordered_list_filtered(pubs, "other")
+```
+
+## Peer-Reviewed Publications
+```{r printing references in pandoc format}
+#| results: asis
+make_ordered_list_filtered(pubs, "peer_reviewed")
+```
+
+## Pre-prints
+```{r printing pre-print}
+#| results: asis
+make_ordered_list_filtered(pubs, "working")
+```
+
+## Policy Statements, White Papers, Reports
+```{r printing white papers}
+#| results: asis
+make_ordered_list_filtered(pubs, "white")
+```
+
+## Theses
+```{r theses}
+#| results: asis
+make_ordered_list_filtered(pubs, "theses")
+```
