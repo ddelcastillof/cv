@@ -132,9 +132,9 @@ gscholar_page <- paste0("https://scholar.google.com/citations?user=", gscholar_i
 
 \textbf{Jun 2023 - Aug 2023} & Research Assistant \\
 & CRONICAS Center of Excellence in Chronic Diseases \\
-& Peruvian University Cayetano Heredia, Peru \\
+& Universidad Peruana Cayetano Heredia, Peru \\
 & \begin{itemize}
-\item Conducted semi-structured qualitative interviews for the NIHR-UK-supported IMPACT-DEMENTIA project, collaborating with researchers from Peruvian University Cayetano Heredia, Imperial College, and the University of Oxford
+\item Conducted semi-structured qualitative interviews for the NIHR-UK-supported IMPACT-DEMENTIA project, collaborating with researchers from Universidad Peruana Cayetano Heredia, Imperial College, and the University of Oxford
 \item Facilitated collaboration and communication between international research teams and local stakeholders to ensure effective project implementation
 \item Coordinated fieldwork with community health workers across diverse Lima, Iquitos, and Huancayo locations
 \end{itemize} \\
@@ -176,7 +176,7 @@ gscholar_page <- paste0("https://scholar.google.com/citations?user=", gscholar_i
 
 \textbf{Mar 2019 - Jun 2021} & Research Assistant \\
 & CRONICAS Center of Excellence in Chronic Diseases \\
-& Peruvian University Cayetano Heredia, Peru \\
+& Universidad Peruana Cayetano Heredia, Peru \\
 & \begin{itemize}
 \item Conducted a systematic review with the COSMOS initiative to develop a core set of outcomes for designing multimorbidity clinical trials.
 \item Participated in the data handling and the writing phase of a research manuscript to understand the impact of preterm birth on the development of hypertension in offspring at age 22.
@@ -198,10 +198,10 @@ gscholar_page <- paste0("https://scholar.google.com/citations?user=", gscholar_i
 
 \textbf{Jan 2014 - Aug 2021} & Teaching Assistant \\
 & School of Medicine \\
-& National University of San Marcos, Peru \\
+& Universidad Nacional Mayor de San Marcos, Peru \\
 & \begin{itemize}
 \item Teaching assistant in Human Development (01/2014-01/2015) and Introduction to Biostatistics (04/2020 – 08/2020)
-\item In the Human Embryology course, I guided students in identifying embryological samples in the laboratory.
+\item In the Human Development course, I guided students in identifying embryological samples in the laboratory.
 \item During the Introduction to Biostatistics course, I gave review lectures to students in preparation for their final exam.
 \end{itemize} \\
 
@@ -249,7 +249,7 @@ Pokemón GO Study & \href{https://figshare.com/articles/dataset/Personality_prof
 ```{r importing pubs, include = F, echo = F}
 pubs <- get_cv_sheet('pubs') %>%
   mutate(
-    journal  = ifelse(is.na(journal_abbv), '', paste0('_', journal_abbv, '_.')),
+    journal  = ifelse(is.na(journal_abbv), '', paste0(journal_abbv)),
     number   = ifelse(is.na(number), '', paste0(number, '.')),
     doi      = ifelse(
                is.na(doi), '',
