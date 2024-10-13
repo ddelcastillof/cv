@@ -181,7 +181,6 @@ gscholar_page <- paste0("https://scholar.google.com/citations?user=", gscholar_i
 \end{longtable}
 
 # Academic Honours and Awards
-
 \begin{longtable}{p{2cm} p{12cm}}
 \textbf{2018} & \begin{itemize} 
 \item Scholarship for the Young Lives Study’s Methodological Workshop, GRADE Research Group. A workshop to receive advanced training in data wrangling and longitudinal data analysis applied to the Young Lives Study.
@@ -197,7 +196,6 @@ Cayetano Heredia. Funded by the training program NIH/FIC 2D43TW001140-21 “Trai
 \end{longtable}
 
 # Skills
-
 \begin{justify}
 \textbf{Computer and programming skills:} Advanced skills in R, Stata, and SPSS for statistical analysis, data visualization, decision-making analyses, and genetic epidemiology. Intermediate skills in Python for genomic data science, epidemiologic data analysis, and data wrangling. Certificates in data management, causal inference, and machine learning applied to healthcare. \\
 Intermediate skills in qualitative data analysis, thematic coding, content analysis, and experience with the software Dedoose. \\
@@ -239,7 +237,7 @@ pubs <- get_cv_sheet('pubs') %>%
   arrange(desc(pub_date))
 ```
 
-## Submitted
+## Submitted Articles
 ```{r incoming}
 #| results: asis
 make_ordered_list_filtered(pubs, "other")
@@ -270,7 +268,8 @@ make_ordered_list_filtered(pubs, "theses")
 ```
 
 # Teaching Experience
-## Courses taught at Universidad Nacional Mayor de San Marcos
+## Courses taught at the college level
+### Courses taught at Universidad Nacional Mayor de San Marcos
 ```{r}
 df <- get_cv_sheet('classes') |> filter(univ == "UNMSM") |>
     mutate(
@@ -301,7 +300,7 @@ df |>
   )
 ```
 
-## Courses taught at University of Washington
+### Courses taught at University of Washington
 ```{r}
 df <- get_cv_sheet('classes') |> filter(univ == "UW") |>
     mutate(
@@ -329,6 +328,49 @@ df |>
   )
 ```
 
+## Other teaching experience
+```{r}
+teaching <- get_cv_sheet('teaching') |>
+  arrange(desc(date)) |> 
+  mutate(
+    with = ifelse(is.na(with), '', paste0(', with ', with)),
+    title = paste0(enquote(title), with),
+    date = paste0(format(as.Date(date), format = "%b %d, %Y"), '.'),
+    url = ifelse(is.na(url), NA, markdown_url(url)),
+    date = ifelse(is.na(url), date, paste0(date, '. ', url)), 
+    citation = paste(title, host, location, date, sep = '. ')
+  )
+```
+### Seminars
+```{r}
+#| results: asis
+make_ordered_list_filtered(teaching, "seminar")
+```
+
+# Advising
+```{r}
+advisees <- get_cv_sheet('advising') |>
+  arrange(date_start) |> 
+  mutate(
+    date = paste0(' (',  date_start, ' to ', date_stop, ').'),
+    citation = ifelse(
+      is.na(title), name, paste0(name, ', ', enquote(title))
+    ),
+    citation = paste0(citation, ', ', institution, ' ', date), 
+    citation = ifelse(
+        is.na(defense_date), citation, 
+        paste0(citation, ' _Defense date: ', defense_date, '_.')
+    )
+  )
+```
+## Undergraduate Students - Current
+```{r}
+#| results: asis
+advisees |> 
+  filter(complete == 0) |>
+  make_ordered_list_filtered("ug")
+```
+
 
 # Leadership, Volunteer, and Community Activities
 \begin{itemize}
@@ -342,3 +384,5 @@ df |>
  \item International Epidemiological Association (2020 — Current)
  \item Peruvian College of Physicians (2021 — Current)
 \end{itemize}
+
+
