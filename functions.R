@@ -10,8 +10,8 @@ gs4_deauth()
 gscholar_stats <- function(url) {
   cites <- get_cites(url)
   return(paste(
-    'Citations:', cites$citations, '•',
-    'h-index:',   cites$hindex, '•',
+    'Citations:', cites$citations, '|',
+    'h-index:',   cites$hindex, '|',
     'i10-index:', cites$i10index
   ))
 }
@@ -27,7 +27,7 @@ get_cites <- function(url) {
 
 get_cv_sheet <- function(sheet) {
     return(read_sheet(
-        ss = 'https://docs.google.com/spreadsheets/d/1xyzgW5h1rVkmtO1rduLsoNRF9vszwfFZPd72zrNmhmU/edit?usp=sharing',
+        ss = 'https://docs.google.com/spreadsheets/d/1yEYPdjQNqIw_lrOjUPDKjx9wMfzTeYrcdrtSDRj6Zhw/edit',
         sheet = sheet
     ))
 }
