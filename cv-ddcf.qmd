@@ -20,7 +20,12 @@ execute:
   eval: true
 ---
 
-```{r setup, include = F, message = F, eval = T}
+```{r}
+#| name: setup
+#| include: false
+#| message: false
+#| eval: true
+
 knitr::opts_chunk$set(
 fig.path = "figs/",
 fig.width = 7.252,
@@ -109,16 +114,6 @@ gscholar_page <- paste0("https://scholar.google.com/citations?user=", gscholar_i
 
 & \\
 
-\textbf{Mar 2024 - Jun 2024} & Teaching Assistant \\
-& Department of Biology \\
-& University of Washington - Seattle, USA \\
-& \begin{itemize}
-\item Instructor for BIOL 200 Introduction to Biology during the Spring 2024 quarter.
-\item Instructed wet and dry laboratory practices for two sections with 25 undergrad students each.
-\end{itemize} \\
-
-& \\
-
 \textbf{Sep 2023 - Dec 2023} & Research Assistant \\
 & Department of Health Systems and Population Health \\
 & University of Washington - Seattle, USA \\
@@ -161,7 +156,7 @@ gscholar_page <- paste0("https://scholar.google.com/citations?user=", gscholar_i
 \item Participated and organized didactical activities in community outreach and participant retention crafted for the queer community
 \end{itemize} \\
 
-\newpage
+& \\
 
 \textbf{Jun 2021 - Aug 2021} & Research Consultant \\
 & Health Technology Assessment and Research Unit \\
@@ -183,28 +178,6 @@ gscholar_page <- paste0("https://scholar.google.com/citations?user=", gscholar_i
 \item Collaborated in the study design and manuscript preparation of other research interim products, including peer-reviewed research articles
 \end{itemize} \\
 
-& \\
-
-\textbf{Jan 2018 - Feb 2018} & Teaching Assistant \\
-& Stanford Honors Academies Program \\
-& Eduexplora, Peru \\
-& \begin{itemize}
-\item A Stanford University summer camp designed for high school students located in Peru.
-\item Adapted lectured materials and translated them from English to Spanish for the Bioscience class. 
-\item Instructed laboratory practices using neurobiological samples. 
-\end{itemize} \\
-
-& \\
-
-\textbf{Jan 2014 - Aug 2021} & Teaching Assistant \\
-& School of Medicine \\
-& Universidad Nacional Mayor de San Marcos, Peru \\
-& \begin{itemize}
-\item Teaching assistant in Human Development (01/2014-01/2015) and Introduction to Biostatistics (04/2020 – 08/2020)
-\item In the Human Development course, I guided students in identifying embryological samples in the laboratory.
-\item During the Introduction to Biostatistics course, I gave review lectures to students in preparation for their final exam.
-\end{itemize} \\
-
 \end{longtable}
 
 # Academic Honours and Awards
@@ -214,7 +187,7 @@ gscholar_page <- paste0("https://scholar.google.com/citations?user=", gscholar_i
 \item Scholarship for the Young Lives Study’s Methodological Workshop, GRADE Research Group. A workshop to receive advanced training in data wrangling and longitudinal data analysis applied to the Young Lives Study.
 \end{itemize} \\
 \textbf{2021} & \begin{itemize} 
-\item Graduated with \textit{Cum Laude}, School of Medicine, Universidad Nacional Mayor de San Marcos. Grade of 17/20
+\item Graduated with Honours \textit{(Cum Laude)}, School of Medicine, Universidad Nacional Mayor de San Marcos. Grade of 17/20
 \item   Scholarship to study the Diplomate in Clinical Research at Universidad Peruana
 Cayetano Heredia. Funded by the training program NIH/FIC 2D43TW001140-21 “Training in Infectious Disease in Peru – Time for Implementation Research,” Peruvian University Cayetano Heredia
 \end{itemize} \\
@@ -236,6 +209,11 @@ Competencies in Microsoft Office Suite (Word, PowerPoint, Excel), G*Power, and R
 ```{r gstext, include = F, echo = F}
 text_gs <- invisible(gscholar_stats(url = gscholar_page))
 ```
+
+\begin{longtable}{p{6cm} p{6cm}}
+\href{`r gscholar_page`}{Google Scholar Profile} & ORCID: \href{https://orcid.org/0000-0002-8609-0312}{0000-0002-8609-0312} \\
+\end{longtable}
+
 \begin{justify}
 Google Scholar Stats: `r text_gs`
 \end{justify}
@@ -282,7 +260,7 @@ make_ordered_list_filtered(pubs, "working")
 ## Policy Statements, White Papers, Reports
 ```{r printing white papers}
 #| results: asis
-make_ordered_list_filtered(pubs, "white")
+make_ordered_list_filtered(pubs, "white_paper")
 ```
 
 ## Theses
@@ -290,3 +268,77 @@ make_ordered_list_filtered(pubs, "white")
 #| results: asis
 make_ordered_list_filtered(pubs, "theses")
 ```
+
+# Teaching Experience
+## Courses taught at Universidad Nacional Mayor de San Marcos
+```{r}
+df <- get_cv_sheet('classes') |> filter(univ == "UNMSM") |>
+    mutate(
+      course = paste0(number, ": ", name),
+      role = type,
+      num = paste(responses, '/', enrolled), 
+      score = paste(inst_mean, '/', dept_mean), 
+      semester = ifelse(semester == 'Aut20', 'Aut20$^†$', semester)
+    ) |> 
+    select(
+      `Sem.` = semester,
+      Course = course,
+      Role = role,
+      Level = level, 
+      `N. Resp. / N. Enrolled` = num,
+      `Instr. CE* / Dept Mean` = score
+    ) 
+
+df |> 
+  kbl(booktabs = TRUE, escape = FALSE, linesep = "") |> 
+  column_spec(5, width = "1.8cm") |> 
+  column_spec(6, width = "2cm") |> 
+  footnote(
+    symbol = c(
+      "Course Evaluations (FCE) were scored by students (0 = worst, 20 = best).", 
+      "No course evaluations were recorded in 2020 due to the COVID-19 pandemic."
+    )
+  )
+```
+
+## Courses taught at University of Washington
+```{r}
+df <- get_cv_sheet('classes') |> filter(univ == "UW") |>
+    mutate(
+      course = paste0(number, ": ", name),
+      role = type,
+      num = paste(responses, '/', enrolled), 
+      score = paste(inst_mean, '/', dept_mean), 
+      semester = ifelse(semester == 'Spr24', 'Spr24$^*$', semester)
+      ) |> 
+    select(
+      `Sem.` = semester,
+      Course = course,
+      Role = role,
+      Level = level, 
+      `N. Resp. / N. Enrolled` = num,
+      `Instr. CE / Dept Mean` = score
+    ) 
+
+df |> 
+  kbl(booktabs = TRUE, escape = FALSE, linesep = "") |> 
+  column_spec(5, width = "1.8cm") |> 
+  column_spec(6, width = "2cm") |>
+  footnote(
+    symbol = c("Couldn't send course evaluations due to health issues")
+  )
+```
+
+
+# Leadership, Volunteer, and Community Activities
+\begin{itemize}
+  \item Emeritus member and External advisor, \href{https://cem.edu.pe/adiecs/}{Association for the Development of Student's Research in Health Sciences (ADIECS)}, Peru: Peruvian student association funded in 2008 by students from the Universidad Nacional Mayor de San Marcos with the aim of developing capacity of both hard (e.g., epidemiological study designs, data analysis) and soft skills (e.g., teamwork communication, problem-solving) for biomedical underserved students (Mar 2014-current).
+  \item Medical volunteer, Healing the Children Northeast, Peru: Medical translator during plastic surgery clinical rounds after surgery for cleft palate and cleft lip repairment in undeserved populations (Jan 2019).
+  \item Medical volunteer, Healing the Children Rocky Mountains, Peru: Shadowed ENT attendings before and after cochlear implant surgery in pediatric patients. Also helped as medical translator during clinical rounds (Nov 2019).
+\end{itemize}
+
+# Memberships in Professional Organizations
+\begin{itemize}
+ \item International Epidemiological Association (2020 — Current)
+ \item Peruvian College of Physicians (2021 — Current)
+\end{itemize}
