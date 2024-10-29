@@ -53,7 +53,7 @@ gscholar_page <- paste0("https://scholar.google.com/citations?user=", gscholar_i
 \vspace{-5pt}
 \par\centering{ddelcast@uw.edu}
 \vspace{-5pt}
-\par\centering{\href{https://www.darwindelcastillo.com}{www.darwindelcastillo.com}}
+\par\centering{\href{https://ddelcastillof.github.io/darwindelcastillo/}{https://www.darwindelcastillo.com}}
 \rule{\textwidth}{0.5pt}
 \vspace{-10pt}
 
@@ -188,7 +188,7 @@ gscholar_page <- paste0("https://scholar.google.com/citations?user=", gscholar_i
 \textbf{2021} & \begin{itemize} 
 \item Graduated with Honours \textit{(Cum Laude)}, School of Medicine, Universidad Nacional Mayor de San Marcos. Grade of 17/20
 \item   Scholarship to study the Diplomate in Clinical Research at Universidad Peruana
-Cayetano Heredia. Funded by the training program NIH/FIC 2D43TW001140-21 “Training in Infectious Disease in Peru – Time for Implementation Research,” Peruvian University Cayetano Heredia
+Cayetano Heredia. Funded by the training program NIH/FIC 2D43TW001140-21 “Training in Infectious Disease in Peru – Time for Implementation Research,” Universidad Peruana Cayetano Heredia
 \end{itemize} \\
 \textbf{2024} & \begin{itemize} 
 \item Department of Global Health Endowed Fellowship for Global Health Excellence, Equity and Impact, University of Washington
@@ -384,5 +384,3 @@ advisees |>
  \item International Epidemiological Association (2020 — Current)
  \item Peruvian College of Physicians (2021 — Current)
 \end{itemize}
-
-
