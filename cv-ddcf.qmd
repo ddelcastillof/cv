@@ -116,7 +116,7 @@ gscholar_page <- paste0("https://scholar.google.com/citations?user=", gscholar_i
 & \\
 & \\
 
-\textbf{Aug 2024 - current} & Research Intern \\
+\textbf{July 2024 - Present} & Research Intern \\
 & Cinical Informatics Team, Institute for Health Metrics and Evaluation \\
 & University of Washington, USA \\
 & \begin{itemize}
