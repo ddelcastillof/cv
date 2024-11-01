@@ -103,9 +103,33 @@ gscholar_page <- paste0("https://scholar.google.com/citations?user=", gscholar_i
 
 \begin{longtable}{p{4cm}p{12cm}}
 
+\textbf{Nov 2024 - Present} & Research Assistant \\
+& Department of Global Health \\
+& University of Washington, USA \\
+& \begin{itemize}
+\item Designing a systematic review protocol for mapping potential indicators for the implementation of mental health policy in data-limited resources
+\item Coordinating a expert group panel for developing a set list of indicators based in structured expert elicitation
+\item Engaging with stakeholders for the implementation of the future list of proposed indicators in a later phase of the project
+\end{itemize} \\
+
+& \\
+& \\
+& \\
+
+\textbf{Aug 2024 - current} & Research Intern \\
+& Cinical Informatics Team, Institute for Health Metrics and Evaluation \\
+& University of Washington, USA \\
+& \begin{itemize}
+\item Estimated population attributable fractions and standardized mortality ratios for social excluded groups, i.e. people experiencing imprisonment, homelessness, and substance use disorders, in high-income countries.
+\item Analyzed data from public sources and a previous systematic review using Bayesian methods and Monte Carlo simulation to estimate the overlap proportion between social excluded groups in high-income countries.
+\item Collaborated in writing a R01 NIH research proposal to estimate the disease burden for social excluded groups in high-income countries.
+\end{itemize} \\
+
+& \\
+
 \textbf{Jul 2024 - Sep 2024} & Research Assistant \\
 & Department of Global Health \\
-& University of Washington - Seattle, USA \\
+& University of Washington, USA \\
 & \begin{itemize}
 \item Led the design of a mixed-method study to assess the effectiveness of implementation strategies for pediatric burn care in a Peruvian healthcare setting
 \item Collaborated with multidisciplinary teams at Seattle Children’s Hospital and the Peruvian National Hospital for Children to align study objectives and methodologies
@@ -116,7 +140,7 @@ gscholar_page <- paste0("https://scholar.google.com/citations?user=", gscholar_i
 
 \textbf{Sep 2023 - Dec 2023} & Research Assistant \\
 & Department of Health Systems and Population Health \\
-& University of Washington - Seattle, USA \\
+& University of Washington, USA \\
 & \begin{itemize}
 \item Conducted on-phone interviews for the second post-survey assessment of the ReOpening Schools Safely and Educating Youth Study (ROSSEY Study)
 \item Supported submission of materials in Spanish for the IRB for the ADRC Clinical Core Study project
@@ -134,6 +158,14 @@ gscholar_page <- paste0("https://scholar.google.com/citations?user=", gscholar_i
 \item Coordinated fieldwork with community health workers across diverse Lima, Iquitos, and Huancayo locations
 \end{itemize} \\
 
+& \\
+& \\
+& \\
+& \\
+& \\
+& \\
+& \\
+& \\
 & \\
 
 \textbf{Jan 2023 - Jan 2024} & Research Consultant \\
