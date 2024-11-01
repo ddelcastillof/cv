@@ -121,7 +121,7 @@ gscholar_page <- paste0("https://scholar.google.com/citations?user=", gscholar_i
 & University of Washington, USA \\
 & \begin{itemize}
 \item Estimated population attributable fractions and standardized mortality ratios for social excluded groups, i.e. people experiencing imprisonment, homelessness, and substance use disorders, in high-income countries.
-\item Analyzed data from public sources and a previous systematic review using Bayesian methods and Monte Carlo simulation to estimate the overlap proportion between social excluded groups in high-income countries.
+\item Analyzed data from public sources and a previous published systematic review using Bayesian methods and Monte Carlo simulation to estimate the overlap proportion between social excluded groups in high-income countries.
 \item Collaborated in writing a R01 NIH research proposal to estimate the disease burden for social excluded groups in high-income countries.
 \end{itemize} \\
 
