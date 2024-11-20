@@ -4,13 +4,14 @@
 \usepackage{babel}   % multi-language support
 \usepackage{float}   % floats
 \usepackage{url}     % urls
-\usepackage{geometry}
 \usepackage{hyperref}
-\geometry{margin=1in}
 \usepackage{enumitem} % Customizing
 \usepackage{marvosym} % Allows the use of symbols
 \usepackage{parskip} % Spacing adjustments
 \usepackage{ragged2e}
+\usepackage{geometry} % Required for adjusting page dimensions and margins
+\usepackage{titlesec} % Custom section headers
+
 % Main font
 
 \usepackage{fontspec}
@@ -21,3 +22,21 @@
 
 \usepackage{color}
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
+
+% Headers
+
+
+% Format for \section
+\titleformat{\section}
+  {\normalfont\Large\bfseries\raggedright}            % Format applied to the whole title
+  {\thesection}{1em}{}                              % Label format and spacing
+
+% Format for \subsection
+\titleformat{\subsection}
+  {\normalfont\large\bfseries\raggedright}          % Format: normal font, large size, bold, right alignment
+  {\thesubsection}{1em}{}                           % Label format and spacing
+
+% Format for \subsubsection
+\titleformat{\subsubsection}
+  {\normalfont\normalsize\bfseries\raggedright}     % Format: normal font, normal size, bold, right alignment
+  {\thesubsubsection}{1em}{}                        % Label format and spacing
