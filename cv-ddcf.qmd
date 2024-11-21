@@ -58,14 +58,14 @@ gscholar_page <- paste0("https://scholar.google.com/citations?user=", gscholar_i
 \begin{longtable}{>{\raggedright\arraybackslash}p{4cm} p{14cm}}
 
 \textbf{Sep 2023 – June 2025} & \textbf{Master in Public Healh, Global Health (MPH)} \\
-& \textbf{University of Washington, Seattle (USA)} \\
-& \textit{Thesis: }“Cost-effectiveness analysis of a household salt substitute intervention on reducing community-wide blood pressure in Northern Peru” \\
+&\textbf{University of Washington, Seattle (USA)} \\
+&\textit{Thesis:} “Cost-effectiveness analysis of a household salt substitute intervention on reducing community-wide blood pressure in Northern Peru” \\
 
 &\\
 
 \textbf{Mar 2013 – Dec 2020} & \textbf{Medical Doctor (MD)} \\
 &\textbf{Universidad Nacional Mayor de San Marcos, Lima (Peru)} \\
-& \textit{Thesis: }"Childhood Obesity and Its Effect on Academic Achievement: An Analysis of the Young Lives Study between 2009 and 2016" \\
+&\textit{Thesis:} “Childhood Obesity and Its Effect on Academic Achievement: An Analysis of the Young Lives Study between 2009 and 2016” \\
 
 \end{longtable}
 
