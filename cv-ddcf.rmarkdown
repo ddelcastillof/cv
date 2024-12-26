@@ -43,6 +43,8 @@ gscholar_id <- "iNdNU5QAAAAJ"
 gscholar_page <- paste0("https://scholar.google.com/citations?user=", gscholar_id)
 ```
 
+
+
 \par\centering{\Large{\textbf{Darwin Del Castillo Fernandez, M.D.}}}
 \vspace{-5pt}
 \par\centering{\textit{Mobile:} +1 (206) 605 5077 (USA; WhatsApp) | +51 965 006 311 (Peru)}
@@ -202,16 +204,24 @@ gscholar_page <- paste0("https://scholar.google.com/citations?user=", gscholar_i
 \textbf{Languages:} Spanish (native), English (fluent), Portuguese (intermediate)
 \end{justify}
 
+
+
 ```{r qualiative skills text, eval = F, include = F, echo = F}
 ### Qualitative analysis skills: Intermediate skills in qualitative data analysis, 
 ### thematic coding, content analysis, and experience with the software Dedoose.
 ```
 
+
+
 \section{\underline{Publications}}
+
+
 
 ```{r gstext, include = F, echo = F}
 text_gs <- invisible(gscholar_stats(url = gscholar_page))
 ```
+
+
 
 \begin{longtable}{>{\centering\arraybackslash}p{9cm} >{\centering\arraybackslash}p{9cm}}
 \href{`r gscholar_page`}{Google Scholar Profile} & ORCID: \href{https://orcid.org/0000-0002-8609-0312}{0000-0002-8609-0312} \\
@@ -220,6 +230,8 @@ text_gs <- invisible(gscholar_stats(url = gscholar_page))
 \begin{justify}
 Google Scholar Stats: `r text_gs`
 \end{justify}
+
+
 
 ```{r importing pubs, include = F, echo = F}
 pubs <- get_cv_sheet('pubs') %>%
@@ -236,29 +248,47 @@ pubs <- get_cv_sheet('pubs') %>%
   arrange(desc(pub_date))
 ```
 
+
+
 \subsection{Peer-Reviewed Publications}
+
+
 ```{r printing references in pandoc format}
 #| results: asis
 make_ordered_list_filtered(pubs, "peer_reviewed")
 ```
 
+
+
 \subsection{Pre-prints}
+
+
 ```{r printing pre-print}
 #| results: asis
 make_ordered_list_filtered(pubs, "working")
 ```
 
+
+
 \subsection{Policy Statements, White Papers, Reports}
+
+
 ```{r printing white papers}
 #| results: asis
 make_ordered_list_filtered(pubs, "white_paper")
 ```
 
+
+
 \subsection{Theses}
+
+
 ```{r theses}
 #| results: asis
 make_ordered_list_filtered(pubs, "theses")
 ```
+
+
 
 \subsection{Databases}
 
@@ -269,6 +299,8 @@ Pokemón GO Study & \href{https://figshare.com/articles/dataset/Personality_prof
 \section{\underline{Teaching Experience}}
 \subsection{Courses taught at the college level}
 \subsubsection{Courses taught at Universidad Nacional Mayor de San Marcos}
+
+
 ```{r}
 df <- get_cv_sheet('classes') |> filter(univ == "UNMSM") |>
     mutate(
@@ -287,7 +319,11 @@ df |>
   kbl(booktabs = TRUE, escape = FALSE, linesep = "")
 ```
 
+
+
 \subsubsection{Courses taught at University of Washington}
+
+
 ```{r}
 df <- get_cv_sheet('classes') |> filter(univ == "UW") |>
     mutate(
@@ -306,7 +342,11 @@ df |>
   kbl(booktabs = TRUE, escape = FALSE, linesep = "")
 ```
 
+
+
 \subsection{Other teaching experience}
+
+
 ```{r}
 teaching <- get_cv_sheet('teaching') |>
   arrange(desc(date)) |> 
@@ -319,13 +359,21 @@ teaching <- get_cv_sheet('teaching') |>
     citation = paste(title, host, location, date, sep = '. ')
   )
 ```
+
+
 \subsubsection{Seminars}
+
+
 ```{r}
 #| results: asis
 make_ordered_list_filtered(teaching, "seminar")
 ```
 
+
+
 \section{\underline{Advising}}
+
+
 ```{r}
 advisees <- get_cv_sheet('advising') |>
   arrange(date_start) |> 
@@ -341,13 +389,19 @@ advisees <- get_cv_sheet('advising') |>
     )
   )
 ```
+
+
 \subsection{Undergraduate Students - Current}
+
+
 ```{r}
 #| results: asis
 advisees |> 
   filter(complete == 0) |>
   make_ordered_list_filtered("ug")
 ```
+
+
 
 \section{\underline{Leadership, Volunteer, and Community Activities}}
 \begin{longtable}{>{\raggedright\arraybackslash}p{4cm} p{14cm}}
