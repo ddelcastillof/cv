@@ -352,7 +352,7 @@ advisees |>
 \section{\underline{Leadership, Volunteer, and Community Activities}}
 \begin{longtable}{>{\raggedright\arraybackslash}p{4cm} p{14cm}}
 
-\textbf{Dec 2024 - current} & \textbf{Trainee Advisory Committee Member} \\
+\textbf{Jan 2025 - current} & \textbf{Trainee Advisory Committee Member} \\
 & \textbf{Consortium of Universities for Global Health (CUGH), USA} \\
 & Collaborating with international co-trainees to address global health challenges and provide student perspectives on global health issues such as COVID-19, racial disparities, climate change, and research involvement of global health students. \\
 
@@ -364,13 +364,13 @@ advisees |>
 
 &\\
 
-\textbf{Jan 2019} & \textbf{Medical volunteer} \\
+\textbf{Jan 2019 - Feb 2019} & \textbf{Medical volunteer} \\
 & \textbf{Healing the Children Northeast, Ica (Peru)} \\
 & Medical translator during plastic surgery clinical rounds after surgery for cleft palate and cleft lip repairment in undeserved populations. \\
 
 &\\
 
-\textbf{Nov 2019} & \textbf{Medical volunteer} \\
+\textbf{Nov 2019 - Dec 2019} & \textbf{Medical volunteer} \\
 & \textbf{Healing the Children Rocky Mountains, Lima, (Peru)} \\
 & Shadowed otorhinolaryngologist specialist before and after cochlear implant surgery in pediatric patients. Also helped as medical translator during clinical rounds. \\
 
