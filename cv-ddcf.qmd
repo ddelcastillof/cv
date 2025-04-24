@@ -7,7 +7,7 @@ format:
     documentclass: scrartcl
     papersize: letter
     pdf-engine: xelatex
-    fontsize: 9pt
+    fontsize: 8pt
     geometry:
       - margin=0.5in
       - heightrounded
@@ -43,13 +43,13 @@ gscholar_id <- "iNdNU5QAAAAJ"
 gscholar_page <- paste0("https://scholar.google.com/citations?user=", gscholar_id)
 ```
 
-\par\centering{\Large{\textbf{Darwin Del Castillo Fernandez, M.D.}}}
+\par\centering{\Large{\textbf{Darwin Del Castillo Fernandez, MD}}}
 \vspace{-5pt}
-\par\centering{\textit{Mobile:} +1 (206) 605 5077 (USA; WhatsApp) | +51 965 006 311 (Peru)}
+\par\centering{\textit{Mobile:} +1 (206) 605 5077}
 \vspace{-5pt}
-\par\centering{\textit{Email:} ddelcast@uw.edu}
+\par\centering{\textit{Email:} ddelcastillo.f@gmail.com}
 \vspace{-5pt}
-\par\centering{\href{https://ddelcastillof.github.io/darwindelcastillo/}{https://www.darwindelcastillo.com}}
+\par\centering{\href{https://ddelcastillof.github.io/darwindelcastillo/}{Website} | \href{https://www.linkedin.com/in/darwin-del-castillo-md/}{LinkedIn} | \href{https://github.com/ddelcastillof}{Github}}
 \rule{\textwidth}{0.5pt}
 \vspace{-5pt}
 
@@ -57,14 +57,14 @@ gscholar_page <- paste0("https://scholar.google.com/citations?user=", gscholar_i
 
 \begin{longtable}{>{\raggedright\arraybackslash}p{4cm} p{14cm}}
 
-\textbf{Sep 2023 – June 2025} & \textbf{Master in Public Healh, Global Health (MPH)} \\
-&\textbf{University of Washington, Seattle (USA)} \\
+\textbf{Sep 2023 – May 2025} & \textbf{Master in Public Health (MPH)} \\
+&\textbf{University of Washington, Seattle - USA} \\
 &\textit{Thesis: }“Cost-effectiveness analysis of a household salt substitute intervention on reducing community-wide blood pressure in Northern Peru” \\
 
 &\\
 
 \textbf{Mar 2013 – Dec 2020} & \textbf{Medical Doctor (MD)} \\
-&\textbf{Universidad Nacional Mayor de San Marcos, Lima (Peru)} \\
+&\textbf{Universidad Nacional Mayor de San Marcos, Lima - Peru} \\
 &\textit{Thesis: }“Childhood Obesity and Its Effect on Academic Achievement: An Analysis of the Young Lives Study between 2009 and 2016” \\
 
 \end{longtable}
@@ -73,22 +73,13 @@ gscholar_page <- paste0("https://scholar.google.com/citations?user=", gscholar_i
 
 \begin{longtable}{>{\raggedright\arraybackslash}p{4cm} p{14cm}}
 
-\textbf{Nov 2023 – June 2025} & \textbf{Certificate in Global Health on Maternal and Child Health} \\
-& \textbf{University of Washington, Seattle (USA)} \\
+\textbf{Sep 2021 – Apr 2022} & \textbf{Professional Certificate in Clinical Research} \\
+& \textbf{Universidad Peruana Cayetano Heredia, Lima - Peru} \\
 
 &\\
 
-\textbf{Sep 2021 – Apr 2022} & \textbf{Certificate - Clinical Research} \\
-& \textbf{Universidad Peruana Cayetano Heredia, Lima (Peru)} \\
-
-\end{longtable}
-
-\section{\underline{Licensure and certification}}
-
-\begin{longtable}{>{\raggedright\arraybackslash}p{4cm} p{14cm}}
-
-\textbf{2021} & Peruvian College of Physicians, Membership No. 94534 \\
-\textbf{2024} & National Registry of Investigators, RENACYT-CONCYTEC, Investigator Level VII (P0160977) \\
+\textbf{Nov 2023 – May 2025} & \textbf{Certificate in Global Health on Maternal and Child Health} \\
+& \textbf{University of Washington, Seattle - USA} \\
 
 \end{longtable}
 
@@ -96,90 +87,51 @@ gscholar_page <- paste0("https://scholar.google.com/citations?user=", gscholar_i
 
 \begin{longtable}{>{\raggedright\arraybackslash}p{4cm} p{14cm}}
 
-\textbf{Jul 2024 - Nov 2024} & \textbf{Research Intern} \\
-\textbf{Dec 2024 - Present} & \textbf{Graduate Research Assistant} \\
-& \textbf{Clinical Informatics Team, Institute for Health Metrics and Evaluation} \\
-& \textbf{University of Washington, Seattle (USA)} \\
+\textbf{Jul 2024 - Current} & \textbf{Graduate Research Assistant} \\
+& \textbf{Institute for Health Metrics and Evaluation} \\
+& \textbf{University of Washington, Seattle - USA} \\
 & \begin{itemize}
-\item Meta-analyzing data from 1107 studies to produce estimates of the incidence of lower respiratory tract infections and subsequent clinical outcomes due to human metapneumovirus globally across all ages, sexes, and locations modeled in the GBD from 2010-2023.
-\item Estimated population attributable fractions and standardized mortality ratios for socially excluded groups, i.e., people experiencing imprisonment, homelessness, and substance use disorders, in high-income countries.
-\item Analyzed data from public sources and a previously published systematic review using Bayesian methods and Monte Carlo simulation to estimate the overlap proportion between socially excluded groups in high-income countries.
+\item Pooling epidemiological data of lower respiratory tract infections due to human metapneumovirus globally and across all ages from 2010 to 2023 using a Bayesian meta-regression tool.
+\item Estimated population-attributable fractions and standardized mortality ratios for socially excluded groups in high-income countries.
+\item Analyzed data from public sources using Bayesian methods and Monte Carlo simulation to estimate the overlap proportion between socially excluded groups in high-income countries.
 \end{itemize} \\
 
-\textbf{Nov 2024 - Present} & \textbf{Research Assistant} \\
-& \textbf{David Watkins' Research Group, Department of Global Health} \\
-& \textbf{University of Washington, Seattle (USA)} \\
+\textbf{Jun 2024 - Mar 2025} & \textbf{Graduate Research Assistant} \\
+& \textbf{Department of Global Health} \\
+& \textbf{University of Washington, Seattle - USA} \\
 & \begin{itemize}
-\item Designing a scoping review protocol and performing evidence synthesis for mapping potential indicators for the implementation of mental health policy in data-limited settings.
-\item Coordinating a expert group panel for developing a set list of indicators based in structured expert elicitation.
-\item Engaging with stakeholders for the implementation of the future list of proposed indicators in a later phase of the project.
-\end{itemize} \\
-
-\newpage
-
-\textbf{Jun 2024 - Sep 2024} & \textbf{Research Assistant} \\
-& \textbf{OPTICC Center, Department of Global Health} \\
-& \textbf{University of Washington, Seattle (USA)} \\
-& \begin{itemize}
+\item Designing a scoping review protocol and performing evidence synthesis for mapping potential indicators for implementing mental health policy in data-limited settings.
 \item Led the design of a mixed-method study to assess the effectiveness of implementation strategies for pediatric burn care in a Peruvian healthcare setting.
-\item Collaborated with multidisciplinary teams at Seattle Children’s Hospital and the Peruvian National Hospital for Children to align study objectives and methodologies.
-\item Coordinated cross-cultural research efforts to ensure the study’s relevance and applicability to both U.S. and Peruvian healthcare environments.
+\item Crafted communication strategies with stakeholders to implement later phases of the project.
 \end{itemize} \\
 
-\textbf{Sep 2024 - Dec 2024} & \textbf{Research Assistant} \\
-& \textbf{Health Population Research Center, Department of Health Systems and Population Health} \\
-& \textbf{University of Washington, Seattle (USA)} \\
+\textbf{Sep 2023 - Dec 2023} & \textbf{Graduate Research Assistant} \\
+& \textbf{Department of Health Systems and Population Health} \\
+& \textbf{University of Washington, Seattle - USA} \\
 & \begin{itemize}
-\item Conducted on-phone interviews for the second post-survey assessment of the ReOpening Schools Safely and Educating Youth Study (ROSSEY Study).
-\item Supported submission of materials in Spanish for the IRB for the ADRC Clinical Core Study project.
+\item Carried out on-phone interviews for the ReOpening Schools Safely and Educating Youth Study post-survey assessments.
+\item Facilitated the submission of materials in Spanish to the IRB for Alzheimer’s Disease Research Center (ADRC).
 \item Conducted preliminary analyses for the Outreach, Engagement, and Recruitment module of the ADRC Clinical Core Study project.
 \end{itemize} \\
 
-\textbf{Jun 2023 - Aug 2023} & \textbf{Research Assistant} \\
-& \textbf{CRONICAS Center of Excellence in Chronic Diseases} \\
-& \textbf{Universidad Peruana Cayetano Heredia, Lima (Peru)} \\
-& \begin{itemize}
-\item Conducted semi-structured qualitative interviews for the NIHR-UK-supported IMPACT-DEMENTIA project, collaborating with researchers from Universidad Peruana Cayetano Heredia, Imperial College, and the University of Oxford.
-\item Facilitated collaboration and communication between international research teams and local stakeholders to ensure effective project implementation.
-\item Coordinated fieldwork with community health workers across diverse Lima, Iquitos, and Huancayo locations.
-\end{itemize} \\
-
-\textbf{Jan 2023 - Jan 2024} & \textbf{Research Consultant (Comparative Health Outcomes Research)} \\
-& \textbf{Health Technology Assessment Direction, Health Technology Assessment and Research Institute} \\
-& \textbf{Social Security Health System, Lima (Peru)} \\
-& \begin{itemize}
-\item Assessed the benefits and drawbacks of purchasing pharmaceutical products for Peru's social health insurance through a systematic evaluation of the effectiveness and economic impact.
-\item Conducted systematic reviews of anti-cancerous and immunosuppressant drugs regarding efficacy and economic impact.
-\item Evaluated the budget impact of introducing new pharmacological products in the Social Security System.
-\end{itemize} \\
-
-\textbf{Mar 2022 - Mar 2023} & \textbf{Clinical Sub-investigator} \\
-& \textbf{Clinical Research Unit} \\
-& \textbf{Via Libre Association, Lima (Peru)} \\
-& \begin{itemize}
-\item Via Libre is a Clinical Research Site for studies in STI and HIV prevention and treatment in queer population.
-\item Performed clinical procedures and assessed clinical trial participants from the HVTN and the HPTN networks.
-\item Participated and organized activities for community outreach and participant retention crafted for the queer community.
-\end{itemize} \\
-
 \newpage
 
-\textbf{Jun 2021 - Aug 2021} & \textbf{Research Consultant (Data Management)} \\
-& \textbf{Healthcare Research Direction, Health Technology Assessment and Research Institute} \\
-& \textbf{Social Security Health System, Lima (Peru)} \\
+\textbf{Jan 2023 - Jan 2024} & \textbf{Research Consultant} \\
+& \textbf{Health Technology Assessment and Research Institute} \\
+& \textbf{Social Security Health System, Lima - Peru} \\
 & \begin{itemize}
-\item Managed and validated all data inputs using REDCap from two clinical studies related to COVID-19 vaccinations.
-\item Contributed to a randomized controlled trial assessing the efficacy and safety of convalescent plasma therapy in COVID-19-infected patients.
-\item Conducted data analysis from an observational study on vaccination hesitancy among healthcare workers using Stata and R statistical packages.
+\item Elaborated policy documents of new pharmaceutical products for Peru’s social health insurance.
+\item Conducted systematic reviews of anti-cancerous and immunosuppressant drugs regarding efficacy and economic impact.
+\item Evaluated the budget impact of introducing new pharmacological products in Peruvian social health insurance.
 \end{itemize} \\
 
-\textbf{Mar 2019 - Jun 2021} & \textbf{Research Fellow} \\
+\textbf{Mar 2019 - Aug 2023} & \textbf{Research Assistant} \\
 & \textbf{CRONICAS Center of Excellence in Chronic Diseases} \\
-& \textbf{Universidad Peruana Cayetano Heredia, Lima (Peru)} \\
+& \textbf{Universidad Peruana Cayetano Heredia, Lima - Peru} \\
 & \begin{itemize}
-\item Conducted a systematic review with the COSMOS initiative to develop a core set of outcomes for designing multimorbidity clinical trials.
-\item Participated in the data handling and the writing phase of a research manuscript to understand the impact of preterm birth on the development of hypertension in offspring at age 22.
-\item Collaborated in the study design and manuscript preparation of other research interim products, including peer-reviewed research articles.
+\item Coordinated focus groups and on-field work across four Peruvian regions to co-design an intervention for patients with cognitive impairment and their caregivers.
+\item Contributed to research grant proposals in hypertension, diabetes, cancer, and multimorbidity projects by conducting systematic reviews and preliminary data analysis.
+\item Co-authored scientific manuscripts in the topics mentioned above which included longitudinal data analyses, meta-analyses, and unsupervised machine learning methods.
 \end{itemize} \\
 \end{longtable}
 
@@ -198,8 +150,21 @@ gscholar_page <- paste0("https://scholar.google.com/citations?user=", gscholar_i
 \section{\underline{Skills}}
 
 \begin{justify}
-\textbf{Computer and programming skills:} Advanced proficiency in R and STATA for statistical analysis, machine learning in healthcare, data visualization, decision-making analyses, causal inference, and genetic epidemiology. Working proficiency in Python and SQL for genomic data science, epidemiological data analysis, and data wrangling. Competencies in Microsoft Office Suite (Word, PowerPoint, Excel), G*Power, and REDCap.\\
-\textbf{Languages:} Spanish (native), English (fluent), Portuguese (intermediate)
+\textbf{Computer and programming skills:} 
+\begin{itemize}
+\item \textbf{Programming languages:} R, Python, bash
+\item \textbf{Statistical software:} Stata, SPSS, SAS, G*Power
+\item \textbf{Data visualization and reporting:} Shiny, ArcGIS, \LaTeX, Markdown
+\item \textbf{Data management and wrangling:} SQL, REDCap
+\item \textbf{Project management:} Jira, Asana, Trello
+\item \textbf{Development tools:} Git, GitHub, Docker, VSCode, Confluence, Bitbucket 
+\item \textbf{Computing environments:} Linux/Unix, Windows, ssh
+\end{itemize}
+
+\textbf{Languages:} 
+\begin{longtable}{>{\centering\arraybackslash}p{6cm}>{\centering\arraybackslash}p{6cm}>{\centering\arraybackslash}p{6cm}}
+English: Fluent & Spanish: Native & Portuguese: Working proficiency
+\end{longtable}
 \end{justify}
 
 ```{r qualiative skills text, eval = F, include = F, echo = F}
@@ -242,12 +207,6 @@ pubs <- get_cv_sheet('pubs') %>%
 make_ordered_list_filtered(pubs, "peer_reviewed")
 ```
 
-\subsection{Pre-prints}
-```{r printing pre-print}
-#| results: asis
-make_ordered_list_filtered(pubs, "working")
-```
-
 \subsection{Policy Statements, White Papers, Reports}
 ```{r printing white papers}
 #| results: asis
@@ -260,24 +219,25 @@ make_ordered_list_filtered(pubs, "white_paper")
 make_ordered_list_filtered(pubs, "theses")
 ```
 
+```{r future chunk of text, eval = F, include = F, echo = F}
 \subsection{Databases}
 
 \begin{longtable}{p{4cm} p{14cm}}
 Pokemón GO Study & \href{https://figshare.com/articles/dataset/Personality_profiles_and_Pokemon_GO_engagement_csv/21191500?file=37569835}{Cross-sectional study: Exploratory factorial analysis database}
 \end{longtable}
-
+```
 \section{\underline{Teaching Experience}}
 \subsection{Courses taught at the college level}
-\subsubsection{Courses taught at Universidad Nacional Mayor de San Marcos}
+\subsubsection{Courses taught at Universidad Nacional Mayor de San Marcos, Peru}
 ```{r}
 df <- get_cv_sheet('classes') |> filter(univ == "UNMSM") |>
     mutate(
-      course = paste0(number, ": ", name),
+      course = paste0(name),
       role = type,
       semester = ifelse(semester == 'Aut20', 'Aut20', semester)
     ) |> 
     select(
-      `Sem.` = semester,
+      Semester = semester,
       Course = course,
       Role = role,
       Level = level
@@ -286,17 +246,35 @@ df <- get_cv_sheet('classes') |> filter(univ == "UNMSM") |>
 df |> 
   kbl(booktabs = TRUE, escape = FALSE, linesep = "")
 ```
+\subsubsection{Courses taught at Universidad Científica del Sur, Peru}
+```{r}
+df <- get_cv_sheet('classes') |> filter(univ == "UCSUR") |>
+    mutate(
+      course = paste0(name),
+      role = type,
+      semester = ifelse(semester == '
+                        Sum25', 'Sum25', semester)
+    ) |> 
+    select(
+      Semester = semester,
+      Course = course,
+      Role = role,
+      Level = level
+    ) 
 
-\subsubsection{Courses taught at University of Washington}
+df |> 
+  kbl(booktabs = TRUE, escape = FALSE, linesep = "")
+```
+\subsubsection{Courses taught at University of Washington, USA}
 ```{r}
 df <- get_cv_sheet('classes') |> filter(univ == "UW") |>
     mutate(
-      course = paste0(number, ": ", name),
+      course = paste0(name),
       role = type, 
       semester = ifelse(semester == 'Spr24', 'Spr24', semester)
       ) |> 
     select(
-      `Sem.` = semester,
+      Semester = semester,
       Course = course,
       Role = role,
       Level = level
@@ -349,29 +327,38 @@ advisees |>
   make_ordered_list_filtered("ug")
 ```
 
+\section{\underline{Licensure and certification}}
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{4cm} p{14cm}}
+
+\textbf{2021} & Peruvian College of Physicians, Membership No. 94534 \\
+\textbf{2024} & National Registry of Investigators, RENACYT-CONCYTEC, Investigator Level VII (P0160977) \\
+
+\end{longtable}
+
 \section{\underline{Leadership, Volunteer, and Community Activities}}
 \begin{longtable}{>{\raggedright\arraybackslash}p{4cm} p{14cm}}
 
 \textbf{Jan 2025 - current} & \textbf{Trainee Advisory Committee Member} \\
-& \textbf{Consortium of Universities for Global Health (CUGH), USA} \\
+& \textbf{Consortium of Universities for Global Health, USA} \\
 & Collaborating with international co-trainees to address global health challenges and provide student perspectives on global health issues such as COVID-19, racial disparities, climate change, and research involvement of global health students. \\
 
 &\\
 
 \textbf{Mar 2014 - current} & \textbf{Emeritus member and External advisor} \\
-& \textbf{\href{https://cem.edu.pe/adiecs/}{Association for the Development of Student's Research in Health Sciences (ADIECS), Lima (Peru)}} \\
-& Peruvian student association funded in 2008 by students from the Universidad Nacional Mayor de San Marcos with the aim of developing capacity of both hard (e.g., epidemiological study designs, data analysis) and soft skills (e.g., teamwork communication, problem-solving) for biomedical underserved students. \\
+& \textbf{\href{https://cem.edu.pe/adiecs/}{Association for the Development of Student's Research in Health Sciences (ADIECS)}, Lima - Peru} \\
+& Peruvian student association funded in 2008 by students from the Universidad Nacional Mayor de San Marcos to develop capacity of both hard (e.g., epidemiological study designs, data analysis) and soft skills (e.g., teamwork communication, problem-solving) for biomedical underserved students. \\
 
 &\\
 
 \textbf{Jan 2019 - Feb 2019} & \textbf{Medical volunteer} \\
-& \textbf{Healing the Children Northeast, Ica (Peru)} \\
-& Medical translator during plastic surgery clinical rounds after surgery for cleft palate and cleft lip repairment in undeserved populations. \\
+& \textbf{Healing the Children Northeast, Ica - Peru} \\
+& Medical translator during plastic surgery clinical rounds after surgery for cleft palate and cleft lip repairment in underserved populations. \\
 
 &\\
 
 \textbf{Nov 2019 - Dec 2019} & \textbf{Medical volunteer} \\
-& \textbf{Healing the Children Rocky Mountains, Lima, (Peru)} \\
+& \textbf{Healing the Children Rocky Mountains, Lima - Peru} \\
 & Shadowed otorhinolaryngologist specialist before and after cochlear implant surgery in pediatric patients. Also helped as medical translator during clinical rounds. \\
 
 \end{longtable}
@@ -379,7 +366,8 @@ advisees |>
 \section{\underline{Memberships in Professional Organizations}}
 
 \begin{itemize}
- \item International Epidemiological Association (2020 — Current)
- \item Peruvian College of Physicians (2021 — Current)
- \item Consortium of Universities for Global Health (2023 — Current)
+ \item International Epidemiological Association (2020 - Current)
+ \item Peruvian College of Physicians (2021 - Current)
+ \item Consortium of Universities for Global Health (2023 - Current)
+ \item America’s Network for Chronic Disease Surveillance (2025 - Current)
 \end{itemize}
