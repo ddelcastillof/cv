@@ -76,11 +76,6 @@ gscholar_page <- paste0("https://scholar.google.com/citations?user=", gscholar_i
 \textbf{Sep 2021 – Apr 2022} & \textbf{Professional Certificate in Clinical Research} \\
 & \textbf{Universidad Peruana Cayetano Heredia, Lima - Peru} \\
 
-&\\
-
-\textbf{Nov 2023 – May 2025} & \textbf{Certificate in Global Health on Maternal and Child Health} \\
-& \textbf{University of Washington, Seattle - USA} \\
-
 \end{longtable}
 
 \section{\underline{Professional Experience}}
@@ -91,9 +86,9 @@ gscholar_page <- paste0("https://scholar.google.com/citations?user=", gscholar_i
 & \textbf{Institute for Health Metrics and Evaluation} \\
 & \textbf{University of Washington, Seattle - USA} \\
 & \begin{itemize}
-\item Pooling epidemiological data of lower respiratory tract infections due to human metapneumovirus globally and across all ages from 2010 to 2023 using a Bayesian meta-regression tool.
-\item Estimated population-attributable fractions and standardized mortality ratios for socially excluded groups in high-income countries.
-\item Analyzed data from public sources using Bayesian methods and Monte Carlo simulation to estimate the overlap proportion between socially excluded groups in high-income countries.
+\item Pooling epidemiological data of lower respiratory tract infections due to human metapneumovirus from 2010 to 2023 using the package meta in R and Python functions.
+\item Estimated population-attributable fractions and standardized mortality ratios for socially excluded groups in high-income countries using R.
+\item Analyzed data from public sources using Bayesian methods and Monte Carlo simulation to estimate the overlap proportion between socially excluded groups in high-income countries using the packages rJAGS and rstan.
 \end{itemize} \\
 
 \textbf{Jun 2024 - Mar 2025} & \textbf{Graduate Research Assistant} \\
@@ -101,8 +96,8 @@ gscholar_page <- paste0("https://scholar.google.com/citations?user=", gscholar_i
 & \textbf{University of Washington, Seattle - USA} \\
 & \begin{itemize}
 \item Designing a scoping review protocol and performing evidence synthesis for mapping potential indicators for implementing mental health policy in data-limited settings.
-\item Led the design of a mixed-method study to assess the effectiveness of implementation strategies for pediatric burn care in a Peruvian healthcare setting.
-\item Crafted communication strategies with stakeholders to implement later phases of the project.
+\item Designed of a mixed-method study protocol to assess the effectiveness of implementation strategies for pediatric burn care in a Peruvian healthcare setting.
+\item Crafted communication strategies with stakeholders to inform results from the mixed-methods study.
 \end{itemize} \\
 
 \textbf{Sep 2023 - Dec 2023} & \textbf{Graduate Research Assistant} \\
@@ -114,8 +109,6 @@ gscholar_page <- paste0("https://scholar.google.com/citations?user=", gscholar_i
 \item Conducted preliminary analyses for the Outreach, Engagement, and Recruitment module of the ADRC Clinical Core Study project.
 \end{itemize} \\
 
-\newpage
-
 \textbf{Jan 2023 - Jan 2024} & \textbf{Research Consultant} \\
 & \textbf{Health Technology Assessment and Research Institute} \\
 & \textbf{Social Security Health System, Lima - Peru} \\
@@ -124,6 +117,8 @@ gscholar_page <- paste0("https://scholar.google.com/citations?user=", gscholar_i
 \item Conducted systematic reviews of anti-cancerous and immunosuppressant drugs regarding efficacy and economic impact.
 \item Evaluated the budget impact of introducing new pharmacological products in Peruvian social health insurance.
 \end{itemize} \\
+
+\newpage
 
 \textbf{Mar 2019 - Aug 2023} & \textbf{Research Assistant} \\
 & \textbf{CRONICAS Center of Excellence in Chronic Diseases} \\
@@ -335,6 +330,8 @@ advisees |>
 \textbf{2024} & National Registry of Investigators, RENACYT-CONCYTEC, Investigator Level VII (P0160977) \\
 
 \end{longtable}
+
+\newpage
 
 \section{\underline{Leadership, Volunteer, and Community Activities}}
 \begin{longtable}{>{\raggedright\arraybackslash}p{4cm} p{14cm}}
