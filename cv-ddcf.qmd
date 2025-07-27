@@ -62,72 +62,82 @@ gscholar_page <- paste0("https://scholar.google.com/citations?user=", gscholar_i
 \vspace{-1.5em}
 \textcolor{darkgray}{\rule{\textwidth}{0.5pt}}
 
-\begin{longtable}{>{\raggedright\arraybackslash}p{4cm} p{14cm}}
-\textbf{Sep 2023 – May 2025} & \textbf{Master in Public Health (MPH)} \\
-&\textbf{University of Washington, USA} \\
-&\\
-\textbf{Mar 2013 – Dec 2020} & \textbf{Medical Doctor (MD)} \\
-&\textbf{Universidad Nacional Mayor de San Marcos, Peru} \\
+\begin{longtable}{p{14cm}>{\raggedleft\arraybackslash}p{4cm}}
+\textbf{Master of Public Health (MPH)} & \textbf{Sep 2023 – Jun 2025} \\
+\textsc{University of Washington, USA} & \\
+& \\
+\textbf{Medical Doctor (MD)} & \textbf{Mar 2013 – Dec 2020} \\
+\textsc{Universidad Nacional Mayor de San Marcos, Peru} & \\
 \end{longtable}
 
 \section{Additional Education}
 \vspace{-1.5em}
 \textcolor{darkgray}{\rule{\textwidth}{0.5pt}}
 
-\begin{longtable}{>{\raggedright\arraybackslash}p{4cm} p{14cm}}
-\textbf{Sep 2021 – Apr 2022} & \textbf{Professional Certificate in Clinical Research} \\
-& \textbf{Universidad Peruana Cayetano Heredia, Lima - Peru} \\
+\begin{longtable}{p{14cm}>{\raggedleft\arraybackslash}p{4cm}}
+\textbf{Professional Certificate in Clinical Research} & \textbf{Sep 2021 – Apr 2022} \\
+\textsc{Universidad Peruana Cayetano Heredia, Lima - Peru} & \\
 \end{longtable}
 
 \section{Professional Experience}
 \vspace{-1.5em}
 \textcolor{darkgray}{\rule{\textwidth}{0.5pt}}
 
-\begin{longtable}{>{\raggedright\arraybackslash}p{4cm} p{14cm}}
-\textbf{Jul 2024 – Jun 2025} & \textbf{Graduate Research Assistant} \\
-& \textbf{Institute for Health Metrics and Evaluation} \\
-& \textbf{University of Washington, Seattle - USA} \\
-& \begin{itemize}
-\item Modeling epidemiological data of lower respiratory tract infections due to human metapneumovirus from 2010 to 2023 using meta-analysis information in R and Bayesian meta-regression suites (DisMod-MR).
-\item Analyzed data from public sources using Bayesian methods and Monte Carlo simulation to estimate the overlap proportion between socially excluded groups in high-income countries using the packages rJAGS and rstan.
-\item Improved analytic scripts for electronic health records data extraction, cleaning, and analysis by developing Python functions and pipeline tools that reduced processing time.
-\end{itemize} \\
+\begin{longtable}{p{14cm}>{\raggedleft\arraybackslash}p{4cm}}
+\textbf{Graduate Research Assistant} & \textbf{Jul 2024 – Jun 2025} \\
+\multicolumn{2}{p{18cm}}{\textsc{Institute for Health Metrics and Evaluation}} \\
+\multicolumn{2}{p{18cm}}{\textsc{University of Washington, Seattle - USA}} \\
+\multicolumn{2}{p{18cm}}{%
+\begin{itemize}
+  \item Modeling epidemiological data of lower respiratory tract infections due to human metapneumovirus from 2010 to 2023 using meta-analysis information in R and Bayesian meta-regression suites (DisMod-MR).
+  \item Analyzed data from public sources using Bayesian methods and Monte Carlo simulation to estimate the overlap proportion between socially excluded groups in high-income countries using the packages rJAGS and rstan.
+  \item Estimated population-attributable fractions and standardized mortality ratios for socially excluded groups in high-income countries.
+\end{itemize}
+} \\
 \\
-\textbf{Jun 2024 – Mar 2025} & \textbf{Graduate Research Assistant} \\
-& \textbf{Department of Global Health} \\
-& \textbf{University of Washington, Seattle - USA} \\
-& \begin{itemize}
-\item Conducted a scoping review protocol and performed evidence synthesis for mapping potential indicators for implementing mental health policy in data-limited settings.
-\item Designed of a mixed-method study protocol to assess the effectiveness of implementation strategies for pediatric burn care in a Peruvian healthcare setting.
-\item Crafted communication strategies with stakeholders to inform results from the mixed-methods study.
-\end{itemize} \\
+\textbf{Graduate Research Assistant} & \textbf{Jun 2024 – Mar 2025} \\
+\multicolumn{2}{p{18cm}}{\textsc{Department of Global Health}} \\
+\multicolumn{2}{p{18cm}}{\textsc{University of Washington, Seattle - USA}} \\
+\multicolumn{2}{p{18cm}}{%
+\begin{itemize}
+  \item Conducted a scoping review protocol and performed evidence synthesis for mapping potential indicators for implementing mental health policy in data-limited settings.
+  \item Designed of a mixed-method study protocol to assess the effectiveness of implementation strategies for pediatric burn care in a Peruvian healthcare setting.
+  \item Crafted communication strategies with stakeholders to inform results from the mixed-methods study.
+\end{itemize}
+} \\
 \\
-\textbf{Sep 2023 – Dec 2023} & \textbf{Graduate Research Assistant} \\
-& \textbf{Department of Health Systems and Population Health} \\
-& \textbf{University of Washington, Seattle - USA} \\
-& \begin{itemize}
-\item Gathered sociodemographic and utlization data as part of a clinical trial post-assesment survey through on-phone interviews.
-\item Translated IRB submissions materials from Spanish to English for the Alzheimer’s Disease Research Center.
-\item Synthesized early engagement and outreach data into visualisation tools and summary tables, enabling program managers to make adjustments to recruitment strategies.
-\end{itemize} \\
+\textbf{Graduate Research Assistant} & \textbf{Sep 2023 – Dec 2023} \\
+\multicolumn{2}{p{18cm}}{\textsc{Department of Health Systems and Population Health}} \\
+\multicolumn{2}{p{18cm}}{\textsc{University of Washington, Seattle - USA}} \\
+\multicolumn{2}{p{18cm}}{%
+\begin{itemize}
+  \item Gathered sociodemographic and utilization data as part of a clinical trial post-assesment survey through on-phone interviews.
+  \item Translated IRB submissions materials from Spanish to English for the Alzheimer’s Disease Research Center.
+  \item Synthesized early engagement and outreach data into visualisation tools and summary tables, enabling program managers to make adjustments to recruitment strategies.
+\end{itemize}
+} \\
+\\
+\textbf{Research Consultant} & \textbf{Jan 2023 – Jan 2024} \\
+\multicolumn{2}{p{18cm}}{\textsc{Health Technology Assessment and Research Institute}} \\
+\multicolumn{2}{p{18cm}}{\textsc{Social Security Health System, Lima - Peru}} \\
+\multicolumn{2}{p{18cm}}{%
+\begin{itemize}
+  \item Structured and consolidated multi-source health data (surveillance data, clinical studies) to generate data for health technology assessments.
+  \item Conducted budget impact and cost-effectiveness assessments to prioritize funding for high-impact health interventions under national budgets.
+  \item Presented data-driven recommendations and evidence summaries to policymakers and partners, supporting strategic purchasing decisions for the Social Security System.
+\end{itemize}
+} \\
 \newpage
-\textbf{Jan 2023 – Jan 2024} & \textbf{Research Consultant} \\
-& \textbf{Health Technology Assessment and Research Institute} \\
-& \textbf{Social Security Health System, Lima - Peru} \\
-& \begin{itemize}
-\item Structured and consolidated multi-source health data (surveillance data, clinical studies) to generate data for health technology assessments.
-\item Conducted budget impact and cost-effectiveness assessments to prioritize funding for high-impact health interventions under national budgets.
-\item Presented data-driven recommendations and evidence summaries to policymakers and partners, supporting strategic purchasing decisions for the Social Security System.
-\end{itemize} \\
-\\
-\textbf{Mar 2019 – Aug 2023} & \textbf{Research Assistant} \\
-& \textbf{CRONICAS Center of Excellence in Chronic Diseases} \\
-& \textbf{Universidad Peruana Cayetano Heredia, Lima - Peru} \\
-& \begin{itemize}
-\item Coordinated focus groups and on-field work across four Peruvian regions to co-design an intervention for patients with cognitive impairment and their caregivers.
-\item Contributed to research grant proposals in hypertension, diabetes, cancer, and multimorbidity projects by conducting systematic reviews and preliminary data analysis.
-\item Co-authored scientific manuscripts in the topics mentioned above which included longitudinal data analyses, meta-analyses, and unsupervised machine learning methods.
-\end{itemize} \\
+\textbf{Research Assistant} & \textbf{Mar 2019 – Aug 2023} \\
+\multicolumn{2}{p{18cm}}{\textsc{CRONICAS Center of Excellence in Chronic Diseases}} \\
+\multicolumn{2}{p{18cm}}{\textsc{Universidad Peruana Cayetano Heredia, Lima - Peru}} \\
+\multicolumn{2}{p{18cm}}{%
+\begin{itemize}
+  \item Coordinated focus groups and on-field work across four Peruvian regions to co-design an intervention for patients with cognitive impairment and their caregivers.
+  \item Contributed to research grant proposals in hypertension, diabetes, cancer, and multimorbidity projects by conducting systematic reviews and preliminary data analysis.
+  \item Co-authored scientific manuscripts in the topics mentioned above which included longitudinal data analyses, meta-analyses, and unsupervised machine learning methods.
+\end{itemize}
+} \\
 \end{longtable}
 
 \section{Skills}
@@ -159,39 +169,81 @@ Health data science and epidemiology: data wrangling, querying, analysis, visual
 \vspace{-1.5em}
 \textcolor{darkgray}{\rule{\textwidth}{0.5pt}}
 
-\begin{longtable}{>{\raggedright\arraybackslash}p{1.5cm} p{16.5cm}}
-\textbf{Jun 2018} & Scholarship for the Young Lives Study’s Methodological Workshop, GRADE Research Group. A workshop to receive advanced training in data wrangling and longitudinal data analysis applied to the Young Lives Study. \\
+\begin{longtable}{>{\raggedright\arraybackslash}p{16.5cm} p{1.5cm}} %%Improve the cum laude line%%
+Young Lives Study Methodological Workshop Scholarship, \textsc{Group for the Analysis of Development (GRADE)} – Peru & \textbf{Jun 2018}\\
 & \\
-\textbf{Jul 2021} & Graduated with Honours \textit{(Cum Laude)}, School of Medicine, Universidad Nacional Mayor de San Marcos. Grade of 17/20 \\
+Medical School Graduation with Honors \textit{(Cum Laude)} (Grade: 17/20), \textsc{Universidad Nacional Mayor de San Marcos School of Medicine} – Peru & \textbf{Aug 2021}\\ 
 & \\
-\textbf{Sep 2021} & Scholarship to study the Diplomate in Clinical Research at Universidad Peruana Cayetano Heredia. Funded by the training program NIH/FIC 2D43TW001140-21 “Training in Infectious Disease in Peru – Time for Implementation Research,” Universidad Peruana Cayetano Heredia \\
+Professional Certificate in Clinical Research Fogarty Scholarship, \textsc{Universidad Peruana Cayetano Heredia School of Public Healh} – Peru & \textbf{Sep 2021}\\
 & \\
-\textbf{Feb 2024} & Department of Global Health Endowed Fellowship for Global Health Excellence, Equity and Impact, University of Washington \\
+Department of Global Health Endowed Fellowship for Global Health Excellence, Equity and Impact, \textsc{University of Washington Department of Global Health} – USA & \textbf{Feb 2024}\\
 \end{longtable}
 
-```{r past skills text, eval = F, include = F, echo = F}
-### Qualitative analysis skills: Intermediate skills in qualitative data analysis, 
-### thematic coding, content analysis, and experience with the software Dedoose.
-
-\section{\underline{Skills}}
-
-\begin{justify}
-\textbf{Computer and programming skills:} 
-\begin{itemize}
-\item \textbf{Programming languages:} R, Python, bash
-\item \textbf{Statistical software:} Stata, SPSS, SAS, G*Power
-\item \textbf{Data visualization and reporting:} Shiny, ArcGIS, \LaTeX, Markdown
-\item \textbf{Data management and wrangling:} SQL, REDCap
-\item \textbf{Project management:} Jira, Asana, Trello
-\item \textbf{Development tools:} Git, GitHub, Docker, VSCode, Confluence, Bitbucket 
-\item \textbf{Computing environments:} Linux/Unix, Windows, ssh
-\end{itemize}
-
-\textbf{Languages:} 
-\begin{longtable}{>{\centering\arraybackslash}p{6cm}>{\centering\arraybackslash}p{6cm}>{\centering\arraybackslash}p{6cm}}
-English: Fluent & Spanish: Native & Portuguese: Working proficiency
+\section{Research and Teaching}
+\vspace{-1.5em}
+\textcolor{darkgray}{\rule{\textwidth}{0.5pt}}
+\subsection{Research Support}
+```{r importing grants, include = F, echo = F}
+grants <- get_cv_sheet('grants') |>
+  mutate(
+    status  = ifelse(is.na(status), '', paste0(status)),
+    role = ifelse(is.na(role), '', paste0(role)),
+    project_code = ifelse(is.na(id), '', paste0(id)),
+    budget   = ifelse(is.na(budget_total), '', paste0(budget_total)),
+    awarded   = ifelse(is.na(awarded), '', paste0(awarded)),
+    funder_1 = ifelse(is.na(sponsor_1), '', paste0(sponsor_1)),
+    funder_2 = ifelse(is.na(sponsor_2), '', paste0(sponsor_2)),
+    year_start = ifelse(is.na(begin), '', paste0(begin)),
+    year_end = ifelse(is.na(end), '', paste0(end)),
+    title = ifelse(is.na(title), '', paste0(enquote(title))),
+    pi = ifelse(is.na(pi), '', paste0(pi, '.')),
+    coi_1 = ifelse(is.na(coi_1), '', paste0(coi_1, '.')),
+    coi_2 = ifelse(is.na(coi_2), '', paste0(coi_2, '.'))
+    ) |> 
+  arrange(desc(status))
+```
+\subsubsection{Concluded Research Support}
+```{r grants_text}
+#| results: asis
+make_grants_table(grants, "concluded")
+```
+\newpage
+\subsection{Teaching and Lecturer Contributions} <!-- Improve the pull method from the cv database -->
+\begin{longtable}{>{\raggedright\arraybackslash}p{14cm} p{4cm}}
+\textbf{Lecturer} & \textbf{Mar 2025 – Current} \\
+\textsc{School of Medicine} & \\
+\textsc{Universidad Científica del Sur, Lima – Peru} & \\
+\textsc{Introduction to Epidemiology:} I teach three sections of \textasciitilde 15 fourth-year medical students each, focusing on basic clinical epidemiology concepts, including study designs, bias identification, \& basic epidemiological surveillance concepts. & \\
+& \\
+\textbf{Teaching Assistant} & \textbf{Mar 2024 – Jun 2024} \\
+\textsc{College of Arts \& Sciences} & \\
+\textsc{University of Washington, Seattle – USA} & \\ 
+\textsc{Introduction to Molecular and Cellular Biology:} Led two laboratory practice sessions with \textasciitilde 25 undergraduate students each, covering fundamental molecular and cellular biology experiments. & \\
 \end{longtable}
-\end{justify}
+
+\subsection{Advising}
+```{r}
+#| name: pooling_advising_data
+advisees <- get_cv_sheet('advising') |>
+  arrange(date_start) |> 
+  mutate(
+    date = paste0(' (',  date_start, ' – ', date_stop, ').'),
+    citation = ifelse(
+      is.na(title), name, paste0(name, ', ', enquote(title))
+    ),
+    citation = paste0(citation, ', ', '\\textsc{', institution, '}',', ',country,' ', date), 
+    citation = ifelse(
+        is.na(defense_date), citation, 
+        paste0(citation, ' _Defense date: ', defense_date, '_.')
+    )
+  )
+```
+\subsubsection{Undergraduate Students}
+```{r}
+#| results: asis
+advisees |> 
+  filter(complete == 0) |>
+  make_bullet_list_filtered("ug")
 ```
 
 \section{Publications \hspace{1cm} ORCID: 0000-0002-8609-0312}
@@ -261,114 +313,14 @@ Pokemón GO Study & \href{https://figshare.com/articles/dataset/Personality_prof
 \end{longtable}
 ```
 
-```{r classes at UNMSM, eval = F, include = F, echo = F}
-df <- get_cv_sheet('classes') |> filter(univ == "UNMSM") |>
-    mutate(
-      course = paste0(name),
-      role = type,
-      semester = ifelse(semester == 'Aut20', 'Aut20', semester)
-    ) |> 
-    select(
-      Semester = semester,
-      Course = course,
-      Role = role,
-      Level = level
-    ) 
-
-df |> 
-  kbl(booktabs = TRUE, escape = FALSE, linesep = "")
-```
-
-```{r classes at ucsur, eval = F, include = F, echo = F}
-df <- get_cv_sheet('classes') |> filter(univ == "UCSUR") |>
-    mutate(
-      course = paste0(name),
-      role = type,
-      semester = ifelse(semester == '
-                        Sum25', 'Sum25', semester)
-    ) |> 
-    select(
-      Semester = semester,
-      Course = course,
-      Role = role,
-      Level = level
-    ) 
-
-df |> 
-  kbl(booktabs = TRUE, escape = FALSE, linesep = "")
-```
-
-```{r classes uw, eval = F, include = F, echo = F}
-df <- get_cv_sheet('classes') |> filter(univ == "UW") |>
-    mutate(
-      course = paste0(name),
-      role = type, 
-      semester = ifelse(semester == 'Spr24', 'Spr24', semester)
-      ) |> 
-    select(
-      Semester = semester,
-      Course = course,
-      Role = role,
-      Level = level
-    ) 
-
-df |> 
-  kbl(booktabs = TRUE, escape = FALSE, linesep = "")
-```
-
-```{r other teaching, eval = F, include = F, echo = F}
-teaching <- get_cv_sheet('teaching') |>
-  arrange(desc(date)) |> 
-  mutate(
-    with = ifelse(is.na(with), '', paste0(', with ', with)),
-    title = paste0(enquote(title), with),
-    date = paste0(format(as.Date(date), format = "%b %d, %Y"), '.'),
-    url = ifelse(is.na(url), NA, markdown_url(url)),
-    date = ifelse(is.na(url), date, paste0(date, '. ', url)), 
-    citation = paste(title, host, location, date, sep = '. ')
-  )
-```
-
-```{r seminars, eval = F, include = F, echo = F}
-#| results: asis
-make_ordered_list_filtered(teaching, "seminar")
-```
-
-\section{Advising}
+\section{Licensure and Certification}
 \vspace{-1.5em}
 \textcolor{darkgray}{\rule{\textwidth}{0.5pt}}
 
-```{r}
-#| name: pooling_advising_data
-advisees <- get_cv_sheet('advising') |>
-  arrange(date_start) |> 
-  mutate(
-    date = paste0(' (',  date_start, ' to ', date_stop, ').'),
-    citation = ifelse(
-      is.na(title), name, paste0(name, ', ', enquote(title))
-    ),
-    citation = paste0(citation, ', ', institution, ' ', date), 
-    citation = ifelse(
-        is.na(defense_date), citation, 
-        paste0(citation, ' _Defense date: ', defense_date, '_.')
-    )
-  )
-```
-\subsection{Undergraduate Students - Current}
-```{r}
-#| results: asis
-advisees |> 
-  filter(complete == 0) |>
-  make_ordered_list_filtered("ug")
-```
-
-\section{Licensure and certification}
-\vspace{-1.5em}
-\textcolor{darkgray}{\rule{\textwidth}{0.5pt}}
-
-\begin{longtable}{>{\raggedright\arraybackslash}p{1cm} p{17cm}}
-\textbf{2021} & Peruvian College of Physicians, Membership No. 94534 \\
-\textbf{2024} & National Registry of Investigators, RENACYT-CONCYTEC, Investigator Level VII (P0160977) \\
+\begin{longtable}{>{\raggedright\arraybackslash}p{17cm} p{1cm}}
+Peruvian College of Physicians, Membership No. 94534 & \textbf{2021} \\
+CITI Program, Good Clinical Practice and ICH, Credential ID 65079238 & \textbf{2023} \\
+National Registry of Investigators \textsc{(RENACYT-CONCYTEC)}, Investigator Level VII (P0160977) & \textbf{2024} \\
 \end{longtable}
 
 ```{r, eval = F, include = F, echo = F}
@@ -403,13 +355,6 @@ advisees |>
 
 \end{longtable}
 ```
-
-\section{Other activities}
-\vspace{-1.5em}
-\textcolor{darkgray}{\rule{\textwidth}{0.5pt}}
-\begin{longtable}{>{\raggedright\arraybackslash}p{3.5cm} p{14.5cm}}
-\textbf{Jan 2025 – current} & \textbf{Lecturer: Introduction to Epidemiology.} Universidad Científica del Sur. I'm teaching fourth-year medical students basic concepts of clinical epidemiology with a focus on basic study designs and identification of bias.
-\end{longtable}
 
 \section{Memberships in Professional Organizations}
 \vspace{-1.5em}
