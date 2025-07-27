@@ -94,7 +94,10 @@ make_grants_table <- function(df, cat) {
                             ifelse(.data$coi_1 == "", "", 
                                    paste0(", ", .data$coi_1)),
                             ifelse(.data$coi_2 == "", "", 
-                                   paste0(", ", .data$coi_2)))
+                                   paste0(", ", .data$coi_2))),
+      budget = paste0(ifelse(.data$budget_currency == "USD",
+                             "$", ""),
+                      .data$budget_total)
     )
     
   for (i in seq_len(nrow(grants_filtered))) {
