@@ -81,3 +81,48 @@ enquote <- function(x) {
 markdown_url <- function(url) {
   return(paste0('[', url, '](', url,')'))
 }
+
+make_grants_table <- function(df, cat) {
+  grants_filtered <- df |>
+    filter(.data$status == cat) |>
+    mutate(
+      funder = paste0(.data$funder_2, 
+                      ifelse(.data$funder_1 == "", "", 
+                             paste0(", ", .data$funder_1))),
+      period = paste0(.data$year_start, " – ", .data$year_end),
+      investigators = paste0(.data$pi, 
+                            ifelse(.data$coi_1 == "", "", 
+                                   paste0(", ", .data$coi_1)),
+                            ifelse(.data$coi_2 == "", "", 
+                                   paste0(", ", .data$coi_2)))
+    )
+    
+  for (i in seq_len(nrow(grants_filtered))) {
+    grant <- grants_filtered[i, ]
+    
+    grant_table <- data.frame(
+      Category = c("Funder:", "Project Code:", "Title:", "Investigators:",
+                   "Period:", "Budget:", "Role:"),
+      Details = c(grant$funder, grant$project_code, grant$title, 
+                  grant$investigators, grant$period, grant$budget, 
+                  grant$role),
+      stringsAsFactors = FALSE
+    )
+    
+    print(kableExtra::kable(grant_table, 
+      format = "latex",
+      col.names = NULL,
+      align = c("l", "l"),
+      booktabs = TRUE,
+      vline = "",
+      bottomrule = "",
+      toprule = "",
+      midrule = "",
+      linesep = ""
+    ))
+    
+    if (i < nrow(grants_filtered)) {
+      cat("\n")
+    }
+  }
+}
