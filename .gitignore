@@ -6,4 +6,4 @@
 CLAUDE.md
 *.log
 cite_scrape.R
-text.dump.txt
+text_dump.txt
