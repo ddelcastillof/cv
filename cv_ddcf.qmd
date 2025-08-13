@@ -64,7 +64,7 @@ gscholar_page <- paste0("https://scholar.google.com/citations?user=", gscholar_i
 \textcolor{darkgray}{\rule{\textwidth}{0.5pt}}
 
 \begin{longtable}{p{14cm}>{\raggedleft\arraybackslash}p{4cm}}
-\textbf{Master of Public Health (MPH)} & \textbf{Sep 2023 – Jun 2025} \\
+\textbf{Master of Public Health (MPH) – Epidemiology} & \textbf{Sep 2023 – Jun 2025} \\
 \textsc{University of Washington} & \textsc{Seattle – USA}\\
 & \\
 \textbf{Medical Doctor (MD)} & \textbf{Mar 2014 – Dec 2020} \\
@@ -89,7 +89,7 @@ gscholar_page <- paste0("https://scholar.google.com/citations?user=", gscholar_i
 \textsc{Institute for Health Metrics and Evaluation} & \textsc{Seattle - USA} \\
 \multicolumn{2}{p{18cm}}{%
 \begin{itemize}
-  \item Developed Bayesian priors for a Bayesian hierarchical meta‑regression model to estimate prevalence, incidence, and clinical‐outcome occurrence of lower‑respiratory‑tract infections across 80 countries, informing GBD 2025 inputs.
+  \item Developed Bayesian priors for a Bayesian hierarchical meta‑regression model to estimate prevalence, incidence, and clinical‐outcome occurrence of lower respiratory tract infections across 80 countries, informing GBD 2025 inputs.
   \item Executed a Gibbs sampler using data from a meta-analysis to estimate the proportion of overlap between socially excluded groups in 22 high-income countries.
   \item Estimated population-attributable fractions and standardized mortality ratios using the overlap between socially-excluded groups.
 \end{itemize}
@@ -321,4 +321,6 @@ Peruvian College of Physicians, Membership No. 94534 & \textbf{2021} \\
  \item Peruvian College of Physicians (2021 - Current)
  \item Consortium of Universities for Global Health (2023 - Current)
  \item America’s Network for Chronic Disease Surveillance (2025 - Current)
+ \item Global Burden of Disease Study Collaborator (2025 – Current)
+
 \end{itemize}
