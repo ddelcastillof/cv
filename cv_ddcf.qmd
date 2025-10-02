@@ -64,10 +64,10 @@ gscholar_page <- paste0("https://scholar.google.com/citations?user=", gscholar_i
 \textcolor{darkgray}{\rule{\textwidth}{0.5pt}}
 
 \begin{longtable}{p{14cm}>{\raggedleft\arraybackslash}p{4cm}}
-\textbf{Master of Public Health (MPH) – Epidemiology} & \textbf{Sep 2023 – Jun 2025} \\
+\textbf{Master of Public Health (MPH)} & \textbf{Sep 2023 – Jun 2025} \\
 \textsc{University of Washington} & \textsc{Seattle – USA}\\
 & \\
-\textbf{Medical Doctor (MD)} & \textbf{Mar 2014 – Dec 2020} \\
+\textbf{Doctor of Medicine (MD)} & \textbf{Mar 2014 – Aug 2021} \\
 \textsc{Universidad Nacional Mayor de San Marcos} & \textsc{Lima – Peru}\\
 \end{longtable}
 
@@ -77,7 +77,10 @@ gscholar_page <- paste0("https://scholar.google.com/citations?user=", gscholar_i
 
 \begin{longtable}{p{14cm}>{\raggedleft\arraybackslash}p{4cm}}
 \textbf{Professional Certificate in Clinical Research} & \textbf{Sep 2021 – Apr 2022} \\
-\textsc{Universidad Peruana Cayetano Heredia} & \textsc{Lima – Peru}\\
+\textsc{Universidad Peruana Cayetano Heredia} & \textsc{Lima – Peru} \\
+& \\
+\textbf{Non-Certificate Trainee in Demographic Methods} & \textbf{Sep 2024 – Current} \\
+\textsc{Center for Studies in Demography and Ecology – University of Washington} & \textsc{Seattle – USA} \\
 \end{longtable}
 
 \section{Professional Experience}
@@ -89,9 +92,9 @@ gscholar_page <- paste0("https://scholar.google.com/citations?user=", gscholar_i
 \textsc{Institute for Health Metrics and Evaluation} & \textsc{Seattle - USA} \\
 \multicolumn{2}{p{18cm}}{%
 \begin{itemize}
-  \item Developed Bayesian priors for a Bayesian hierarchical meta‑regression model to estimate prevalence, incidence, and clinical‐outcome occurrence of lower respiratory tract infections across 80 countries, informing GBD 2025 inputs.
-  \item Executed a Gibbs sampler using data from a meta-analysis to estimate the proportion of overlap between socially excluded groups in 22 high-income countries.
-  \item Estimated population-attributable fractions and standardized mortality ratios using the overlap between socially-excluded groups.
+  \item Developed hyperparameters for a Bayesian hierarchical meta‑regression model to estimate prevalence, incidence, and clinical‐outcome occurrence of lower respiratory tract infections across 80 countries.
+  \item Executed an MCMC using data-driven priors and uncertainty propagation to estimate the probabilistic overlap between inclusion health groups in 22 high-income countries.
+  \item Estimated population-attributable fractions and standardized mortality ratios using the overlap between inclusion health groups.
 \end{itemize}
 } \\
 \\
@@ -109,9 +112,9 @@ gscholar_page <- paste0("https://scholar.google.com/citations?user=", gscholar_i
 \textsc{Health Population Research Center – University of Washington} & \textsc{Seattle - USA} \\
 \multicolumn{2}{p{18cm}}{%
 \begin{itemize}
-  \item Maintained and stored sociodemographic and utilization data as part of a clinical trial post-assessment survey using electronic data capture platforms.
+  \item Maintained and stored sociodemographic and utilization data as part of a clinical trial post-assessment survey on school-age children using electronic data capture platforms.
   \item Translated IRB submission materials from Spanish to English for the Alzheimer’s Disease Research Center.
-  \item Analyzed engagement and outreach data into visualization tools and summary tables, enabling program managers to make adjustments to recruitment strategies.
+  \item Analyzed engagement and outreach data from clinical trials into visualization tools and summary tables, enabling program managers to make adjustments to recruitment strategies.
 \end{itemize}
 } \\
 \\
@@ -119,8 +122,8 @@ gscholar_page <- paste0("https://scholar.google.com/citations?user=", gscholar_i
 \textsc{Health Technology Assessment and Research Institute} & \textsc{Lima – Peru}\\
 \multicolumn{2}{p{18cm}}{%
 \begin{itemize}
-  \item Integrated surveillance and clinical data from 80 Peruvian hospitals into statistical burden models to support national health technology assessment and prioritization processes.
-  \item Conducted budget impact and cost-effectiveness models that prioritized oncological interventions worth \$1 M+.
+  \item Integrated surveillance and clinical data from Peruvian hospitals into statistical burden models to support national health technology assessment and prioritization processes.
+  \item Conducted budget impact and cost-effectiveness models that prioritized oncological interventions worth over \$1 M+.
   \item Synthesized findings into executive reports aimed at policymakers and partners, guiding reimbursement policy for Peru's Social Security System.
 \end{itemize}
 } \\
@@ -130,8 +133,8 @@ gscholar_page <- paste0("https://scholar.google.com/citations?user=", gscholar_i
 \multicolumn{2}{p{18cm}}{%
 \begin{itemize}
   \item Coordinated 2 workshops per site with community health workers in 3 Peruvian regions to co-design a mobile application for early detection of cognitive impairment.
-  \item Contributed to research grant proposals in noncommunicable disease epidemiology by conducting preliminary data analysis on clinical, demographic, and biological biomarkers, supporting proposals worth \$300\,k in competitive funding.
-  \item Co-authored 5 scientific manuscripts, which included longitudinal data analyses, systematic reviews, and machine learning models.
+  \item Contributed to research grant proposals in noncommunicable disease epidemiology for pediatric and adult populations by conducting preliminary data analysis of clinical and demographic data, supporting research proposals.
+  \item Co-authored 5 scientific manuscripts, including longitudinal data analyses, systematic reviews, and machine learning models.
 \end{itemize}
 } \\
 \end{longtable}
@@ -140,25 +143,14 @@ gscholar_page <- paste0("https://scholar.google.com/citations?user=", gscholar_i
 \vspace{-1.5em}
 \textcolor{darkgray}{\rule{\textwidth}{0.5pt}}
 Broad experience in the health data lifecycle: data collection, management, wrangling, querying, analysis, \& visualization.
-\begin{minipage}[c]{0.65\textwidth}
 \vspace{1pt}
-\begin{itemize}
-\item \textbf{Programming:} SQL (MySQL), Python, R programming
-\item \textbf{Cloud Computing:} HPC (Slurm), Linux environments (bash)
-\item \textbf{Tools:} VS Code, Jupyter Lab, Quarto, Markdown, \LaTeX, Shiny (R), ArcGIS
-\item \textbf{Version control:} Git (GitHub, Bitbucket)
-\item \textbf{Libraries and packages:} \texttt{tidyverse}, \texttt{ggplot2}, \texttt{meta}/\texttt{metafor}, \texttt{lme4}, \texttt{survival}, \texttt{geepack}, \texttt{gam}, \texttt{lavaan}, \texttt{sf}, \texttt{rJAGS}, \texttt{rstan}, Pandas, Matplotlib, NumPy, MR-BRT (GBD Study estimation), amongst other tools.
-\end{itemize}
-\end{minipage}
-\begin{minipage}[c]{0.35\textwidth}
-\begin{itemize}
-\item Fluency in English \& Spanish
-\item Team work \& collaboration
-\item Problem solving
-\item Science communication
-\item Mentorship
-\end{itemize}
-\end{minipage}
+\textbf{Programming:} R, Stata, SQL (MySQL), Python \
+\textbf{Cloud Computing:} Slurm HPC, Containerization (Docker/Apptainer), Linux environments (bash) \
+\textbf{Tools:} VS Code, Jupyter, Quarto, \LaTeX, Shiny (R), Git version control (GitHub, Bitbucket) \
+\textbf{Packages:} \texttt{tidyverse}, \texttt{ggplot2}, \texttt{sf}, \texttt{survey}, \texttt{lme4}, \texttt{survival}, \texttt{cmprsk}, \texttt{mice}, \texttt{geepack}, \texttt{metafor}, \texttt{rstan}, \texttt{crosswalk}, \texttt{pandas}, \texttt{NumPy}, \texttt{Matplotlib}, \texttt{pytest}, MR-BRT \
+\textbf{Languages:} English (fluent), Spanish (native) \
+\textbf{Core Competencies:} Data analysis, teamwork, problem solving, science communication, mentorship
+
 
 \section{Academic Honours and Awards}
 \vspace{-1.5em}
@@ -202,14 +194,13 @@ grants <- get_cv_sheet('grants') |>
 #| results: asis
 make_grants_table(grants, "concluded")
 ```
-\
-\
+
 \subsection{Teaching and Lecturer Contributions} <!-- Improve the pull method from the cv database -->
 \begin{longtable}{>{\raggedright\arraybackslash}p{14cm}>{\raggedleft\arraybackslash}p{4cm}}
 \textbf{Lecturer} & \textbf{Mar 2025 – Current} \\
 \textsc{School of Medicine – Universidad Científica del Sur} & \textsc{Lima – Peru} \\
 \textsc{Introduction to Epidemiology:} I teach three sections of \textasciitilde 15 fourth-year medical students each, focusing on basic clinical epidemiology concepts, including study designs, bias identification, \& basic epidemiological surveillance concepts. & \\
-& \\
+\newpage
 \textbf{Teaching Assistant} & \textbf{Mar 2024 – Jun 2024} \\
 \textsc{College of Arts \& Sciences – University of Washington} & \textsc{Seattle – USA} \\
 \textsc{Introduction to Molecular and Cellular Biology:} Led two laboratory practice sessions with \textasciitilde 25 undergraduate students each, covering fundamental molecular and cellular biology experiments. & \\
@@ -309,7 +300,7 @@ National Registry of Investigators \textsc{(RENACYT-CONCYTEC)}, Investigator Lev
 CITI Program, Good Clinical Practice and ICH, Credential ID 65079238 & \textbf{2023} \\
 CITI Program, Human Subjects Learners, Credential ID 65079240 & \textbf{2023} \\
 CITI Program, Biomedical Responsible Conduct of Research, Credential ID 65079239 & \textbf{2023} \\
-Peruvian College of Physicians, Membership No. 94534 & \textbf{2021} \\
+Peruvian Medical Board, License No. 94534 & \textbf{2021} \\
 \end{longtable}
 
 \section{Memberships in Professional Organizations}
