@@ -1,6 +1,6 @@
 # Academic CV
 
-Dynamic academic CV built with Quarto and R. Automatically pulls publications from Google Sheets and citation metrics from Google Scholar. The bib folder containt BibTeX files from publications imported with [Paperpile](https://paperpile.com/).
+Dynamic academic CV built with Quarto and R. Automatically pulls publications from Google Sheets and citation metrics from Google Scholar. The bib folder contains BibTeX files from publications imported with [Paperpile](https://paperpile.com/).
 
 ## Build
 
