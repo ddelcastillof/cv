@@ -40,7 +40,7 @@ fig.retina = 3
 source("functions.R")
 
 # Store IDs
-gscholar_id <- "iNdNU5QAAAAJ"
+gscholar_id <- "zC1dAvcAAAAJ"
 gscholar_page <- paste0("https://scholar.google.com/citations?user=", gscholar_id)
 ```
 
@@ -78,9 +78,6 @@ gscholar_page <- paste0("https://scholar.google.com/citations?user=", gscholar_i
 \begin{longtable}{p{14cm}>{\raggedleft\arraybackslash}p{4cm}}
 \textbf{Professional Certificate in Clinical Research} & \textbf{Sep 2021 – Apr 2022} \\
 \textsc{Universidad Peruana Cayetano Heredia} & \textsc{Lima – Peru} \\
-& \\
-\textbf{Non-Certificate Trainee in Demographic Methods} & \textbf{Sep 2024 – Current} \\
-\textsc{Center for Studies in Demography and Ecology – University of Washington} & \textsc{Seattle – USA} \\
 \end{longtable}
 
 \section{Professional Experience}
@@ -144,7 +141,7 @@ gscholar_page <- paste0("https://scholar.google.com/citations?user=", gscholar_i
 \textcolor{darkgray}{\rule{\textwidth}{0.5pt}}
 Broad experience in the health data lifecycle: data collection, management, wrangling, querying, analysis, \& visualization.
 \vspace{1pt}
-\textbf{Programming:} R, Stata, SQL (MySQL), Python \
+\textbf{Programming languages:} R, Python, C++, Stata, SQL (MySQL) \
 \textbf{Cloud Computing:} Slurm HPC, Containerization (Docker/Apptainer), Linux environments (bash) \
 \textbf{Tools:} VS Code, Jupyter, Quarto, \LaTeX, Shiny (R), Git version control (GitHub, Bitbucket) \
 \textbf{Packages:} \texttt{tidyverse}, \texttt{ggplot2}, \texttt{sf}, \texttt{survey}, \texttt{lme4}, \texttt{survival}, \texttt{cmprsk}, \texttt{mice}, \texttt{geepack}, \texttt{metafor}, \texttt{rstan}, \texttt{crosswalk}, \texttt{pandas}, \texttt{NumPy}, \texttt{Matplotlib}, \texttt{pytest}, MR-BRT \

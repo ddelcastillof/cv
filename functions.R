@@ -8,17 +8,28 @@ library(kableExtra)
 gs4_deauth()
 
 gscholar_stats <- function(url) {
-  cites <- get_cites(url)
-  return(paste(
-    '**Citations**', cites$citations, '|',
-    '**h-index**',   cites$hindex, '|',
-    '**i10-index**', cites$i10index
-  ))
+  tryCatch({
+    cites <- get_cites(url)
+    return(paste(
+      '**Citations**', cites$citations, '|',
+      '**h-index**',   cites$hindex, '|',
+      '**i10-index**', cites$i10index
+    ))
+  }, error = function(e) {
+    warning("Failed to fetch Google Scholar statistics. Using placeholder.")
+    return("*Google Scholar statistics temporarily unavailable*")
+  })
 }
 
 get_cites <- function(url) {
-  html <- xml2::read_html(url)
+  # Adding user agent to avoid being blocked
+  html <- xml2::read_html(url, ssl_verifypeer = FALSE)
   node <- rvest::html_nodes(html, xpath='//*[@id="gsc_rsb_st"]')
+
+  if (length(node) == 0) {
+    stop("Could not find Google Scholar statistics element")
+  }
+
   cites_df <- rvest::html_table(node)[[1]]
   cites <- data.frame(t(as.data.frame(cites_df)[,2]))
   names(cites) <- c('citations', 'hindex', 'i10index')
