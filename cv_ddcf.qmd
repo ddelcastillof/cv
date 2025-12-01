@@ -85,6 +85,15 @@ gscholar_page <- paste0("https://scholar.google.com/citations?user=", gscholar_i
 \textcolor{darkgray}{\rule{\textwidth}{0.5pt}}
 
 \begin{longtable}{p{14cm}>{\raggedleft\arraybackslash}p{4cm}}
+\textbf{Research Scientist} & \textbf{Jul 2025 – Nov 2025} \\
+\textsc{UW Medicine Diabetes Institute – Bjornstad Lab} & \textsc{Seattle - USA} \\
+\multicolumn{2}{p{18cm}}{%
+\begin{itemize}
+ \item Applied Cox proportional hazards models and differential expression analysis to metabolomic data to quantify diabetic complication risk and cardio-kidney-metabolic syndrome progression in youth-onset type 2 diabetes participants.
+ \item Performed a network analysis using MetaboAnalyst to identify key metabolic pathways associated with CKM progression on youth-onset type 2 diabetes participants.
+\end{itemize}
+} \\
+\\
 \textbf{Graduate Research Assistant} & \textbf{Jul 2024 – Jun 2025} \\
 \textsc{Institute for Health Metrics and Evaluation} & \textsc{Seattle - USA} \\
 \multicolumn{2}{p{18cm}}{%
