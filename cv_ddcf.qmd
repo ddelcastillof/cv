@@ -59,123 +59,122 @@ gscholar_page <- paste0("https://scholar.google.com/citations?user=", gscholar_i
 \vspace{-2.5pt}
 \end{center}
 
-\section{Education}
+\section{Formación Académica}
 \vspace{-1.5em}
 \textcolor{darkgray}{\rule{\textwidth}{0.5pt}}
 
 \begin{longtable}{p{14cm}>{\raggedleft\arraybackslash}p{4cm}}
-\textbf{Master of Public Health (MPH)} & \textbf{Sep 2023 – Jun 2025} \\
+\textbf{Maestría en Salud Pública (MPH)} & \textbf{Sep 2023 – Jun 2025} \\
 \textsc{University of Washington} & \textsc{Seattle – USA}\\
 & \\
-\textbf{Doctor of Medicine (MD)} & \textbf{Mar 2014 – Aug 2021} \\
-\textsc{Universidad Nacional Mayor de San Marcos} & \textsc{Lima – Peru}\\
+\textbf{Médico Cirujano (MD)} & \textbf{Mar 2014 – Aug 2021} \\
+\textsc{Universidad Nacional Mayor de San Marcos} & \textsc{Lima – Perú}\\
 \end{longtable}
 
-\section{Additional Education}
+\section{Formación Adicional}
 \vspace{-1.5em}
 \textcolor{darkgray}{\rule{\textwidth}{0.5pt}}
 
 \begin{longtable}{p{14cm}>{\raggedleft\arraybackslash}p{4cm}}
-\textbf{Professional Certificate in Clinical Research} & \textbf{Sep 2021 – Apr 2022} \\
-\textsc{Universidad Peruana Cayetano Heredia} & \textsc{Lima – Peru} \\
+\textbf{Diplomado en Investigación Clínica} & \textbf{Sep 2021 – Apr 2022} \\
+\textsc{Universidad Peruana Cayetano Heredia} & \textsc{Lima – Perú} \\
 \end{longtable}
 
-\section{Professional Experience}
+\section{Experiencia Profesional}
 \vspace{-1.5em}
 \textcolor{darkgray}{\rule{\textwidth}{0.5pt}}
 
 \begin{longtable}{p{14cm}>{\raggedleft\arraybackslash}p{4cm}}
-\textbf{Research Scientist} & \textbf{Jul 2025 – Nov 2025} \\
+\textbf{Investigador} & \textbf{Jul 2025 – Nov 2025} \\
 \textsc{UW Medicine Diabetes Institute – Bjornstad Lab} & \textsc{Seattle - USA} \\
 \multicolumn{2}{p{18cm}}{%
 \begin{itemize}
- \item Applied Cox proportional hazards models and differential expression analysis to metabolomic data to quantify diabetic complication risk and cardio-kidney-metabolic syndrome progression in youth-onset type 2 diabetes participants.
- \item Performed a network analysis using MetaboAnalyst to identify key metabolic pathways associated with CKM progression on youth-onset type 2 diabetes participants.
+ \item Apliqué modelos de riesgos proporcionales de Cox y análisis de expresión diferencial en datos metabolómicos para cuantificar el riesgo de complicaciones diabéticas y la progresión del síndrome cardio–reno–metabólico en participantes con diabetes tipo 2 de inicio en la juventud.
+ \item Realicé un análisis de redes utilizando MetaboAnalyst para identificar las vías metabólicas clave asociadas con la progresión de CKM en participantes con diabetes tipo 2 de inicio en la juventud.
 \end{itemize}
 } \\
 \\
-\textbf{Graduate Research Assistant} & \textbf{Jul 2024 – Jun 2025} \\
+\textbf{Asistente de Investigación de Posgrado} & \textbf{Jul 2024 – Jun 2025} \\
 \textsc{Institute for Health Metrics and Evaluation} & \textsc{Seattle - USA} \\
 \multicolumn{2}{p{18cm}}{%
 \begin{itemize}
-  \item Developed hyperparameters for a Bayesian hierarchical meta‑regression model to estimate prevalence, incidence, and clinical‐outcome occurrence of lower respiratory tract infections across 80 countries.
-  \item Executed an MCMC using data-driven priors and uncertainty propagation to estimate the probabilistic overlap between inclusion health groups in 22 high-income countries.
-  \item Estimated population-attributable fractions and standardized mortality ratios using the overlap between inclusion health groups.
+  \item Desarrollé hiperparámetros para un modelo de meta–regresión jerárquico bayesiano con el fin de estimar prevalencia, incidencia y ocurrencia de desenlaces clínicos de infecciones del tracto respiratorio inferior en 80 países.
+  \item Ejecuté cadenas MCMC utilizando priors basados en datos y propagación de la incertidumbre para estimar el traslape probabilístico entre grupos de inclusión social en 22 países de altos ingresos.
+  \item Estimé fracciones atribuibles poblacionales y razones de mortalidad estandarizadas a partir del traslape entre grupos de inclusión social.
 \end{itemize}
 } \\
 \\
-\textbf{Graduate Research Assistant} & \textbf{Jun 2024 – Mar 2025} \\
+\textbf{Asistente de Investigación de Posgrado} & \textbf{Jun 2024 – Mar 2025} \\
 \textsc{Department of Global Health – University of Washington} & \textsc{Seattle - USA} \\
 \multicolumn{2}{p{18cm}}{%
 \begin{itemize}
-  \item Designed a study protocol to assess the effectiveness of implementation strategies for pediatric burn care in a Peruvian healthcare setting.
-  \item Coordinated a mixed-methods study to explore barriers and facilitators in >10 low-resource Peruvian hospitals.
-  \item Co-developed communication strategies with 2 stakeholder organizations to disseminate complex findings among healthcare policymakers.
+  \item Diseñé un protocolo de estudio para evaluar la efectividad de estrategias de implementación para la atención de quemaduras pediátricas en establecimientos de salud peruanos.
+  \item Coordiné un estudio de métodos mixtos para explorar barreras y facilitadores en más de 10 hospitales peruanos de bajos recursos.
+  \item Co–desarrollé estrategias de comunicación con 2 organizaciones de actores clave para difundir hallazgos complejos entre tomadores de decisión en salud.
 \end{itemize}
 } \\
 \\
-\textbf{Graduate Research Assistant}  & \textbf{Sep 2023 – Mar 2024} \\
+\textbf{Asistente de Investigación de Posgrado}  & \textbf{Sep 2023 – Mar 2024} \\
 \textsc{Health Population Research Center – University of Washington} & \textsc{Seattle - USA} \\
 \multicolumn{2}{p{18cm}}{%
 \begin{itemize}
-  \item Maintained and stored sociodemographic and utilization data as part of a clinical trial post-assessment survey on school-age children using electronic data capture platforms.
-  \item Translated IRB submission materials from Spanish to English for the Alzheimer’s Disease Research Center.
-  \item Analyzed engagement and outreach data from clinical trials into visualization tools and summary tables, enabling program managers to make adjustments to recruitment strategies.
-\end{itemize}
-} \\
-\\
-\textbf{Research Consultant} & \textbf{Jan 2023 – Jan 2024} \\
-\textsc{Health Technology Assessment and Research Institute} & \textsc{Lima – Peru}\\
-\multicolumn{2}{p{18cm}}{%
-\begin{itemize}
-  \item Integrated surveillance and clinical data from Peruvian hospitals into statistical burden models to support national health technology assessment and prioritization processes.
-  \item Conducted budget impact and cost-effectiveness models that prioritized oncological interventions worth over \$1 M+.
-  \item Synthesized findings into executive reports aimed at policymakers and partners, guiding reimbursement policy for Peru's Social Security System.
+  \item Mant tuve y almacené datos sociodemográficos y de utilización como parte de una encuesta de seguimiento posterior a un ensayo clínico en escolares, utilizando plataformas electrónicas de captura de datos.
+  \item Traduje materiales de sometimiento a comité de ética (IRB) del español al inglés para el Alzheimer’s Disease Research Center.
+  \item Analicé datos de participación y alcance de ensayos clínicos para generar herramientas de visualización y tablas resumen, permitiendo que los gestores de programa ajustaran las estrategias de reclutamiento.
 \end{itemize}
 } \\
 \newpage
-\textbf{Research Assistant} & \textbf{Mar 2019 – Aug 2023}\\
-\textsc{CRONICAS Center of Excellence in Chronic Diseases} & \textsc{Lima – Peru}\\
+\textbf{Consultor de Investigación} & \textbf{Ene 2023 – Ene 2024} \\
+\textsc{Health Technology Assessment and Research Institute} & \textsc{Lima – Perú}\\
 \multicolumn{2}{p{18cm}}{%
 \begin{itemize}
-  \item Coordinated 2 workshops per site with community health workers in 3 Peruvian regions to co-design a mobile application for early detection of cognitive impairment.
-  \item Contributed to research grant proposals in noncommunicable disease epidemiology for pediatric and adult populations by conducting preliminary data analysis of clinical and demographic data, supporting research proposals.
-  \item Co-authored 5 scientific manuscripts, including longitudinal data analyses, systematic reviews, and machine learning models.
+  \item Integré datos de vigilancia y datos clínicos de hospitales peruanos en modelos estadísticos de carga de enfermedad para apoyar los procesos nacionales de evaluación de tecnologías sanitarias y priorización.
+  \item Realicé análisis de impacto presupuestario y modelos de costo–efectividad que priorizaron intervenciones oncológicas por montos superiores a USD 1 millón.
+  \item Sinteticé los hallazgos en informes ejecutivos dirigidos a tomadores de decisión y socios, orientando la política de reembolso del Seguro Social de Salud del Perú.
+\end{itemize}
+} \\
+\\
+\textbf{Asistente de Investigación} & \textbf{Mar 2019 – Ago 2023}\\
+\textsc{CRONICAS Center of Excellence in Chronic Diseases} & \textsc{Lima – Perú}\\
+\multicolumn{2}{p{18cm}}{%
+\begin{itemize}
+  \item Coordiné 2 talleres por sede con agentes comunitarios de salud en 3 regiones peruanas para co–diseñar una aplicación móvil para la detección temprana del deterioro cognitivo.
+  \item Contribuí a propuestas de financiamiento en epidemiología de enfermedades no transmisibles en poblaciones pediátricas y adultas mediante análisis preliminares de datos clínicos y demográficos, apoyando el desarrollo de proyectos de investigación.
+  \item Fui coautor de 5 manuscritos científicos, incluyendo análisis de datos longitudinales, revisiones sistemáticas y modelos de aprendizaje automático.
 \end{itemize}
 } \\
 \end{longtable}
 
-\section{Skills}
+\section{Competencias}
 \vspace{-1.5em}
 \textcolor{darkgray}{\rule{\textwidth}{0.5pt}}
-Broad experience in the health data lifecycle: data collection, management, wrangling, querying, analysis, \& visualization.
-\vspace{1pt}
-\textbf{Programming languages:} R, Python, C++, Stata, SQL (MySQL) \
-\textbf{Cloud Computing:} Slurm HPC, Containerization (Docker/Apptainer), Linux environments (bash) \
-\textbf{Tools:} VS Code, Jupyter, Quarto, \LaTeX, Shiny (R), Git version control (GitHub, Bitbucket) \
-\textbf{Packages:} \texttt{tidyverse}, \texttt{ggplot2}, \texttt{sf}, \texttt{survey}, \texttt{lme4}, \texttt{survival}, \texttt{cmprsk}, \texttt{mice}, \texttt{geepack}, \texttt{metafor}, \texttt{rstan}, \texttt{crosswalk}, \texttt{pandas}, \texttt{NumPy}, \texttt{Matplotlib}, \texttt{pytest}, MR-BRT \
-\textbf{Languages:} English (fluent), Spanish (native) \
-\textbf{Core Competencies:} Data analysis, teamwork, problem solving, science communication, mentorship
+Amplia experiencia a lo largo del ciclo de vida de los datos en salud: recolección, gestión, limpieza, consulta, análisis y visualización de datos. \
+\textbf{Lenguajes de programación:} R, Python, C++, Stata, SQL (MySQL) \
+\textbf{Cloud Computing:} Slurm HPC, contenedores (Docker/Apptainer), entornos Linux (bash) \
+\textbf{Herramientas:} VS Code, Jupyter, Quarto, \LaTeX, Shiny (R), control de versiones con Git (GitHub, Bitbucket) \
+\textbf{Paquetes:} \texttt{tidyverse}, \texttt{ggplot2}, \texttt{sf}, \texttt{survey}, \texttt{lme4}, \texttt{survival}, \texttt{cmprsk}, \texttt{mice}, \texttt{geepack}, \texttt{metafor}, \texttt{rstan}, \texttt{crosswalk}, \texttt{pandas}, \texttt{NumPy}, \texttt{Matplotlib}, \texttt{pytest}, MR-BRT \
+\textbf{Idiomas:} Inglés (fluido), español (nativo) \
+\textbf{Competencias clave:} Análisis de datos, trabajo en equipo, resolución de problemas, comunicación científica, mentoría
 
 
-\section{Academic Honours and Awards}
+\section{Distinciones Académicas y Premios}
 \vspace{-1.5em}
 \textcolor{darkgray}{\rule{\textwidth}{0.5pt}}
 
 \begin{longtable}{>{\raggedright\arraybackslash}p{16.5cm} p{1.5cm}} %%Improve the cum laude line%%
-Young Lives Study Methodological Workshop Scholarship, \textsc{Group for the Analysis of Development (GRADE)} – Peru & \textbf{Jun 2018}\\
+Beca para el Taller Metodológico del Estudio Young Lives, \textsc{Grupo de Análisis para el Desarrollo (GRADE)} – Perú & \textbf{Jun 2018}\\
 & \\
-Medical School Graduation with Honors \textit{(Cum Laude)} (Grade: 17/20), \textsc{Universidad Nacional Mayor de San Marcos School of Medicine} – Peru & \textbf{Aug 2021}\\ 
+Graduación de la Escuela de Medicina con Honores \textit{(Cum Laude)} (Promedio: 17/20), \textsc{Facultad de Medicina, Universidad Nacional Mayor de San Marcos} – Perú & \textbf{Ago 2021}\\ 
 & \\
-Professional Certificate in Clinical Research Fogarty Scholarship, \textsc{Universidad Peruana Cayetano Heredia School of Public Health} – Peru & \textbf{Sep 2021}\\
+Beca Fogarty para el Diplomado en Investigación Clínica, \textsc{Escuela de Salud Pública, Universidad Peruana Cayetano Heredia} – Perú & \textbf{Sep 2021}\\
 & \\
-Department of Global Health Endowed Fellowship for Global Health Excellence, Equity and Impact, \textsc{University of Washington Department of Global Health} – USA & \textbf{Feb 2024}\\
+Beca del Departamento de Salud Global por Excelencia, Equidad e Impacto en Salud Global, \textsc{Department of Global Health, University of Washington} – USA & \textbf{Feb 2024}\\
 \end{longtable}
 
-\section{Research and Teaching}
+\section{Investigación y Docencia}
 \vspace{-1.5em}
 \textcolor{darkgray}{\rule{\textwidth}{0.5pt}}
-\subsection{Research Support}
+\subsection{Financiamiento de Investigación}
 ```{r importing grants, include = F, echo = F}
 grants <- get_cv_sheet('grants') |>
   mutate(
@@ -195,24 +194,23 @@ grants <- get_cv_sheet('grants') |>
     ) |> 
   arrange(desc(status))
 ```
-\subsubsection{Concluded Research Support}
+\subsubsection{Financiamiento de Investigación Concluido}
 ```{r grants_text}
 #| results: asis
 make_grants_table(grants, "concluded")
 ```
 
-\subsection{Teaching and Lecturer Contributions} <!-- Improve the pull method from the cv database -->
+\subsection{Actividades de Docencia}
 \begin{longtable}{>{\raggedright\arraybackslash}p{14cm}>{\raggedleft\arraybackslash}p{4cm}}
-\textbf{Lecturer} & \textbf{Mar 2025 – Current} \\
-\textsc{School of Medicine – Universidad Científica del Sur} & \textsc{Lima – Peru} \\
-\textsc{Introduction to Epidemiology:} I teach three sections of \textasciitilde 15 fourth-year medical students each, focusing on basic clinical epidemiology concepts, including study designs, bias identification, \& basic epidemiological surveillance concepts. & \\
-\newpage
-\textbf{Teaching Assistant} & \textbf{Mar 2024 – Jun 2024} \\
+\textbf{Docente a tiempo parcial} & \textbf{Mar 2025 – Actualidad} \\
+\textsc{Facultad de Medicina – Universidad Científica del Sur} & \textsc{Lima – Perú} \\
+\textsc{Introducción a la Epidemiología:} Dicto tres secciones de aproximadamente 15 estudiantes de cuarto año de medicina cada una, centradas en conceptos básicos de epidemiología clínica, incluyendo diseños de estudio, identificación de sesgos y conceptos básicos de vigilancia epidemiológica. & \\
+\textbf{Asistente de Docencia} & \textbf{Mar 2024 – Jun 2024} \\
 \textsc{College of Arts \& Sciences – University of Washington} & \textsc{Seattle – USA} \\
-\textsc{Introduction to Molecular and Cellular Biology:} Led two laboratory practice sessions with \textasciitilde 25 undergraduate students each, covering fundamental molecular and cellular biology experiments. & \\
+\textsc{Introducción a la Biología Molecular y Celular:} Lideré dos sesiones de laboratorio con aproximadamente 25 estudiantes de pregrado cada una, cubriendo experimentos fundamentales de biología molecular y celular. & \\
 \end{longtable}
 
-\subsection{Advising}
+\subsection{Asesoría}
 ```{r}
 #| name: pooling_advising_data
 advisees <- get_cv_sheet('advising') |>
@@ -229,7 +227,7 @@ advisees <- get_cv_sheet('advising') |>
     )
   )
 ```
-\subsubsection{Undergraduate Students}
+\subsubsection{Estudiantes de Pregrado}
 ```{r}
 #| results: asis
 advisees |> 
@@ -237,7 +235,7 @@ advisees |>
   make_bullet_list_filtered("ug")
 ```
 
-\section{Publications \hspace{1cm} ORCID: 0000-0002-8609-0312}
+\section{Publicaciones \hspace{1cm} ORCID: 0000-0002-8609-0312}
 \vspace{-1.5em}
 \textcolor{darkgray}{\rule{\textwidth}{0.5pt}}
 
@@ -245,7 +243,7 @@ advisees |>
 text_gs <- invisible(gscholar_stats(url = gscholar_page))
 ```
 
-\subsection{Google Scholar Statistics:} `r text_gs`
+\subsection{Estadísticas de Google Scholar:} `r text_gs`
 
 ```{r importing pubs, include = F, echo = F}
 pubs <- get_cv_sheet('pubs') %>%
@@ -273,51 +271,51 @@ pubs <- get_cv_sheet('pubs') %>%
   arrange(desc(year))
 ```
 
-\subsection{Peer-Reviewed Publications}
+\subsection{Publicaciones en Revistas Arbitradas}
 ```{r printing papers}
 #| results: asis
 make_bullet_list_filtered(pubs, "peer_reviewed")
 ```
 
-\subsection{Conference Abstracts}
+\subsection{Resúmenes en Congresos}
 ```{r printing abstracts, eval = T, include = T, echo = F}
 #| results: asis
 make_bullet_list_filtered(pubs, "conference")
 ```
 
-\subsection{Thesis and Dissertations}
+\subsection{Tesis y Disertaciones}
 ```{r printing theses, eval = T, include = T, echo = F}
 #| results: asis
 make_bullet_list_filtered(pubs, "thesis")
 ```
 
-\subsection{White Papers}
+\subsection{Documentos Técnicos (White Papers)}
 ```{r printing white papers, eval = T, include = T, echo = F}
 #| results: asis
 make_bullet_list_filtered(pubs, "white_paper")
 ```
 
-\section{Licensure and Certification}
+\section{Colegiaturas y Certificaciones}
 \vspace{-1.5em}
 \textcolor{darkgray}{\rule{\textwidth}{0.5pt}}
 
 \begin{longtable}{>{\raggedright\arraybackslash}p{17cm} p{1cm}}
-National Registry of Investigators \textsc{(RENACYT-CONCYTEC)}, Investigator Level VII (P0160977) & \textbf{2024} \\
-CITI Program, Good Clinical Practice and ICH, Credential ID 65079238 & \textbf{2023} \\
-CITI Program, Human Subjects Learners, Credential ID 65079240 & \textbf{2023} \\
-CITI Program, Biomedical Responsible Conduct of Research, Credential ID 65079239 & \textbf{2023} \\
-Peruvian Medical Board, License No. 94534 & \textbf{2021} \\
+Registro Nacional de Investigadores \textsc{(RENACYT-CONCYTEC)}, Investigador Nivel VII (P0160977) & \textbf{2024} \\
+CITI Program, Buenas Prácticas Clínicas e ICH, Credencial ID 65079238 & \textbf{2023} \\
+CITI Program, Investigación con Sujetos Humanos, Credencial ID 65079240 & \textbf{2023} \\
+CITI Program, Conducta Responsable de la Investigación Biomédica, Credencial ID 65079239 & \textbf{2023} \\
+Colegio Médico del Perú, Licencia N.º 94534 & \textbf{2021} \\
 \end{longtable}
 
-\section{Memberships in Professional Organizations}
+\section{Afiliaciones a Organizaciones Profesionales}
 \vspace{-1.5em}
 \textcolor{darkgray}{\rule{\textwidth}{0.5pt}}
 
 \begin{itemize}
- \item International Epidemiological Association (2020 - Current)
- \item Peruvian College of Physicians (2021 - Current)
- \item Consortium of Universities for Global Health (2023 - Current)
- \item America’s Network for Chronic Disease Surveillance (2025 - Current)
- \item Global Burden of Disease Study Collaborator (2025 – Current)
+ \item International Epidemiological Association (2020 – Actualidad)
+ \item Colegio Médico del Perú (2021 – Actualidad)
+ \item Consortium of Universities for Global Health (2023 – Actualidad)
+ \item America’s Network for Chronic Disease Surveillance (2025 – Actualidad)
+ \item Global Burden of Disease Study Collaborator (2025 – Actualidad)
 
 \end{itemize}
