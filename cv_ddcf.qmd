@@ -176,7 +176,7 @@ Department of Global Health Endowed Fellowship for Global Health Excellence, Equ
 \vspace{-1.5em}
 \textcolor{darkgray}{\rule{\textwidth}{0.5pt}}
 \subsection{Research Support}
-```{r importing grants, include = F, echo = F}
+```{r importing grants}
 grants <- get_cv_sheet('grants') |>
   mutate(
     status  = na_to_space(status),
@@ -237,6 +237,21 @@ advisees |>
   make_bullet_list_filtered("ug")
 ```
 
+\subsection{Peer-Review Contributions}
+```{r}
+#| name: peer_review
+peer_reviews <- get_cv_sheet('reviews') |>
+  mutate(
+    category = paste0(category),
+    event = paste0(event))
+```
+
+```{r}
+#| name: peer_review_text
+#| results: asis
+make_review_table(peer_reviews)
+```
+
 \section{Publications \hspace{1cm} ORCID: 0000-0002-8609-0312}
 \vspace{-1.5em}
 \textcolor{darkgray}{\rule{\textwidth}{0.5pt}}
@@ -269,7 +284,7 @@ pubs <- get_cv_sheet('pubs') %>%
       category == "peer_reviewed" ~ paste(author, year, title, journal, number, doi),
       category == "thesis" ~ paste(author, year, title, journal, organization)
     )
-  ) %>% 
+  ) |> 
   arrange(desc(year))
 ```
 
@@ -319,5 +334,4 @@ Peruvian Medical Board, License No. 94534 & \textbf{2021} \\
  \item Consortium of Universities for Global Health (2023 - Current)
  \item America’s Network for Chronic Disease Surveillance (2025 - Current)
  \item Global Burden of Disease Study Collaborator (2025 – Current)
-
 \end{itemize}
