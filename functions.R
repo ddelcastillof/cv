@@ -140,3 +140,34 @@ make_grants_table <- function(df, cat) {
     }
   }
 }
+
+make_review_table <- function(df) {
+  reviews <- df |>
+  filter(is.na(category) == FALSE)
+
+  for (i in seq_len(nrow(reviews))) {
+    review <- reviews[i, ]
+
+    review_table <- data.frame(
+      Category = review$category,
+      Event = review$event,
+      stringsAsFactors = FALSE
+    )
+
+    print(kableExtra::kable(review_table,
+      format = "latex",
+      col.names = NULL,
+      align = c("l", "l"),
+      booktabs = TRUE,
+      vline = "",
+      bottomrule = "",
+      toprule = "",
+      midrule = "",
+      linesep = ""
+    ))
+
+    if (i < nrow(reviews)) {
+      cat("\n")
+    }
+  }
+}
