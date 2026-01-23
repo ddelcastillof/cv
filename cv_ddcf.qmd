@@ -85,12 +85,11 @@ gscholar_page <- paste0("https://scholar.google.com/citations?user=", gscholar_i
 \textcolor{darkgray}{\rule{\textwidth}{0.5pt}}
 
 \begin{longtable}{p{14cm}>{\raggedleft\arraybackslash}p{4cm}}
-\textbf{Research Scientist} & \textbf{Jul 2025 – Nov 2025} \\
-\textsc{UW Medicine Diabetes Institute – Bjornstad Lab} & \textsc{Seattle - USA} \\
+\textbf{Research Assistant} & \textbf{Dec 2025 – Current} \\
+\textsc{School of Health and Wellbeing – University of Glasgow} & \textsc{Glasgow - UK} \\
 \multicolumn{2}{p{18cm}}{%
 \begin{itemize}
- \item Applied Cox proportional hazards models and differential expression analysis to metabolomic data to quantify diabetic complication risk and cardio-kidney-metabolic syndrome progression in youth-onset type 2 diabetes participants.
- \item Performed a network analysis using MetaboAnalyst to identify key metabolic pathways associated with CKM progression on youth-onset type 2 diabetes participants.
+ \item Estimating the causal effects of unemployement on physical and mental health outcomes using g-methods with administrative data.
 \end{itemize}
 } \\
 \\
@@ -150,7 +149,7 @@ gscholar_page <- paste0("https://scholar.google.com/citations?user=", gscholar_i
 \textcolor{darkgray}{\rule{\textwidth}{0.5pt}}
 Broad experience in the health data lifecycle: data collection, management, wrangling, querying, analysis, \& visualization.
 \vspace{1pt}
-\textbf{Programming languages:} R, Python, C++, Stata, SQL (MySQL) \
+\textbf{Programming languages:} R, Python, Stata, SQL (MySQL) \
 \textbf{Cloud Computing:} Slurm HPC, Containerization (Docker/Apptainer), Linux environments (bash) \
 \textbf{Tools:} VS Code, Jupyter, Quarto, \LaTeX, Shiny (R), Git version control (GitHub, Bitbucket) \
 \textbf{Packages:} \texttt{tidyverse}, \texttt{ggplot2}, \texttt{sf}, \texttt{survey}, \texttt{lme4}, \texttt{survival}, \texttt{cmprsk}, \texttt{mice}, \texttt{geepack}, \texttt{metafor}, \texttt{rstan}, \texttt{crosswalk}, \texttt{pandas}, \texttt{NumPy}, \texttt{Matplotlib}, \texttt{pytest}, MR-BRT \
@@ -200,7 +199,7 @@ grants <- get_cv_sheet('grants') |>
 #| results: asis
 make_grants_table(grants, "concluded")
 ```
-
+\
 \subsection{Teaching and Lecturer Contributions} <!-- Improve the pull method from the cv database -->
 \begin{longtable}{>{\raggedright\arraybackslash}p{14cm}>{\raggedleft\arraybackslash}p{4cm}}
 \textbf{Lecturer} & \textbf{Mar 2025 – Current} \\
@@ -256,11 +255,10 @@ make_review_table(peer_reviews)
 \vspace{-1.5em}
 \textcolor{darkgray}{\rule{\textwidth}{0.5pt}}
 
-```{r gstext, include = F, echo = F, eval = T}
+```{r gstext, include = F, echo = F, eval = F}
 text_gs <- invisible(gscholar_stats(url = gscholar_page))
-```
-
 \subsection{Google Scholar Statistics:} `r text_gs`
+```
 
 ```{r importing pubs, include = F, echo = F}
 pubs <- get_cv_sheet('pubs') %>%
