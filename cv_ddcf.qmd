@@ -327,6 +327,8 @@ Peruvian Medical Board, License No. 94534 & \textbf{2021} \\
 \textcolor{darkgray}{\rule{\textwidth}{0.5pt}}
 
 \begin{itemize}
+ \item John Snow Society (2026 - Current)
+ \item Society for Social Medicine \& Population Health (2026 - Current)
  \item International Epidemiological Association (2020 - Current)
  \item Peruvian College of Physicians (2021 - Current)
  \item Consortium of Universities for Global Health (2023 - Current)
