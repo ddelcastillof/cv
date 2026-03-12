@@ -222,3 +222,15 @@ test_that("render_publications groups entries by category", {
   expect_true(grepl("\\\\section\\{Publications", result))
   expect_true(grepl("Peer-Reviewed Publications", result))
 })
+
+# ── main assembly ─────────────────────────────────────────────────────────────
+test_that("main() writes build/cv.md and it contains key sections", {
+  main()
+  expect_true(file.exists("build/cv.md"))
+  content <- paste(readLines("build/cv.md"), collapse = "\n")
+  expect_true(grepl("documentclass: scrartcl", content))
+  expect_true(grepl("\\\\section\\{Education\\}", content))
+  expect_true(grepl("\\\\section\\{Professional Experience\\}", content))
+  expect_true(grepl("\\\\section\\{Publications", content))
+  expect_true(grepl("\\\\section\\{Memberships", content))
+})
