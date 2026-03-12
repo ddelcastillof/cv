@@ -60,7 +60,7 @@ local function bold_del_castillo_in_inlines(inlines)
               local after = inlines[m + 1]
               if after and after.t == "Str" then
                 -- Initial pattern: single uppercase letter optionally followed by "."
-                if after.text:match("^[A-ZÁÉÍÓÚ]%.?$") or
+                if after.text:match("^[A-ZÁÉÍÓÚ][%.,;]*$") or
                    after.text:match("^Darwin") or
                    after.text:match("^Fern") then
                   table.insert(name_run, next_el)

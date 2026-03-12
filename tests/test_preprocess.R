@@ -48,6 +48,19 @@ test_that("write_front_matter produces valid YAML front matter block", {
   expect_true(grepl("fontsize: 9pt", result))
   expect_true(grepl("margin=0.5in", result))
   expect_true(grepl("---$", trimws(result)))
+  expect_true(grepl("Test Name, MD", result))
+})
+
+# ── read_bib ──────────────────────────────────────────────────────────────────
+test_that("read_bib parses double-quoted BibTeX fields correctly", {
+  bib <- read_bib("bib/references.bib")
+  expect_true(nrow(bib) >= 4)
+  first <- bib[bib$BIBTEXKEY == "Del-Castillo-Fernandez2021-kl", ]
+  expect_equal(nrow(first), 1)
+  expect_true(nchar(first$TITLE) > 10)
+  expect_true(length(first$AUTHOR[[1]]) >= 1)
+  expect_true(grepl("Del Castillo", first$AUTHOR[[1]][1]))
+  expect_equal(first$YEAR, "2021")
 })
 
 # ── render_contact_header ─────────────────────────────────────────────────────

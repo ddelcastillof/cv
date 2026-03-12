@@ -4,7 +4,6 @@
 library(yaml)
 library(dplyr)
 library(stringr)
-library(bib2df)
 
 # ── Helper functions ──────────────────────────────────────────────────────────
 
@@ -36,6 +35,7 @@ write_front_matter <- function(contact) {
   lines <- c(
     "---",
     'title: ""',
+    paste0('author: "', contact$name, '"'),
     paste0("documentclass: scrartcl"),
     paste0("papersize: letter"),
     paste0("fontsize: 9pt"),
@@ -49,6 +49,69 @@ write_front_matter <- function(contact) {
     ""
   )
   paste(lines, collapse = "\n")
+}
+
+# ── BibTeX parser ──────────────────────────────────────────────────────────────
+# Custom parser that handles Paperpile's double-quoted field format and
+# multi-line field values. Returns a data frame compatible with format_pub_entry.
+
+read_bib <- function(bib_path) {
+  raw <- paste(readLines(bib_path, warn = FALSE, encoding = "UTF-8"), collapse = "\n")
+
+  starts <- gregexpr("(?m)^@ARTICLE\\{", raw, perl = TRUE)[[1]]
+  if (starts[1] < 0) return(data.frame())
+
+  n <- length(starts)
+  rows <- vector("list", n)
+
+  for (i in seq_len(n)) {
+    s <- starts[i]
+    e <- if (i < n) starts[i + 1L] - 1L else nchar(raw)
+    block <- substring(raw, s, e)
+
+    key <- gsub("(?si)^@ARTICLE\\{([^,\n]+).*$", "\\1", block, perl = TRUE)
+
+    # Extract value of a named field: handles "quoted", {braced}, and bare numbers.
+    # (?si) = single-line (. matches \n) + case-insensitive
+    get_val <- function(field) {
+      pat <- paste0(
+        "(?si)\\b", field,
+        "\\s*=\\s*(?:\"([^\"]*)\"|\\{([^{}]*)\\}|(\\b\\d+\\b))"
+      )
+      m <- regexpr(pat, block, perl = TRUE)
+      if (m[1L] < 0L) return(NA_character_)
+      caps <- attr(m, "capture.start")
+      lens <- attr(m, "capture.length")
+      for (g in seq_len(ncol(caps))) {
+        cs <- caps[1L, g]; cl <- lens[1L, g]
+        if (cs > 0L && cl > 0L) {
+          return(trimws(gsub("\\s+", " ", substring(block, cs, cs + cl - 1L), perl = TRUE)))
+        }
+      }
+      NA_character_
+    }
+
+    author_raw <- get_val("author")
+    authors <- if (!is.na(author_raw) && nchar(author_raw) > 0L) {
+      trimws(strsplit(author_raw, "\\s+and\\s+", perl = TRUE)[[1]])
+    } else character(0)
+
+    df <- data.frame(
+      BIBTEXKEY = trimws(key),
+      TITLE     = get_val("title"),
+      YEAR      = get_val("year"),
+      JOURNAL   = get_val("journal"),
+      VOLUME    = get_val("volume"),
+      NUMBER    = get_val("number"),
+      PAGES     = get_val("pages"),
+      DOI       = get_val("doi"),
+      stringsAsFactors = FALSE
+    )
+    df$AUTHOR <- list(authors)
+    rows[[i]] <- df
+  }
+
+  do.call(rbind, Filter(Negate(is.null), rows))
 }
 
 # ── Section renderers ─────────────────────────────────────────────────────────
@@ -328,7 +391,7 @@ main <- function() {
   skills_data   <- yaml::read_yaml("data/skills.yaml")
   certs         <- yaml::read_yaml("data/certifications.yaml")
   pub_cats      <- yaml::read_yaml("data/pub_categories.yaml")
-  bib_df        <- bib2df::bib2df("bib/references.bib")
+  bib_df        <- read_bib("bib/references.bib")
 
   # education.yaml uses primary: / additional: named keys (valid YAML structure)
   education      <- education_raw$primary
