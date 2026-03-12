@@ -209,17 +209,14 @@ render_teaching <- function(teaching) {
 
 render_reviews <- function(reviews) {
   rows <- sapply(reviews, function(r) {
-    paste0("| ", r$category, " | ", r$event, " |")
+    paste0(r$category, " & ", r$event, " \\\\")
   })
-  c(
-    "",
+  raw_latex(c(
     "\\subsection{Peer-Review Contributions}",
-    "",
-    "| | |",
-    "|:---|:---|",
+    "\\begin{tabular}{ll}",
     rows,
-    ""
-  )
+    "\\end{tabular}"
+  ))
 }
 
 render_memberships <- function(memberships) {

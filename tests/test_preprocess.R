@@ -163,13 +163,13 @@ test_that("render_teaching produces subsection with role and course", {
 })
 
 # ── render_reviews ────────────────────────────────────────────────────────────
-test_that("render_reviews produces a pipe table with two columns", {
+test_that("render_reviews produces a raw LaTeX tabular with two columns", {
   data <- list(
     list(category = "Peer Reviewer", event = "Journal A"),
     list(category = "Conference Reviewer", event = "Conf B")
   )
   result <- paste(render_reviews(data), collapse = "\n")
-  expect_true(grepl("\\|:---\\|", result))
+  expect_true(grepl("tabular", result))
   expect_true(grepl("Peer Reviewer", result))
   expect_true(grepl("Journal A", result))
 })
