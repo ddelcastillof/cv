@@ -36,12 +36,5 @@ build/         # generated files (gitignored)
 Paperpile syncs `bib/references.bib` automatically. To make a new entry appear in the CV, add its cite key to the appropriate category in `data/pub_categories.yaml`.
 
 ## License
-[![GNU General Public License v3.0][gpl-shield]][gpl]
 
-This work is licensed under a
-[GNU General Public License v3.0][gpl].
-
-[![GNU GPL v3.0][gpl-image]][gpl]
-
-[gpl]: https://www.gnu.org/licenses/gpl-3.0
-[gpl-image]: https://img.shields.io/badge/License-GPLv3-blue.svg
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
