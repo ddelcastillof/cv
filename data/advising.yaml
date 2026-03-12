@@ -1,0 +1,10 @@
+# Add entries as students are mentored. Example schema:
+# - name: "Student Name"
+#   level: undergraduate
+#   institution: "Universidad X"
+#   country: Peru
+#   start: "2024"
+#   end: "2025"
+#   thesis_title: "Optional thesis title"
+#   defense_date: ~
+#   complete: 0

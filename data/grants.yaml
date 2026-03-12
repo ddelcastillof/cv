@@ -1,0 +1,15 @@
+# Add grant entries as they occur. Example schema:
+# - title: "Grant title"
+#   funder_1: "Primary funder"
+#   funder_2: ~
+#   project_code: "ABC-123"
+#   role: PI
+#   start: "2023"
+#   end: "2025"
+#   status: concluded
+#   budget: "50000"
+#   budget_currency: USD
+#   investigators:
+#     pi: "Del Castillo F"
+#     coi_1: ~
+#     coi_2: ~
