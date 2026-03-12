@@ -51,8 +51,10 @@ rsconnect/
 # Mac Finder
 .DS_Store
 
-# Claude Documentation
+# Claude Documentation and memory
 CLAUDE.md
+.claude/
+
 
 # Dump text files
 dump_text.txt
