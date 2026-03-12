@@ -124,7 +124,7 @@ render_contact_header <- function(contact) {
   raw_latex(c(
     "\\noindent",
     "\\begin{minipage}[c]{0.45\\textwidth}",
-    paste0("{\\LARGE\\underline{\\textbf{", contact$name, "}}}"),
+    paste0("{\\huge\\underline{\\textbf{", contact$name, "}}}"),
     "\\end{minipage}%",
     "\\hfill",
     "\\begin{minipage}[c]{0.50\\textwidth}",
