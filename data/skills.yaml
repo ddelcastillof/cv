@@ -1,7 +1,7 @@
 intro: "Broad experience in the health data lifecycle: data collection, management, wrangling, querying, analysis, \\& visualization."
 programming: "R, Python, Stata, SQL (MySQL)"
 cloud: "Slurm HPC, Containerization (Docker/Apptainer), Linux environments (bash)"
-tools: "VS Code, Jupyter, Quarto, \\LaTeX, Shiny (R), Git version control (GitHub, Bitbucket)"
+tools: "VS Code, Quarto, \\LaTeX, Git version control (GitHub, Bitbucket)"
 packages: "\\texttt{tidyverse}, \\texttt{ggplot2}, \\texttt{sf}, \\texttt{survey}, \\texttt{lme4}, \\texttt{survival}, \\texttt{cmprsk}, \\texttt{mice}, \\texttt{geepack}, \\texttt{metafor}, \\texttt{rstan}, \\texttt{crosswalk}, \\texttt{pandas}, \\texttt{NumPy}, \\texttt{Matplotlib}, \\texttt{pytest}, MR-BRT"
 languages: "English (fluent), Spanish (native)"
 competencies: "Data analysis, teamwork, problem solving, science communication, mentorship"
