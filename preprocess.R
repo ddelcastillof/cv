@@ -122,20 +122,18 @@ raw_latex <- function(lines) {
 
 render_contact_header <- function(contact) {
   raw_latex(c(
-    "\\begin{center}",
-    paste0("\\huge{\\underline{\\textbf{", contact$name, "}}} \\\\"),
-    "\\vspace{2.5pt}",
-    "\\begin{minipage}[c]{0.25\\textwidth}",
-    paste0("\\faLinkedin \\centering\\href{", contact$linkedin_url, "}{\\hspace{0.5em}", contact$linkedin, "}"),
+    "\\noindent",
+    "\\begin{minipage}[c]{0.45\\textwidth}",
+    paste0("{\\LARGE\\underline{\\textbf{", contact$name, "}}}"),
+    "\\end{minipage}%",
+    "\\hfill",
+    "\\begin{minipage}[c]{0.50\\textwidth}",
+    "\\raggedleft\\small",
+    paste0("\\faLinkedin\\hspace{0.4em}\\href{", contact$linkedin_url, "}{", contact$linkedin, "} \\\\[2pt]"),
+    paste0("\\faEnvelope\\hspace{0.4em}\\href{mailto:", contact$email, "}{", contact$email, "} \\\\[2pt]"),
+    paste0("\\faGithub\\hspace{0.4em}\\href{", contact$github_url, "}{", contact$github, "}"),
     "\\end{minipage}",
-    "\\begin{minipage}[c]{0.25\\textwidth}",
-    paste0("\\faEnvelope \\centering\\href{mailto:", contact$email, "}{\\hspace{0.5em}", contact$email, "}"),
-    "\\end{minipage}",
-    "\\begin{minipage}[c]{0.20\\textwidth}",
-    paste0("\\faGithub \\centering\\href{", contact$github_url, "}{\\hspace{0.5em}", contact$github, "}"),
-    "\\end{minipage}",
-    "\\vspace{-2.5pt}",
-    "\\end{center}"
+    "\\vspace{4pt}"
   ))
 }
 
