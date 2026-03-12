@@ -1,0 +1,58 @@
+- title: "Research Assistant"
+  institution: "School of Health and Wellbeing -- University of Glasgow"
+  location: "Glasgow - UK"
+  start: "Dec 2025"
+  end: "Current"
+  bullets:
+    - "Estimating the causal effects of unemployment on physical and mental health outcomes using g-methods with administrative data."
+
+- title: "Graduate Research Assistant"
+  institution: "Institute for Health Metrics and Evaluation"
+  location: "Seattle - USA"
+  start: "Jul 2024"
+  end: "Jun 2025"
+  bullets:
+    - "Developed hyperparameters for a Bayesian hierarchical meta-regression model to estimate prevalence, incidence, and clinical-outcome occurrence of lower respiratory tract infections across 80 countries."
+    - "Executed an MCMC using data-driven priors and uncertainty propagation to estimate the probabilistic overlap between inclusion health groups in 22 high-income countries."
+    - "Estimated population-attributable fractions and standardized mortality ratios using the overlap between inclusion health groups."
+
+- title: "Graduate Research Assistant"
+  institution: "Department of Global Health -- University of Washington"
+  location: "Seattle - USA"
+  start: "Jun 2024"
+  end: "Mar 2025"
+  bullets:
+    - "Designed a study protocol to assess the effectiveness of implementation strategies for pediatric burn care in a Peruvian healthcare setting."
+    - "Coordinated a mixed-methods study to explore barriers and facilitators in >10 low-resource Peruvian hospitals."
+    - "Co-developed communication strategies with 2 stakeholder organizations to disseminate complex findings among healthcare policymakers."
+
+- title: "Graduate Research Assistant"
+  institution: "Health Population Research Center -- University of Washington"
+  location: "Seattle - USA"
+  start: "Sep 2023"
+  end: "Mar 2024"
+  bullets:
+    - "Maintained and stored sociodemographic and utilization data as part of a clinical trial post-assessment survey on school-age children using electronic data capture platforms."
+    - "Translated IRB submission materials from Spanish to English for the Alzheimer's Disease Research Center."
+    - "Analyzed engagement and outreach data from clinical trials into visualization tools and summary tables, enabling program managers to make adjustments to recruitment strategies."
+
+- title: "Research Consultant"
+  institution: "Health Technology Assessment and Research Institute"
+  location: "Lima -- Peru"
+  start: "Jan 2023"
+  end: "Jan 2024"
+  new_page_before: true
+  bullets:
+    - "Integrated surveillance and clinical data from Peruvian hospitals into statistical burden models to support national health technology assessment and prioritization processes."
+    - "Conducted budget impact and cost-effectiveness models that prioritized oncological interventions worth over \\$1 M+."
+    - "Synthesized findings into executive reports aimed at policymakers and partners, guiding reimbursement policy for Peru's Social Security System."
+
+- title: "Research Assistant"
+  institution: "CRONICAS Center of Excellence in Chronic Diseases"
+  location: "Lima -- Peru"
+  start: "Mar 2019"
+  end: "Aug 2023"
+  bullets:
+    - "Coordinated 2 workshops per site with community health workers in 3 Peruvian regions to co-design a mobile application for early detection of cognitive impairment."
+    - "Contributed to research grant proposals in noncommunicable disease epidemiology for pediatric and adult populations by conducting preliminary data analysis of clinical and demographic data, supporting research proposals."
+    - "Co-authored 5 scientific manuscripts, including longitudinal data analyses, systematic reviews, and machine learning models."
