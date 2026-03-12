@@ -22,11 +22,6 @@ local function contains_darwin(inlines)
   return false
 end
 
--- Match "Del" followed (possibly non-contiguously) by "Castillo" variants
-local function is_del_castillo(str)
-  return str:match("Del") ~= nil
-end
-
 local function is_castillo_variant(str)
   -- Matches: Castillo, Castillo-Fernández, Castillo-Fernandez,
   --          Castillo Fernández, Castillo, with optional suffix
