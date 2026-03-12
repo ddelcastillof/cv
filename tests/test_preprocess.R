@@ -137,3 +137,88 @@ test_that("render_skills produces section with labeled lines", {
   expect_true(grepl("R, Python", block))
   expect_true(grepl("\\\\textbf\\{Programming languages:\\}", block))
 })
+
+# ── render_awards ─────────────────────────────────────────────────────────────
+test_that("render_awards produces two-column longtable", {
+  data <- list(list(name = "Test Award", institution = "Test Inst",
+                    location = "USA", year = "2024"))
+  result <- paste(render_awards(data), collapse = "\n")
+  expect_true(grepl("\\\\section\\{Academic Honours and Awards\\}", result))
+  expect_true(grepl("Test Award", result))
+  expect_true(grepl("2024", result))
+})
+
+# ── render_teaching ───────────────────────────────────────────────────────────
+test_that("render_teaching produces subsection with role and course", {
+  data <- list(list(
+    role = "Lecturer", institution = "Univ", department = "School",
+    location = "Lima", course = "Epidemiology",
+    description = "Course description.",
+    start = "Mar 2025", end = "Current"
+  ))
+  result <- paste(render_teaching(data), collapse = "\n")
+  expect_true(grepl("\\\\subsection\\{Teaching and Lecturer Contributions\\}", result))
+  expect_true(grepl("Lecturer", result))
+  expect_true(grepl("Epidemiology", result))
+})
+
+# ── render_reviews ────────────────────────────────────────────────────────────
+test_that("render_reviews produces a pipe table with two columns", {
+  data <- list(
+    list(category = "Peer Reviewer", event = "Journal A"),
+    list(category = "Conference Reviewer", event = "Conf B")
+  )
+  result <- paste(render_reviews(data), collapse = "\n")
+  expect_true(grepl("\\|:---\\|", result))
+  expect_true(grepl("Peer Reviewer", result))
+  expect_true(grepl("Journal A", result))
+})
+
+# ── render_memberships ────────────────────────────────────────────────────────
+test_that("render_memberships produces itemize list", {
+  data <- list(
+    list(organization = "Society A", start = "2020", end = "Current")
+  )
+  result <- paste(render_memberships(data), collapse = "\n")
+  expect_true(grepl("\\\\section\\{Memberships", result))
+  expect_true(grepl("Society A", result))
+  expect_true(grepl("2020", result))
+})
+
+# ── render_certifications ─────────────────────────────────────────────────────
+test_that("render_certifications produces two-column longtable", {
+  data <- list(list(name = "CITI Program", year = "2023"))
+  result <- paste(render_certifications(data), collapse = "\n")
+  expect_true(grepl("\\\\section\\{Licensure and Certification\\}", result))
+  expect_true(grepl("CITI Program", result))
+  expect_true(grepl("2023", result))
+})
+
+# ── format_pub_entry ──────────────────────────────────────────────────────────
+test_that("format_pub_entry formats a bib row in Vancouver style", {
+  mock_row <- list(
+    AUTHOR   = list(c("Del Castillo-Fernández, Darwin", "Brañez-Condorena, Ana")),
+    YEAR     = 2021,
+    TITLE    = "Test title",
+    JOURNAL  = "Test Journal",
+    VOLUME   = "81",
+    NUMBER   = "4",
+    PAGES    = NA,
+    DOI      = "10.1234/test"
+  )
+  result <- format_pub_entry(mock_row)
+  expect_true(grepl("Del Castillo-Fernández D", result))
+  expect_true(grepl("Brañez-Condorena A", result))
+  expect_true(grepl("2021;81\\(4\\)", result))
+  expect_true(grepl("doi:10\\.1234/test", result))
+  expect_true(grepl("\\*Test Journal\\*", result))
+})
+
+# ── render_publications ───────────────────────────────────────────────────────
+test_that("render_publications groups entries by category", {
+  bib <- bib2df::bib2df("bib/references.bib")
+  cats <- yaml::read_yaml("data/pub_categories.yaml")
+  result <- paste(render_publications(bib, cats), collapse = "\n")
+  expect_true(grepl("\\\\section\\{Publications", result))
+  expect_true(grepl("Peer-Reviewed Publications", result))
+})
