@@ -128,7 +128,7 @@ render_contact_header <- function(contact) {
     "\\end{minipage}%",
     "\\hfill",
     "\\begin{minipage}[c]{0.50\\textwidth}",
-    "\\raggedleft\\small",
+    "\\raggedleft\\large",
     paste0("\\faLinkedin\\hspace{0.4em}\\href{", contact$linkedin_url, "}{", contact$linkedin, "} \\\\[2pt]"),
     paste0("\\faEnvelope\\hspace{0.4em}\\href{mailto:", contact$email, "}{", contact$email, "} \\\\[2pt]"),
     paste0("\\faGithub\\hspace{0.4em}\\href{", contact$github_url, "}{", contact$github, "}"),
