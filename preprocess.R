@@ -284,18 +284,6 @@ render_teaching <- function(teaching) {
   ))
 }
 
-render_reviews <- function(reviews) {
-  rows <- sapply(reviews, function(r) {
-    paste0(r$category, " & ", r$event, " \\\\")
-  })
-  raw_latex(c(
-    "\\newpage",
-    "\\subsection{Peer-Review Contributions}",
-    "\\begin{tabular}{ll}",
-    rows,
-    "\\end{tabular}"
-  ))
-}
 
 render_memberships <- function(memberships) {
   items <- sapply(memberships, function(m) {
@@ -354,18 +342,20 @@ format_pub_entry <- function(row) {
   paste0(authors, ". ", title, ". ", journal_part, year_vol, doi_part, addendum_part)
 }
 
-render_publications <- function(bib_df, pub_categories) {
+render_publications <- function(bib_df, pub_categories, reviews = list()) {
   orcid_line <- raw_latex(c(
-    "\\section{Publications \\hspace{1cm} ORCID: 0000-0002-8609-0312}",
+    "\\section{Research Contributions \\hspace{1cm} ORCID: 0000-0002-8609-0312}",
     "\\vspace{-1.5em}",
     "\\textcolor{darkgray}{\\rule{\\textwidth}{0.5pt}}"
   ))
 
   section_labels <- list(
-    peer_reviewed = "Peer-Reviewed Publications",
+    peer_reviewed = "Journal Manuscripts",
     conference    = "Conference Abstracts",
     thesis        = "Thesis and Dissertations",
-    white_paper   = "White Papers"
+    white_paper   = "White Papers",
+    preprints      = "Preprints",
+    book_chapter   = "Book Chapters"
   )
 
   pub_blocks <- list()
@@ -389,7 +379,15 @@ render_publications <- function(bib_df, pub_categories) {
     pub_blocks[[cat]] <- c(subsection_header, "", items, "")
   }
 
-  c(orcid_line, unlist(pub_blocks))
+  reviews_block <- if (length(reviews) > 0) {
+    rows <- sapply(reviews, function(r) paste0(r$category, " & ", r$event, " \\\\"))
+    c(
+      raw_latex(paste0("\\subsection{Peer-Review Contributions}")),
+      raw_latex(c("\\begin{tabular}{ll}", rows, "\\end{tabular}"))
+    )
+  } else character(0)
+
+  c(orcid_line, unlist(pub_blocks), reviews_block)
 }
 
 # ── Main assembly ─────────────────────────────────────────────────────────────
@@ -436,8 +434,8 @@ main <- function() {
     render_experience(experience),
     render_skills(skills_data),
     render_awards(awards),
-    render_research_teaching(grants, teaching, advising, reviews_data),
-    render_publications(bib_df, pub_cats),
+    render_research_teaching(grants, teaching, advising),
+    render_publications(bib_df, pub_cats, reviews_data),
     render_certifications(certs),
     render_memberships(memberships)
   )
@@ -446,9 +444,9 @@ main <- function() {
   message("build/cv.md written successfully.")
 }
 
-render_research_teaching <- function(grants, teaching, advising, reviews_data) {
+render_research_teaching <- function(grants, teaching, advising) {
   header <- raw_latex(c(
-    "\\section{Research and Teaching}",
+    "\\section{Teaching Experience}",
     "\\vspace{-1.5em}",
     "\\textcolor{darkgray}{\\rule{\\textwidth}{0.5pt}}"
   ))
@@ -456,9 +454,8 @@ render_research_teaching <- function(grants, teaching, advising, reviews_data) {
   grants_block   <- if (length(grants) > 0) render_grants(grants) else character(0)
   teaching_block <- if (length(teaching) > 0) render_teaching(teaching) else character(0)
   advising_block <- if (length(advising) > 0) render_advising(advising) else character(0)
-  reviews_block  <- if (length(reviews_data) > 0) render_reviews(reviews_data) else character(0)
 
-  c(header, grants_block, teaching_block, advising_block, reviews_block)
+  c(header, grants_block, teaching_block, advising_block)
 }
 
 render_grants <- function(grants) {
