@@ -7,6 +7,20 @@ library(stringr)
 
 # ── Helper functions ──────────────────────────────────────────────────────────
 
+patch_bib <- function(bib_df, patches) {
+  for (key in names(patches)) {
+    idx <- which(bib_df$BIBTEXKEY == key)
+    if (length(idx) == 0) {
+      warning("patch_bib: cite key not found: ", key)
+      next
+    }
+    for (field in names(patches[[key]])) {
+      bib_df[idx, field] <- patches[[key]][[field]]
+    }
+  }
+  bib_df
+}
+
 na_to_empty <- function(x) {
   if (is.null(x) || (length(x) == 1 && is.na(x))) "" else as.character(x)
 }
@@ -210,7 +224,7 @@ render_skills <- function(skills) {
     programming  = "Programming languages",
     cloud        = "Cloud Computing",
     tools        = "Tools",
-    packages     = "Packages",
+    # packages   = "Packages",
     languages    = "Languages",
     competencies = "Core Competencies"
   )
@@ -225,7 +239,7 @@ render_skills <- function(skills) {
     "\\section{Skills}",
     "\\vspace{-1.5em}",
     "\\textcolor{darkgray}{\\rule{\\textwidth}{0.5pt}}",
-    if (!is.null(skills$intro)) paste0(skills$intro, "\\vspace{1pt}"),
+    # if (!is.null(skills$intro)) paste0(skills$intro, "\\\\[4pt]"),
     lines
   ))
 }
@@ -254,14 +268,15 @@ render_teaching_entry <- function(e) {
     page_break,
     paste0("\\textbf{", e$role, "} & \\textbf{", e$start, " -- ", e$end, "} \\\\"),
     paste0("\\textsc{", e$institution, "} & \\textsc{", e$location, "} \\\\"),
-    paste0("\\textsc{", e$course, ":} ", e$description, " & \\\\")
+    paste0("\\textsc{", e$course, ":} ", e$description, " & \\\\"),
+    "& \\\\"
   )
 }
 
 render_teaching <- function(teaching) {
   entries <- unlist(lapply(teaching, render_teaching_entry), recursive = FALSE)
   raw_latex(c(
-    "\\subsection{Teaching and Lecturer Contributions}",
+    "\\subsection{Teaching Contributions}",
     "\\begin{longtable}{>{\\raggedright\\arraybackslash}p{14cm}>{\\raggedleft\\arraybackslash}p{4cm}}",
     entries,
     "\\end{longtable}"
@@ -273,6 +288,7 @@ render_reviews <- function(reviews) {
     paste0(r$category, " & ", r$event, " \\\\")
   })
   raw_latex(c(
+    "\\newpage",
     "\\subsection{Peer-Review Contributions}",
     "\\begin{tabular}{ll}",
     rows,
@@ -311,12 +327,13 @@ render_certifications <- function(certs) {
 format_pub_entry <- function(row) {
   authors  <- format_authors_vancouver(unlist(row$AUTHOR))
   year     <- na_to_empty(row$YEAR)
-  title    <- na_to_empty(row$TITLE)
+  title    <- gsub("[{}]", "", na_to_empty(row$TITLE))
   journal  <- na_to_empty(row$JOURNAL)
   volume   <- na_to_empty(row$VOLUME)
   number   <- na_to_empty(row$NUMBER)
   pages    <- na_to_empty(row$PAGES)
   doi      <- na_to_empty(row$DOI)
+  addendum <- na_to_empty(row$ADDENDUM)
 
   vol_str <- if (nchar(volume) > 0) {
     v <- if (nchar(number) > 0) paste0(volume, "(", number, ")") else volume
@@ -331,8 +348,9 @@ format_pub_entry <- function(row) {
   } else ""
 
   doi_part <- if (nchar(doi) > 0) paste0(" doi:", doi, ".") else "."
+  addendum_part <- if (nchar(addendum) > 0) paste0(" ", addendum) else ""
 
-  paste0(authors, ". ", title, ". ", journal_part, year_vol, doi_part)
+  paste0(authors, ". ", title, ". ", journal_part, year_vol, doi_part, addendum_part)
 }
 
 render_publications <- function(bib_df, pub_categories) {
@@ -390,6 +408,13 @@ main <- function() {
   certs         <- yaml::read_yaml("data/certifications.yaml")
   pub_cats      <- yaml::read_yaml("data/pub_categories.yaml")
   bib_df        <- read_bib("bib/references.bib")
+
+  # Patches for entries that need addenda not present in references.bib.
+  # Add cite keys here; Paperpile will never overwrite this block.
+  bib_patches <- list(
+   "Vidyasagaran2024-wx" = list(ADDENDUM = "Among authors: Del Castillo Fernandez, D.")
+  )
+  bib_df <- patch_bib(bib_df, bib_patches)
 
   # education.yaml uses primary: / additional: named keys (valid YAML structure)
   education      <- education_raw$primary
