@@ -1,9 +1,9 @@
-- role: "Lecturer"
+- role: "Instructor"
   institution: "Universidad Científica del Sur"
   department: "School of Medicine"
   location: "Lima -- Peru"
   course: "Introduction to Epidemiology"
-  description: "I teach three sections of \\textasciitilde 15 fourth-year medical students each, focusing on basic clinical epidemiology concepts, including study designs, bias identification, \\& basic epidemiological surveillance concepts."
+  description: "I teach three sections of \\textasciitilde 15 fourth-year medical students each, focusing on basic clinical epidemiology concepts, including study designs, bias identification, \\& basic epidemiological surveillance concepts.\\"
   start: "Mar 2025"
   end: "Current"
 
@@ -15,4 +15,3 @@
   description: "Led two laboratory practice sessions with \\textasciitilde 25 undergraduate students each, covering fundamental molecular and cellular biology experiments."
   start: "Mar 2024"
   end: "Jun 2024"
-  new_page_before: true
