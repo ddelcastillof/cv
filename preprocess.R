@@ -119,6 +119,7 @@ read_bib <- function(bib_path) {
       NUMBER    = get_val("number"),
       PAGES     = get_val("pages"),
       DOI       = get_val("doi"),
+      ADDENDUM  = NA_character_,
       stringsAsFactors = FALSE
     )
     df$AUTHOR <- list(authors)

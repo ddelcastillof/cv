@@ -229,7 +229,7 @@ test_that("format_pub_entry formats a bib row in Vancouver style", {
 
 # ── render_publications ───────────────────────────────────────────────────────
 test_that("render_publications groups entries by category", {
-  bib <- bib2df::bib2df("bib/references.bib")
+  bib <- read_bib("bib/references.bib")
   cats <- yaml::read_yaml("data/pub_categories.yaml")
   result <- paste(render_publications(bib, cats), collapse = "\n")
   expect_true(grepl("\\\\section\\{Publications", result))
