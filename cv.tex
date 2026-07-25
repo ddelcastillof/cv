@@ -60,6 +60,12 @@
 \AtBeginDocument{\DeclareDelimFormat{finalnamedelim}{\addcomma\space}}
 \appto{\bibsetup}{\raggedright}
 
+% Títulos de revista en cursiva. vancouver.bbx:72 los imprime en redonda (ICMJE
+% estricto); la antigua plantilla de pandoc también los enfatizaba, aunque
+% `ulem` convertía ese énfasis en subrayado. Borrar esta línea para volver a
+% la redonda del ICMJE.
+\DeclareFieldFormat*{journaltitle}{\mkbibemph{#1}}
+
 % Categorías (reemplaza data/pub_categories.yaml + el registro section_labels).
 % \DeclareBibliographyCategory es solo de preámbulo; la asignación de claves
 % ocurre en content/publications.tex vía \cvpub.
@@ -72,12 +78,31 @@
 \newcommand{\cvpub}[2]{\addtocategory{#1}{#2}\nocite{#2}}
 
 % Campos que Paperpile nunca trae (reemplaza bib_patches/patch_bib).
+%
+% maxnames=6 recorta las listas largas de autores a "et al", lo que oculta el
+% nombre propio en las grandes colaboraciones. Vidyasagaran2024-wx tiene 61
+% autores con Del Castillo en la posición 26, así que el addendum declara la
+% contribución de forma explícita. Añadir un bloque \map por cada clave
+% afectada — solo hace falta cuando el nombre propio queda más allá de la
+% posición 6.
+%
+% El nombre se pone en negrita literalmente aquí: addendum es un campo simple,
+% así que el gancho \mkbibnamefamily de más abajo nunca lo ve.
+%
+% Las abreviaturas de revista no necesitan parche: Paperpile ya las exporta
+% abreviadas ("Int. J. Epidemiol.") y el propio sourcemap de vancouver.bbx
+% quita todos los puntos de journaltitle y añade uno final, dando la forma
+% ICMJE/NLM estricta ("Int J Epidemiol."). No añadir un map que restaure los
+% puntos internos — cv-professional solo se ve así porque su .bib escribe
+% `journal` en vez de `journaltitle`, y biber compara el nombre del campo de
+% origen antes de aplicar el alias de BibTeX, así que allí el map de vancouver
+% lo salta en silencio.
 \DeclareSourcemap{%
   \maps[datatype=bibtex]{%
     \map{%
       \step[fieldsource=entrykey, match={Vidyasagaran2024-wx}, final]
       \step[fieldset=addendum,
-            fieldvalue={Entre los autores: Del Castillo Fernandez, D.}]%
+            fieldvalue={Entre los autores: \textbf{Del Castillo Fernandez, D.}}]%
     }%
   }%
 }
