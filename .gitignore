@@ -69,3 +69,6 @@ text_dump.txt
 # latexmk aux + output (see .latexmkrc $out_dir)
 build/
 /.luarc.json
+
+# VSCode settings
+.vscode/
