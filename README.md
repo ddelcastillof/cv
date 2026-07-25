@@ -1,40 +1,41 @@
-# Academic CV
+# CV Académico (versión en español)
 
-Academic CV built with R and Pandoc. Content is stored in version-controlled YAML files and a Paperpile-synced BibTeX file — no Google Sheets or internet connection required to build.
+Versión en español del CV, generada con LaTeX puro y compilada con `latexmk`
+(XeLaTeX + biber, estilo `biblatex-vancouver`). Es el equivalente en español
+de la rama `main`; ambas comparten la misma arquitectura y difieren solo en el
+idioma del contenido.
 
-## Build
+## Compilación
 
-```bash
-make build
-```
+Requiere TeX Live (XeLaTeX, biber, biblatex-vancouver, babel-spanish,
+fontspec, fontawesome5) y poppler (`pdftotext`) para `make check`.
 
-Runs `preprocess.R` (YAML + BibTeX → `build/cv.md`) then Pandoc + XeLaTeX → `cv.pdf`. Completes in under 20 seconds.
+    make build   # latexmk: XeLaTeX + biber → build/cv.pdf → cv.pdf
+    make check   # compila y verifica el texto del PDF
+    make clean   # elimina los artefactos de build/ y cv.pdf
 
-```bash
-make clean   # remove build/cv.md and cv.pdf
-```
+El contenido vive en `cv.tex` (preámbulo) + `content/*.tex` (una sección por
+archivo). `bib/references.bib` lo sincroniza Paperpile — nunca editar a mano.
 
-## Requirements
-
-- R with packages: `yaml`, `bib2df`, `stringr`
-- Pandoc
-- XeLaTeX (with `fontspec`, `fontawesome5`, `longtable`, `titlesec`)
-
-## Structure
+## Estructura
 
 ```
-data/          # one YAML file per CV section (edit here to update content)
-bib/           # references.bib synced by Paperpile (do not edit manually)
-filters/       # bold-author.lua — bolds author name in publication entries
-templates/     # cv-template.tex — Pandoc LaTeX template
-tests/         # testthat unit tests for preprocess.R
-build/         # generated files (gitignored)
+cv.tex             # preámbulo + lista de \input (idioma: babel spanish)
+content/*.tex      # una sección por archivo
+bib/references.bib # sincronizado por Paperpile (no editar a mano)
+.latexmkrc         # $pdf_mode=5 (xelatex), salida en build/
+Makefile           # build / check / clean
 ```
 
-## Adding Publications
+## Agregar publicaciones
 
-Paperpile syncs `bib/references.bib` automatically. To make a new entry appear in the CV, add its cite key to the appropriate category in `data/pub_categories.yaml`.
+Paperpile sincroniza `bib/references.bib` automáticamente. Para que una entrada
+nueva aparezca en el CV, agregue una línea `\cvpub{<categoría>}{<clave>}` en
+`content/publications.tex`.
 
-## License
+La versión en inglés vive en la rama `main`; el pipeline anterior en Quarto se
+conserva en la rama `legacy/spanish-quarto`.
+
+## Licencia
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)

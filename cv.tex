@@ -1,0 +1,123 @@
+% cv.tex — CV académico (versión en español). Build: make build (latexmk: XeLaTeX + biber)
+% El contenido vive en content/*.tex (un archivo por sección).
+% bib/references.bib lo sincroniza Paperpile — nunca editar a mano.
+\documentclass[9pt,letterpaper]{scrartcl}
+
+% ── Idioma ───────────────────────────────────────────────────────────────────
+% es-noshorthands evita que babel active " . < > como abreviaturas, que
+% chocarían con LaTeX/URLs.
+\usepackage[spanish,es-noshorthands]{babel}
+
+% ── Disposición de página ────────────────────────────────────────────────────
+\usepackage[margin=0.5in,heightrounded,includefoot,footskip=0.5in]{geometry}
+\usepackage{parskip}
+
+% ── Tipografías (XeLaTeX) ────────────────────────────────────────────────────
+\usepackage{fontspec}
+\usepackage{fontawesome5}
+
+% ── Tablas ───────────────────────────────────────────────────────────────────
+\usepackage{longtable}
+\usepackage{array}
+
+% ── Colores y enlaces ────────────────────────────────────────────────────────
+\usepackage{xcolor}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\definecolor{darkgray}{gray}{0.4}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, urlcolor=linkcolour, linkcolor=linkcolour}
+
+% ── Formato de secciones ─────────────────────────────────────────────────────
+% \MakeUppercase (no el primitivo \uppercase) para que las vocales acentuadas
+% de los títulos se conviertan bien: "Formación" → "FORMACIÓN".
+\usepackage{titlesec}
+\titleformat{\section}
+  {\normalfont\normalsize\bfseries\raggedright\MakeUppercase}
+  {\thesection}{1em}{}
+\titleformat{\subsection}
+  {\normalfont\normalsize\bfseries\raggedright}
+  {\thesubsection}{1em}{}
+\titleformat{\subsubsection}
+  {\normalfont\normalsize\bfseries\raggedright}
+  {\thesubsubsection}{1em}{}
+\setcounter{secnumdepth}{0}   % CV académico: sin numeración de secciones
+
+% ── Bibliografía (reemplaza read_bib/format_*_vancouver de preprocess.R) ─────
+\usepackage[backend=biber,style=vancouver,maxnames=6,minnames=6,
+            defernumbers=true,sorting=none]{biblatex}
+\addbibresource{bib/references.bib}
+
+% Correcciones de salida Vancouver/ICMJE (ver revisión de la migración):
+% - quitar language ("en.") y urldate ("[Accessed on: ...]") de las entradas
+% - coma (no "y") antes del último autor
+% - bibliografía en bandera derecha: evita que el justificado estire el DOI/URL
+\AtEveryBibitem{\clearlist{language}\clearfield{langid}\clearfield{urldate}\clearfield{urlday}\clearfield{urlmonth}\clearfield{urlyear}\clearfield{urldateera}}
+% spanish.lbx cambia la última coma por " y "/" e " mediante el contador
+% smartand y su propio delimitador, aplicado al cargar el idioma. Se apaga
+% smartand y se fija el delimitador final a coma dentro de \AtBeginDocument
+% (después de que el idioma se cargue) para forzar el estilo Vancouver.
+\setcounter{smartand}{0}
+\AtBeginDocument{\DeclareDelimFormat{finalnamedelim}{\addcomma\space}}
+\appto{\bibsetup}{\raggedright}
+
+% Categorías (reemplaza data/pub_categories.yaml + el registro section_labels).
+% \DeclareBibliographyCategory es solo de preámbulo; la asignación de claves
+% ocurre en content/publications.tex vía \cvpub.
+\DeclareBibliographyCategory{peerreviewed}
+\DeclareBibliographyCategory{conference}
+\DeclareBibliographyCategory{thesis}
+\DeclareBibliographyCategory{whitepaper}
+\DeclareBibliographyCategory{preprints}
+\DeclareBibliographyCategory{bookchapter}
+\newcommand{\cvpub}[2]{\addtocategory{#1}{#2}\nocite{#2}}
+
+% Campos que Paperpile nunca trae (reemplaza bib_patches/patch_bib).
+\DeclareSourcemap{%
+  \maps[datatype=bibtex]{%
+    \map{%
+      \step[fieldsource=entrykey, match={Vidyasagaran2024-wx}, final]
+      \step[fieldset=addendum,
+            fieldvalue={Entre los autores: Del Castillo Fernandez, D.}]%
+    }%
+  }%
+}
+
+% Resaltar el nombre propio en negrita (reemplaza filters/bold-author.lua).
+% Misma regla: apellido que contiene "Del" y "Castillo", con nombre de pila
+% que empieza por "D" (cubre "Del Castillo", "Del Castillo Fernández",
+% "Del Castillo-Fernández").
+\usepackage{xstring}
+\newif\ifownname
+\newcommand*{\checkownname}{%
+  \global\ownnamefalse
+  \ifdefvoid{\namepartgiven}{}{%
+    \ifdefvoid{\namepartfamily}{}{%
+      \begingroup\expandarg
+        % \namepartfamily es 'Del\bibnamedelima Castillo' — hay una macro
+        % delimitadora entre los tokens, así que un prefijo 'Del Castillo'
+        % nunca coincide. Las pruebas de subcadena la saltan.
+        \IfSubStr{\namepartfamily}{Castillo}
+          {\IfSubStr{\namepartfamily}{Del}
+            {\IfBeginWith{\namepartgiven}{D}{\global\ownnametrue}{}}
+            {}}%
+          {}%
+      \endgroup
+    }%
+  }%
+}
+\renewcommand*{\mkbibnamefamily}[1]{\checkownname\ifownname\textbf{#1}\else#1\fi}
+\renewcommand*{\mkbibnamegiven}[1]{\checkownname\ifownname\textbf{#1}\else#1\fi}
+
+\newcommand{\myorcid}{0000-0002-8609-0312}
+
+\begin{document}
+\input{content/header}
+\input{content/education}
+\input{content/experience}
+\input{content/skills}
+\input{content/awards}
+\input{content/teaching}
+\input{content/publications}
+\input{content/certifications}
+\input{content/memberships}
+\end{document}
