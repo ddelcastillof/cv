@@ -11,11 +11,11 @@ clean:
 check: build
 	@txt=$$(pdftotext cv.pdf - | tr '\n' ' '); \
 	for s in \
-	  "International Journal of Epidemiology" \
-	  "Anales de la Facultad de Medicina" \
-	  "BMJ Global Health" \
-	  "American Journal of Epidemiology" \
-	  "Endocrinology and Metabolism" \
+	  "Int J Epidemiol" \
+	  "An Fac med" \
+	  "BMJ Glob Health" \
+	  "Am J Epidemiol" \
+	  "Endocrinol Metab Clin North Am" \
 	  "FORMACI" \
 	  "ADICIONAL" \
 	  "EXPERIENCIA PROFESIONAL" \
@@ -27,7 +27,7 @@ check: build
 	  "AFILIACIONES A ORGANIZACIONES PROFESIONALES" \
 	  "Entre los autores: Del Castillo" \
 	; do \
-	  echo "$$txt" | grep -q "$$s" || { echo "make check FAIL — falta: $$s"; exit 1; }; \
+	  echo "$$txt" | grep -qF "$$s" || { echo "make check FAIL — falta: $$s"; exit 1; }; \
 	done; \
 	n=$$(pdftotext cv.pdf - | grep -cE '^\[?[0-9]+[].]'); \
 	[ "$$n" -ge 6 ] || { echo "make check FAIL — número de publicaciones $$n < 6"; exit 1; }; \
