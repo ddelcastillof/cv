@@ -36,11 +36,22 @@
   {\thesection}{1em}{}
 \titleformat{\subsection}
   {\normalfont\normalsize\bfseries\raggedright}
-  {\thesubsection}{1em}{}
+  {\thesubsection}{0.5ex}{}
 \titleformat{\subsubsection}
   {\normalfont\normalsize\bfseries\raggedright}
-  {\thesubsubsection}{1em}{}
+  {\thesubsubsection}{0.5ex}{}
 \setcounter{secnumdepth}{0}   % CV académico: sin numeración de secciones
+
+% \titleformat solo fija la apariencia; \titlespacing fija los espacios
+% verticales alrededor de cada \subsection.
+% Argumentos: {sangría izquierda}{espacio antes}{espacio después}.
+\titlespacing*{\subsection}{0pt}{1.5ex plus .5ex minus 1ex}{1ex}
+\titlespacing*{\subsubsection}{0pt}{1.5ex plus .5ex minus 1ex}{1ex}
+
+% longtable añade \bigskipamount (12pt) arriba Y abajo de cada tabla, además
+% del espacio del título. Ese es el grueso del hueco entre subsección y tabla.
+\setlength{\LTpre}{0.5\baselineskip}
+\setlength{\LTpost}{0.5\baselineskip}
 
 % ── Bibliografía (reemplaza read_bib/format_*_vancouver de preprocess.R) ─────
 \usepackage[backend=biber,style=vancouver,maxnames=6,minnames=6,
@@ -133,8 +144,6 @@
 \renewcommand*{\mkbibnamefamily}[1]{\checkownname\ifownname\textbf{#1}\else#1\fi}
 \renewcommand*{\mkbibnamegiven}[1]{\checkownname\ifownname\textbf{#1}\else#1\fi}
 
-\newcommand{\myorcid}{0000-0002-8609-0312}
-
 \begin{document}
 \input{content/header}
 \input{content/education}
@@ -142,6 +151,7 @@
 \input{content/skills}
 \input{content/awards}
 \input{content/teaching}
+\input{content/mentoring}
 \input{content/publications}
 \input{content/certifications}
 \input{content/memberships}
