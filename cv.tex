@@ -32,11 +32,21 @@
   {\thesection}{1em}{}
 \titleformat{\subsection}
   {\normalfont\normalsize\bfseries\raggedright}
-  {\thesubsection}{1em}{}
+  {\thesubsection}{0.5ex}{}
 \titleformat{\subsubsection}
   {\normalfont\normalsize\bfseries\raggedright}
-  {\thesubsubsection}{1em}{}
+  {\thesubsubsection}{0.5ex}{}
 \setcounter{secnumdepth}{0}   % academic CV: no section numbers
+
+% \titleformat sets appearance only under every \subsection.
+% Args: {left indent}{space before}{space after}.
+\titlespacing*{\subsection}{0pt}{1.5ex plus .5ex minus 1ex}{1ex}
+\titlespacing*{\subsubsection}{0pt}{1.5ex plus .5ex minus 1ex}{1ex}
+
+% longtable adds \bigskipamount (12pt) above AND below every table, on top of
+% the title spacing above. This is the bulk of the subsection-to-table gap.
+\setlength{\LTpre}{0.5\baselineskip}
+\setlength{\LTpost}{0.5\baselineskip}
 
 % ── Bibliography (replaces read_bib/format_*_vancouver in preprocess.R) ─────
 \usepackage[backend=biber,style=vancouver,maxnames=6,minnames=6,
@@ -128,7 +138,6 @@
 \input{content/header}
 \input{content/education}
 \input{content/experience}
-\input{content/skills}
 \input{content/awards}
 \input{content/teaching}
 \input{content/publications}
