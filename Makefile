@@ -26,6 +26,8 @@ check: build
 	  "LICENSURE AND CERTIFICATION" \
 	  "MEMBERSHIPS IN PROFESSIONAL ORGANIZATIONS" \
 	  "Among authors: Del Castillo" \
+	  "Open Materials" \
+	  "Preregistered+" \
 	; do \
 	  echo "$$txt" | grep -qF "$$s" || { echo "make check FAIL — missing: $$s"; exit 1; }; \
 	done; \
