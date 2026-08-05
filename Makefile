@@ -18,7 +18,7 @@ check: build
 	  "Endocrinol Metab Clin North Am" \
 	  "EDUCATION" \
 	  "ADDITIONAL EDUCATION" \
-	  "PROFESSIONAL EXPERIENCE" \
+	  "RESEARCH EXPERIENCE" \
 	  "SKILLS" \
 	  "ACADEMIC HONOURS AND AWARDS" \
 	  "TEACHING EXPERIENCE" \

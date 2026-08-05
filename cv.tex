@@ -103,6 +103,8 @@
 \newcommand{\cvbadgeone}[1]{\cvbadgeimg{#1}\hspace{\cvbadgesep}}
 
 % Badge row for the entry currently being rendered; empty if it has none.
+% \mbox keeps a multi-badge row together, so the set never splits across a line
+% break; \unskip drops the separator trailing the last badge.
 \newcommand{\cvbadgerow}{%
   \begingroup
     \edef\cvbk{\thefield{entrykey}}%
@@ -111,43 +113,17 @@
       % must be flattened first or the whole string counts as one item and
       % \includegraphics goes looking for "opendata,opencode.png".
       \edef\cvbl{\csuse{cvbadges@\cvbk}}%
-      \expandafter\forcsvlist\expandafter\cvbadgeone\expandafter{\cvbl}%
+      \addspace
+      \mbox{\expandafter\forcsvlist\expandafter\cvbadgeone
+            \expandafter{\cvbl}\unskip}%
     }{}%
   \endgroup}
 
-% Gutter width, measured rather than derived from \cvbadgeheight: the PNGs are
-% not square, so a multiple of the height is wrong. Sized for the busiest
-% entry (4 badges) plus a little air before the entry number — if any entry
-% ever carries all 5 badges, widen this or the last one will touch the number.
-\newlength{\cvbadgecolw}
-\AtBeginDocument{%
-  \settowidth{\cvbadgecolw}{%
-    \cvbadgeimg{opendata}\hspace{\cvbadgesep}\cvbadgeimg{opendata}%
-    \hspace{\cvbadgesep}\cvbadgeimg{opendata}\hspace{\cvbadgesep}%
-    \cvbadgeimg{opendata}\hspace{\cvbadgesep}}%
-  \addtolength{\cvbadgecolw}{0.4em}}
-
-% Badge column left of the Vancouver number. The badges go in the list LABEL,
-% not the item body: the label is where biblatex still has the entry fields in
-% scope, and the \makebox pair fixes both column widths so a 4-badge entry
-% cannot overprint its own number. Selected per bibliography with env=gutterbib.
-\newlength{\cvgutterlabelw}
-\defbibenvironment{gutterbib}
-  {\list
-     {\makebox[\cvbadgecolw][l]{\cvbadgerow}%
-      \makebox[\labelnumberwidth][r]{%
-        \printfield{labelprefix}\printfield{labelnumber}\adddot}}
-     {\setlength{\cvgutterlabelw}{\cvbadgecolw}%
-      \addtolength{\cvgutterlabelw}{\labelnumberwidth}%
-      \setlength{\labelwidth}{\cvgutterlabelw}%
-      \setlength{\leftmargin}{\labelwidth}%
-      \setlength{\labelsep}{\biblabelsep}%
-      \addtolength{\leftmargin}{\labelsep}%
-      \setlength{\itemsep}{\bibitemsep}%
-      \setlength{\parsep}{\bibparsep}%
-      \renewcommand*{\makelabel}[1]{##1\hss}}}
-  {\endlist}
-  {\item}
+% finentry is the last macro every biblatex driver calls, so appending here
+% puts the badges after the entry's closing period, inside the text flow. No
+% list geometry changes, nothing to keep in sync with the Vancouver numbering,
+% and entries without badges are untouched.
+\renewbibmacro*{finentry}{\finentry\cvbadgerow}
 
 % Legend, ported from ecr-cv.tex and resized for this CV's body text.
 \newcommand{\cvbadgelegend}{%
