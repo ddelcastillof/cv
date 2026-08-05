@@ -18,6 +18,9 @@
 \usepackage{longtable}
 \usepackage{array}
 
+% ── Graphics (open-science badge PNGs in badges/) ────────────────────────────
+\usepackage{graphicx}
+
 % ── Colors & links ───────────────────────────────────────────────────────────
 \usepackage{xcolor}
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
@@ -76,6 +79,95 @@
 \DeclareBibliographyCategory{preprints}
 \DeclareBibliographyCategory{bookchapter}
 \newcommand{\cvpub}[2]{\addtocategory{#1}{#2}\nocite{#2}}
+
+% ── Open-science badges (ported from ecr-academic-cv) ────────────────────────
+% ecr-academic-cv types each publication out by hand and wraps it in a
+% minipage pair (badges left, citation right). That cannot be copied here:
+% entries are rendered by biblatex from a cite key, so there is no entry text
+% to wrap. Instead the badge list is stored per cite key and pulled back inside
+% the bibliography via \thefield{entrykey} — same keying trick as the
+% \DeclareSourcemap patches below, and equally immune to Paperpile overwriting
+% bib/references.bib.
+%
+% Assign badges in content/publications.tex:
+%     \cvbadges{<citekey>}{opendata,opencode}
+% Valid names are the PNG basenames in badges/: opendata, openmaterial,
+% opencode, preregistered, preregisteredplus. A typo yields "File
+% badges/<typo>.png not found" at build time.
+\newlength{\cvbadgeheight}\setlength{\cvbadgeheight}{2.1ex}
+\newlength{\cvbadgesep}\setlength{\cvbadgesep}{2pt}
+
+\newcommand{\cvbadgeimg}[1]{%
+  \raisebox{-0.25ex}{\includegraphics[height=\cvbadgeheight]{badges/#1.png}}}
+\newcommand{\cvbadges}[2]{\csdef{cvbadges@#1}{#2}}
+\newcommand{\cvbadgeone}[1]{\cvbadgeimg{#1}\hspace{\cvbadgesep}}
+
+% Badge row for the entry currently being rendered; empty if it has none.
+\newcommand{\cvbadgerow}{%
+  \begingroup
+    \edef\cvbk{\thefield{entrykey}}%
+    \ifcsdef{cvbadges@\cvbk}{%
+      % \forcsvlist does not expand its list argument, so the stored comma list
+      % must be flattened first or the whole string counts as one item and
+      % \includegraphics goes looking for "opendata,opencode.png".
+      \edef\cvbl{\csuse{cvbadges@\cvbk}}%
+      \expandafter\forcsvlist\expandafter\cvbadgeone\expandafter{\cvbl}%
+    }{}%
+  \endgroup}
+
+% Gutter width, measured rather than derived from \cvbadgeheight: the PNGs are
+% not square, so a multiple of the height is wrong. Sized for the busiest
+% entry (4 badges) plus a little air before the entry number — if any entry
+% ever carries all 5 badges, widen this or the last one will touch the number.
+\newlength{\cvbadgecolw}
+\AtBeginDocument{%
+  \settowidth{\cvbadgecolw}{%
+    \cvbadgeimg{opendata}\hspace{\cvbadgesep}\cvbadgeimg{opendata}%
+    \hspace{\cvbadgesep}\cvbadgeimg{opendata}\hspace{\cvbadgesep}%
+    \cvbadgeimg{opendata}\hspace{\cvbadgesep}}%
+  \addtolength{\cvbadgecolw}{0.4em}}
+
+% Badge column left of the Vancouver number. The badges go in the list LABEL,
+% not the item body: the label is where biblatex still has the entry fields in
+% scope, and the \makebox pair fixes both column widths so a 4-badge entry
+% cannot overprint its own number. Selected per bibliography with env=gutterbib.
+\newlength{\cvgutterlabelw}
+\defbibenvironment{gutterbib}
+  {\list
+     {\makebox[\cvbadgecolw][l]{\cvbadgerow}%
+      \makebox[\labelnumberwidth][r]{%
+        \printfield{labelprefix}\printfield{labelnumber}\adddot}}
+     {\setlength{\cvgutterlabelw}{\cvbadgecolw}%
+      \addtolength{\cvgutterlabelw}{\labelnumberwidth}%
+      \setlength{\labelwidth}{\cvgutterlabelw}%
+      \setlength{\leftmargin}{\labelwidth}%
+      \setlength{\labelsep}{\biblabelsep}%
+      \addtolength{\leftmargin}{\labelsep}%
+      \setlength{\itemsep}{\bibitemsep}%
+      \setlength{\parsep}{\bibparsep}%
+      \renewcommand*{\makelabel}[1]{##1\hss}}}
+  {\endlist}
+  {\item}
+
+% Legend, ported from ecr-cv.tex and resized for this CV's body text.
+\newcommand{\cvbadgelegend}{%
+  \begin{center}
+    \begin{minipage}{0.16\textwidth}\centering
+      \includegraphics[height=3.2ex]{badges/opendata.png}\\[2pt]
+      \footnotesize Open Data\end{minipage}%
+    \begin{minipage}{0.16\textwidth}\centering
+      \includegraphics[height=3.2ex]{badges/openmaterial.png}\\[2pt]
+      \footnotesize Open Materials\end{minipage}%
+    \begin{minipage}{0.16\textwidth}\centering
+      \includegraphics[height=3.2ex]{badges/opencode.png}\\[2pt]
+      \footnotesize Open Code\end{minipage}%
+    \begin{minipage}{0.16\textwidth}\centering
+      \includegraphics[height=3.2ex]{badges/preregistered.png}\\[2pt]
+      \footnotesize Preregistered\end{minipage}%
+    \begin{minipage}{0.16\textwidth}\centering
+      \includegraphics[height=3.2ex]{badges/preregisteredplus.png}\\[2pt]
+      \footnotesize Preregistered+\end{minipage}
+  \end{center}}
 
 % Field patches Paperpile will never carry (replaces bib_patches/patch_bib).
 %
