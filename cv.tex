@@ -103,6 +103,15 @@
       \step[fieldset=addendum,
             fieldvalue={Among authors: \textbf{Del Castillo Fernandez, D.}}]%
     }%
+    % 13 authors, own name 8th, so maxnames=6 truncates it away. Byline form
+    % here is "Del Castillo, Darwin" (not "...Fernandez"), so the addendum
+    % mirrors this paper's byline rather than the Vidyasagaran one — the point
+    % is that a reader can match the string against the published author list.
+    \map{%
+      \step[fieldsource=entrykey, match={Maslova2026-gt}, final]
+      \step[fieldset=addendum,
+            fieldvalue={Among authors: \textbf{Del Castillo, D.}}]%
+    }%
     % Conference abstract (SSM/ECE 2026), now an @article in Paperpile carrying
     % only journaltitle + date. The typo, duplicate eventtitle and journal-as-
     % editor were all fixed upstream, so only one patch is left: nothing in the
