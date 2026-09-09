@@ -70,6 +70,7 @@
 % \DeclareBibliographyCategory is preamble-only; key assignment happens in
 % content/publications.tex via \cvpub.
 \DeclareBibliographyCategory{peerreviewed}
+\DeclareBibliographyCategory{presentation}
 \DeclareBibliographyCategory{conference}
 \DeclareBibliographyCategory{thesis}
 \DeclareBibliographyCategory{whitepaper}
@@ -118,20 +119,6 @@
     % entry marks this as a conference abstract rather than a full paper, and
     % no bib field carries presentation format.
     %
-    % Use addendum, not note: on @article, note prints between volume and
-    % pages ("80. Rapid-fire oral presentation.:A12-A13"), while addendum
-    % prints last. On @inproceedings the two behave alike — this ordering
-    % difference is entry-type-specific.
-    %
-    % Drop "; accepted" after the conference (Sept 2026). When the JECH
-    % supplement assigns volume/pages/DOI, Paperpile may re-key the entry
-    % again — the match below and the \cvpub in content/publications.tex both
-    % silently stop resolving, so check build/cv.blg after any sync.
-    \map{%
-      \step[fieldsource=entrykey, match={Del-Castillo2026-uy}, final]
-      \step[fieldset=addendum,
-            fieldvalue={Rapid-fire oral presentation, 70th Society for Social Medicine \& Population Health Conference -- European Congress of Epidemiology 2026, London, UK; accepted.}]%
-    }%
     % Conference presentations, NLM form:
     %   Author. Title. Presented at: Event; Year Mon Day; City, Country.
     % Two things stop vancouver.bbx producing that on its own:
@@ -153,7 +140,7 @@
             fieldvalue={Rapid-fire presentation at: 70th Society for Social
                         Medicine and Population Health Conference -- European
                         Congress of Epidemiology; 2026 Sep 11; London, UK
-                        \textit{(accepted, forthcoming)}}]%
+                        }]%
       \step[fieldset=date, null]%
     }%
   }%
