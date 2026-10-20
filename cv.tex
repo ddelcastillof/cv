@@ -12,6 +12,8 @@
 \setmainfont{EBGaramond}[Extension=.otf, UprightFont=*-Regular, ItalicFont=*-Italic,
   BoldFont=*-SemiBold, BoldItalicFont=*-SemiBoldItalic, Numbers={Lining,Proportional}]
 \newcommand{\sectioncaps}{\addfontfeatures{Letters=SmallCaps,LetterSpace=6}}
+% shortcut: KOMA's 10pt leading is 12pt; x1.125 = 13.5pt = Ledger's 1.35. Recompute if fontsize changes.
+\linespread{1.125}
 
 \usepackage{longtable}
 \usepackage{array}
@@ -136,7 +138,6 @@
 % \input{content/volunteer}            % PLACEHOLDER
 % \input{content/community}            % PLACEHOLDER
 \input{content/certifications}
-\newpage
 \input{content/publications}
 \input{content/service}
 % \input{content/memberships}
