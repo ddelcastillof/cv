@@ -1,5 +1,5 @@
 % Academic CV. Build: make build. bib/references.bib is Paperpile-owned; never hand-edit it.
-\documentclass[fontsize=9pt,letterpaper]{scrartcl}
+\documentclass[fontsize=10pt,letterpaper]{scrartcl}
 
 % Footer sits in the bottom margin (no includefoot), so the page number stays 0.45in from the edge.
 \usepackage[margin=0.9in,heightrounded,footskip=0.45in]{geometry}
@@ -7,8 +7,11 @@
 
 \usepackage{fontspec}
 \usepackage{fontawesome5}
-% LetterSpace only works on a fontspec-loaded family, and the default lmr is not one.
-\newfontfamily\sectioncaps{lmromancaps10-regular.otf}[LetterSpace=6]
+% Loaded by filename: TeX Live's EB Garamond is not visible to XeTeX by family name on macOS.
+% SemiBold as bold, lining figures: matches prototypes/a-ledger.html.
+\setmainfont{EBGaramond}[Extension=.otf, UprightFont=*-Regular, ItalicFont=*-Italic,
+  BoldFont=*-SemiBold, BoldItalicFont=*-SemiBoldItalic, Numbers={Lining,Proportional}]
+\newcommand{\sectioncaps}{\addfontfeatures{Letters=SmallCaps,LetterSpace=6}}
 
 \usepackage{longtable}
 \usepackage{array}
@@ -51,6 +54,7 @@
 \usepackage[backend=biber,style=vancouver,maxnames=6,minnames=6,
             defernumbers=true,sorting=ymdcite]{biblatex}
 \addbibresource{bib/references.bib}
+\urlstyle{same}  % DOIs/URLs in the body font, not Latin Modern Mono
 \DeclarePrintbibliographyDefaults{heading=subbibliography}
 
 % Newest first by full date; same-date entries keep their \cvpub line order.
