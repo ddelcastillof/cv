@@ -1,78 +1,81 @@
-% cv.tex — academic CV. Build: make build  (latexmk: XeLaTeX + biber)
-% Content lives in content/*.tex (one file per section).
-% bib/references.bib is Paperpile-owned — never hand-edit it.
-\documentclass[9pt,letterpaper]{scrartcl}
+% Academic CV. Build: make build. bib/references.bib is Paperpile-owned; never hand-edit it.
+\documentclass[fontsize=10pt,letterpaper]{scrartcl}
 
-% ── Language ─────────────────────────────────────────────────────────────────
-\usepackage[english]{babel}
-
-% ── Page layout ──────────────────────────────────────────────────────────────
-\usepackage[margin=0.5in,heightrounded,includefoot,footskip=0.5in]{geometry}
+% Footer sits in the bottom margin (no includefoot), so the page number stays 0.45in from the edge.
+\usepackage[margin=0.9in,heightrounded,footskip=0.45in]{geometry}
 \usepackage{parskip}
 
-% ── Fonts (XeLaTeX) ──────────────────────────────────────────────────────────
 \usepackage{fontspec}
 \usepackage{fontawesome5}
+% Loaded by filename: TeX Live's EB Garamond is not visible to XeTeX by family name on macOS.
+% SemiBold as bold, lining figures: matches prototypes/a-ledger.html.
+\setmainfont{EBGaramond}[Extension=.otf, UprightFont=*-Regular, ItalicFont=*-Italic,
+  BoldFont=*-SemiBold, BoldItalicFont=*-SemiBoldItalic, Numbers={Lining,Proportional}]
+\newcommand{\sectioncaps}{\addfontfeatures{Letters=SmallCaps,LetterSpace=6}}
+% shortcut: KOMA's 10pt leading is 12pt; x1.125 = 13.5pt = Ledger's 1.35. Recompute if fontsize changes.
+\linespread{1.125}
 
-% ── Tables ───────────────────────────────────────────────────────────────────
 \usepackage{longtable}
 \usepackage{array}
 
-% ── Graphics (open-science badge PNGs in badges/) ────────────────────────────
-\usepackage{graphicx}
-
-% ── Colors & links ───────────────────────────────────────────────────────────
-\usepackage{xcolor}
+\usepackage[table]{xcolor}  % table: \rowcolor, \arrayrulecolor (colortbl)
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
 \definecolor{darkgray}{gray}{0.4}
-\usepackage{hyperref}
-\hypersetup{colorlinks=true, urlcolor=linkcolour, linkcolor=linkcolour}
+\arrayrulecolor{darkgray}
+\usepackage[colorlinks,urlcolor=linkcolour]{hyperref}
 
-% ── Section formatting ───────────────────────────────────────────────────────
 \usepackage{titlesec}
-\titleformat{\section}
-  {\normalfont\normalsize\bfseries\raggedright\uppercase}
-  {\thesection}{1em}{}
-\titleformat{\subsection}
-  {\normalfont\normalsize\bfseries\raggedright}
-  {\thesubsection}{0.5ex}{}
-\titleformat{\subsubsection}
-  {\normalfont\normalsize\bfseries\raggedright}
-  {\thesubsubsection}{0.5ex}{}
-\setcounter{secnumdepth}{0}   % academic CV: no section numbers
-
-% \titleformat sets appearance only; \titlespacing sets the vertical gaps
-% around every \subsection. Args: {left indent}{space before}{space after}.
+% Section head: all-small-caps title, then a hairline rule to the right margin on the same line.
+\newcommand{\sectionruled}[1]{%
+  {\sectioncaps\MakeLowercase{#1}}%
+  \hspace{0.5em}%
+  {\color{darkgray}\leaders\hrule height \dimexpr0.25em+0.25pt\relax
+                                 depth  \dimexpr0.25pt-0.25em\relax\hfill}}
+\titleformat{\section}{\normalfont\fontsize{13}{14.3}\selectfont\raggedright}{}{0pt}{\sectionruled}
+\titlespacing*{\section}{0pt}{8pt plus 2pt minus 2pt}{5pt}
+\titleformat{\subsection}{\normalfont\normalsize\bfseries\raggedright}{}{0pt}{}
 \titlespacing*{\subsection}{0pt}{1.5ex plus .5ex minus 1ex}{1ex}
-\titlespacing*{\subsubsection}{0pt}{1.5ex plus .5ex minus 1ex}{1ex}
+\setcounter{secnumdepth}{0}
 
-% longtable adds \bigskipamount (12pt) above AND below every table, on top of
-% the title spacing above. This is the bulk of the subsection-to-table gap.
+% longtable otherwise adds \bigskipamount above and below every table.
 \setlength{\LTpre}{0.5\baselineskip}
 \setlength{\LTpost}{0.5\baselineskip}
 
-% ── Bibliography (replaces read_bib/format_*_vancouver in preprocess.R) ─────
-\usepackage[backend=biber,style=vancouver,maxnames=6,minnames=6,
-            defernumbers=true,sorting=none]{biblatex}
-\addbibresource{bib/references.bib}
+% \cventry{<text>}{<date>}: date flush right on the first line, later lines hang by 1em.
+% Use \newline, not \\: under \raggedright, \\ ends the paragraph and the next line loses its hang.
+\newlength{\cvdatewidth}
+\newenvironment{cvledger}{\par\nobreak\setlength{\parskip}{0.3\baselineskip}}{\par}
+\newcommand{\cventry}[2]{%
+  \settowidth{\cvdatewidth}{#2}%
+  {\raggedright\interlinepenalty=10000
+   \parshape 2
+     0pt \dimexpr\linewidth-\cvdatewidth-1.25em\relax
+     1em \dimexpr\linewidth-1em\relax
+   \noindent\rlap{\hspace*{\dimexpr\linewidth-\cvdatewidth\relax}#2}#1\par}}
 
-% Vancouver/ICMJE output corrections (see task-5 review):
-% - drop language ("en.") and urldate ("[Accessed on: ...]") from entries
-% - comma (not "and") before the final author
-% - ragged-right bibliography: stops justification stretching DOI/URL breaks
-\AtEveryBibitem{\clearlist{language}\clearfield{langid}\clearfield{urldate}\clearfield{urlday}\clearfield{urlmonth}\clearfield{urlyear}\clearfield{urldateera}}
+\usepackage[backend=biber,style=vancouver,maxnames=6,minnames=6,
+            defernumbers=true,sorting=ymdcite]{biblatex}
+\addbibresource{bib/references.bib}
+\urlstyle{same}  % DOIs/URLs in the body font, not Latin Modern Mono
+\DeclarePrintbibliographyDefaults{heading=subbibliography}
+
+% Newest first by full date; same-date entries keep their \cvpub line order.
+\DeclareSortingTemplate{ymdcite}{%
+  \sort[direction=descending]{\field{year}}%
+  \sort[direction=descending]{\field{month}}%
+  \sort[direction=descending]{\field{day}}%
+  \sort{\citeorder}%
+}
+
+% Drop language ("en.") and "[Accessed on: ...]"; the access date prints only when urlyear is set.
+\AtEveryBibitem{\clearlist{language}\clearfield{langid}\clearfield{urlyear}}
 \renewcommand*{\finalnamedelim}{\multinamedelim}
 \appto{\bibsetup}{\raggedright}
-
-% Journal titles italic. vancouver.bbx:72 prints them upright (strict ICMJE);
-% the old pandoc template emphasised them too, though `ulem` turned that
-% emphasis into an underline. Delete this line for upright ICMJE journals.
+% vancouver sets journal titles upright (strict ICMJE); italic is a house choice.
 \DeclareFieldFormat*{journaltitle}{\mkbibemph{#1}}
 
-% Categories (replaces data/pub_categories.yaml + section_labels registry).
-% \DeclareBibliographyCategory is preamble-only; key assignment happens in
-% content/publications.tex via \cvpub.
 \DeclareBibliographyCategory{peerreviewed}
+\DeclareBibliographyCategory{presentation}
 \DeclareBibliographyCategory{conference}
 \DeclareBibliographyCategory{thesis}
 \DeclareBibliographyCategory{whitepaper}
@@ -80,45 +83,25 @@
 \DeclareBibliographyCategory{bookchapter}
 \newcommand{\cvpub}[2]{\addtocategory{#1}{#2}\nocite{#2}}
 
-% Field patches Paperpile will never carry (replaces bib_patches/patch_bib).
-%
-% maxnames=6 truncates long author lists to "et al", which hides the own name
-% on large collaborations. Vidyasagaran2024-wx has 61 authors with Del Castillo
-% at position 26, so the addendum states the contribution explicitly. Add one
-% \map block per affected cite key — only needed when the own name sits beyond
-% position 6.
-%
-% The name is bolded literally here: addendum is a plain field, so the
-% \mkbibnamefamily hook below never sees it.
-%
-% Journal abbreviations need no patch: Paperpile exports them already
-% abbreviated ("Int. J. Epidemiol."), and vancouver.bbx's own sourcemap then
-% strips every period from journaltitle and appends a single terminal one,
-% giving strict ICMJE/NLM form ("Int J Epidemiol."). Do not add a map to
-% restore the internal periods — that is only how cv-professional looks
-% because its .bib writes `journal` rather than `journaltitle`, and biber
-% sourcemaps match the source field name before the BibTeX alias applies, so
-% vancouver's map silently skips it there.
+% Per-entry patches live here, not in the .bib, because Paperpile overwrites the .bib on every sync.
+% Journal abbreviations need none: vancouver.bbx already strips their periods to NLM form.
 \DeclareSourcemap{%
   \maps[datatype=bibtex]{%
+    % maxnames=6 truncates the own name away on these papers, so the addendum states it,
+    % spelled as each paper's byline does.
     \map{%
       \step[fieldsource=entrykey, match={Vidyasagaran2024-wx}, final]
       \step[fieldset=addendum,
             fieldvalue={Among authors: \textbf{Del Castillo Fernandez, D.}}]%
     }%
-    % Conference presentations, NLM form:
-    %   Author. Title. Presented at: Event; Year Mon Day; City, Country.
-    % Two things stop vancouver.bbx producing that on its own:
-    %   - its @misc driver reads neither eventtitle nor venue, so the event
-    %     vanishes; addendum is the field it does print (see Vidyasagaran above)
-    %   - NLM puts the date mid-string, next to the event, but vancouver prints
-    %     date at the end of the entry. So the date is written into addendum by
-    %     hand and the real field nulled, or the year prints twice. Keep the
-    %     addendum date in sync if Paperpile revises the entry's date.
-    % "and" not "&": a literal ampersand is an alignment tab, and \& would have
-    % to survive biblatex serialising the fieldvalue into build/cv.bcf.
-    % The title's "Rapid-Fire Presentation:" prefix is Paperpile's; stripped so
-    % the format marker sits where NLM puts it, next to the event.
+    \map{%
+      \step[fieldsource=entrykey, match={Maslova2026-gt}, final]
+      \step[fieldset=addendum,
+            fieldvalue={Among authors: \textbf{Del Castillo, D.}}]%
+    }%
+    % vancouver's @misc driver prints neither eventtitle nor venue, so the event goes in addendum.
+    % The date is typed here and the date field nulled (NLM puts it mid-string); keep it in sync with Paperpile.
+    % "and", not "&": a bare & is an alignment tab and \& does not survive the trip through cv.bcf.
     \map{%
       \step[fieldsource=entrykey, match={Del-Castillo2026-jq}, final]
       \step[fieldsource=title,
@@ -127,47 +110,37 @@
             fieldvalue={Rapid-fire presentation at: 70th Society for Social
                         Medicine and Population Health Conference -- European
                         Congress of Epidemiology; 2026 Sep 11; London, UK
-                        \textit{(accepted, forthcoming)}}]%
+                        }]%
       \step[fieldset=date, null]%
     }%
   }%
 }
 
-% Bold own name (replaces filters/bold-author.lua). Same rule: family name
-% beginning "Del Castillo" (covers "Del Castillo", "Del Castillo Fernández",
-% "Del Castillo-Fernández") anchored on a given name starting with "D".
+% Bold own name: family contains "Del" and "Castillo", given name starts with "D".
+% Substring tests because \namepartfamily holds Del\bibnamedelima Castillo; \expandarg keeps xstring from expanding that delimiter.
 \usepackage{xstring}
-\newif\ifownname
-\newcommand*{\checkownname}{%
-  \global\ownnamefalse
-  \ifdefvoid{\namepartgiven}{}{%
-    \ifdefvoid{\namepartfamily}{}{%
-      \begingroup\expandarg
-        % \namepartfamily is 'Del\bibnamedelima Castillo' — delimiter macro
-        % between tokens, so prefix-match on 'Del Castillo' can never hit.
-        % Substring tests skip the delimiter: family must contain both
-        % 'Del' and 'Castillo', given name must start with 'D'.
-        \IfSubStr{\namepartfamily}{Castillo}
-          {\IfSubStr{\namepartfamily}{Del}
-            {\IfBeginWith{\namepartgiven}{D}{\global\ownnametrue}{}}
-            {}}%
-          {}%
-      \endgroup
-    }%
-  }%
-}
-\renewcommand*{\mkbibnamefamily}[1]{\checkownname\ifownname\textbf{#1}\else#1\fi}
-\renewcommand*{\mkbibnamegiven}[1]{\checkownname\ifownname\textbf{#1}\else#1\fi}
+\expandarg
+\newcommand*{\mkownname}[1]{%
+  \IfSubStr{\namepartfamily}{Castillo}{\IfSubStr{\namepartfamily}{Del}{\IfBeginWith{\namepartgiven}{D}{\textbf{#1}}{#1}}{#1}}{#1}}
+\let\mkbibnamefamily\mkownname
+\let\mkbibnamegiven\mkownname
 
 \begin{document}
 \input{content/header}
 \input{content/education}
+% \input{content/research-interests}   % PLACEHOLDER
 \input{content/experience}
-\input{content/skills}
+% \input{content/other-experience}     % PLACEHOLDER
+\input{content/grants}
 \input{content/awards}
 \input{content/teaching}
-\input{content/mentoring}
-\input{content/publications}
+% \input{content/volunteer}            % PLACEHOLDER
+% \input{content/community}            % PLACEHOLDER
+\newpage
 \input{content/certifications}
-\input{content/memberships}
+\input{content/publications}
+\input{content/service}
+% \input{content/memberships}
+% \input{content/outputs}              % PLACEHOLDER
+% \input{content/referees}             % PLACEHOLDER
 \end{document}

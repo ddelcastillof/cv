@@ -58,7 +58,6 @@ rsconnect/
 CLAUDE.md
 .claude/
 
-
 # Dump text files
 dump_text.txt
 
@@ -74,3 +73,6 @@ build/
 
 # add vscode files
 .vscode/
+
+# prototypes
+prototypes/
