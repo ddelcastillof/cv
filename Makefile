@@ -15,6 +15,8 @@ clean:
 	latexmk -C
 	rm -f cv.pdf
 
+# grep -i: section heads are set in all-small-caps (lowercase text in a caps
+# font), so pdftotext extracts "education", not "EDUCATION".
 check: build
 	@txt=$$(pdftotext cv.pdf - | tr '\n' ' '); \
 	for s in \
@@ -38,7 +40,7 @@ check: build
 	  "Rapid-fire oral presentation" \
 	  "Rapid-fire presentation at:" \
 	; do \
-	  echo "$$txt" | grep -qF "$$s" || { echo "make check FAIL — missing: $$s"; exit 1; }; \
+	  echo "$$txt" | grep -qiF "$$s" || { echo "make check FAIL — missing: $$s"; exit 1; }; \
 	done; \
 	n=$$(pdftotext cv.pdf - | grep -cE '^\[?[0-9]+[].]'); \
 	[ "$$n" -ge 6 ] || { echo "make check FAIL — publication count $$n < 6"; exit 1; }; \
