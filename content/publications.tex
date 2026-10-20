@@ -8,31 +8,19 @@
 \cvpub{peerreviewed}{Pinzon-Cortes2026-vu}
 \cvpub{peerreviewed}{Maslova2026-gt}
 \cvpub{conference}{Del-Castillo2026-cp}
-
-% The talk (@MISC), not the JECH abstract of the same work (@ARTICLE
-% Del-Castillo2026-uy). Its event/date/format come from the sourcemap in
-% cv.tex — vancouver's @misc driver reads neither eventtitle nor venue.
+% The talk (@misc), not its JECH abstract (Del-Castillo2026-uy); event and date come from the sourcemap in cv.tex.
 \cvpub{presentation}{Del-Castillo2026-jq}
 
-% The bibliography link rides in the title, pushed to the right margin by
-% \hfill. Written \%20, not %20: inside an argument a bare % starts a comment.
-% \texorpdfstring keeps the PDF bookmark to the plain title.
+% Written \%20, not %20: inside an argument a bare % starts a comment.
 \printbibliography[category=peerreviewed,
                    title={\texorpdfstring{Peer-Reviewed Publications\hfill
                           {\normalfont Complete bibliography:
                           \href{https://www.ncbi.nlm.nih.gov/myncbi/darwin.del\%20castillo\%20fernandez.1/bibliography/public/}{MyNCBI}}}%
-                          {Peer-Reviewed Publications}},
-                   heading=subbibliography,resetnumbers=true]
-
-\printbibliography[category=conference,title={Conference Abstracts},
-                   heading=subbibliography,resetnumbers=true]
-
-\printbibliography[category=presentation,title={Conference Presentations},
-                   heading=subbibliography,resetnumbers=true]
-
-% Categories below are empty today. When the first key lands, add its
-% \cvpub line above and uncomment the matching \printbibliography:
-% \printbibliography[category=thesis,title={Thesis and Dissertations},heading=subbibliography,resetnumbers=true]
-% \printbibliography[category=whitepaper,title={White Papers},heading=subbibliography,resetnumbers=true]
-% \printbibliography[category=preprints,title={Preprints},heading=subbibliography,resetnumbers=true]
-% \printbibliography[category=bookchapter,title={Book Chapters},heading=subbibliography,resetnumbers=true]
+                          {Peer-Reviewed Publications}},resetnumbers]
+\printbibliography[category=conference,title={Conference Abstracts},resetnumbers]
+\printbibliography[category=presentation,title={Conference Presentations},resetnumbers]
+% Empty today; uncomment when the first \cvpub for the category lands.
+% \printbibliography[category=thesis,title={Thesis and Dissertations},resetnumbers]
+% \printbibliography[category=whitepaper,title={White Papers},resetnumbers]
+% \printbibliography[category=preprints,title={Preprints},resetnumbers]
+% \printbibliography[category=bookchapter,title={Book Chapters},resetnumbers]

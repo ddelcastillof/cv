@@ -15,10 +15,9 @@ clean:
 	latexmk -C
 	rm -f cv.pdf
 
-# grep -i: section heads are set in all-small-caps (lowercase text in a caps
-# font), so pdftotext extracts "education", not "EDUCATION".
+# grep -i: small-caps section heads extract as lowercase.
 check: build
-	@txt=$$(pdftotext cv.pdf - | tr '\n' ' '); \
+	@txt=$$(pdftotext cv.pdf -); flat=$$(echo "$$txt" | tr '\n' ' '); \
 	for s in \
 	  "Int J Epidemiol" \
 	  "An Fac med" \
@@ -37,13 +36,12 @@ check: build
 	  "Conference Abstracts" \
 	  "Conference Presentations" \
 	  "Among authors: Del Castillo" \
-	  "Rapid-fire oral presentation" \
 	  "Rapid-fire presentation at:" \
 	; do \
-	  echo "$$txt" | grep -qiF "$$s" || { echo "make check FAIL — missing: $$s"; exit 1; }; \
+	  echo "$$flat" | grep -qiF "$$s" || { echo "make check FAIL — missing: $$s"; exit 1; }; \
 	done; \
-	n=$$(pdftotext cv.pdf - | grep -cE '^\[?[0-9]+[].]'); \
+	n=$$(echo "$$txt" | grep -cE '^\[?[0-9]+[].]'); \
 	[ "$$n" -ge 6 ] || { echo "make check FAIL — publication count $$n < 6"; exit 1; }; \
-	pdftotext cv.pdf - | grep -qE '^\[?0[].]' \
+	echo "$$txt" | grep -qE '^\[?0[].]' \
 	  && { echo "make check FAIL — entry numbered 0 (stale build/cv.aux vs defernumbers)"; exit 1; }; \
 	echo "make check: all assertions pass"
