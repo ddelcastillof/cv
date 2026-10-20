@@ -7,12 +7,18 @@
 \usepackage[english]{babel}
 
 % ── Page layout ──────────────────────────────────────────────────────────────
-\usepackage[margin=0.5in,heightrounded,includefoot,footskip=0.5in]{geometry}
+% 0.9in margins from the Ledger prototype (prototypes/a-ledger.html). The
+% footer sits in the bottom margin (no includefoot), so the text block is the
+% prototype's full 6.7 x 9.2in and the page number stays 0.45in from the edge.
+\usepackage[margin=0.9in,heightrounded,footskip=0.45in]{geometry}
 \usepackage{parskip}
 
 % ── Fonts (XeLaTeX) ──────────────────────────────────────────────────────────
 \usepackage{fontspec}
 \usepackage{fontawesome5}
+% Latin Modern's small caps, loaded through fontspec so LetterSpace works:
+% the default lmr family isn't fontspec-selected, so \addfontfeature ignores it.
+\newfontfamily\sectioncaps{lmromancaps10-regular.otf}[LetterSpace=6]
 
 % ── Tables ───────────────────────────────────────────────────────────────────
 \usepackage{longtable}
@@ -27,9 +33,20 @@
 
 % ── Section formatting ───────────────────────────────────────────────────────
 \usepackage{titlesec}
+% Section heads from the Ledger prototype: letterspaced small caps, then a
+% hairline rule from the title to the right margin on the same line, so a
+% heading costs one line instead of heading + separate rule + gap.
+% \MakeLowercase + the caps font gives all-small-caps, as the prototype's CSS
+% does; LetterSpace=6 is its 0.06em tracking.
+\newcommand{\sectionruled}[1]{%
+  {\sectioncaps\MakeLowercase{#1}}%
+  \hspace{0.5em}%
+  {\color{darkgray}\leaders\hrule height \dimexpr0.25em+0.25pt\relax
+                                 depth  \dimexpr0.25pt-0.25em\relax\hfill}}
 \titleformat{\section}
-  {\normalfont\normalsize\bfseries\raggedright\uppercase}
-  {\thesection}{1em}{}
+  {\normalfont\large\raggedright}
+  {}{0pt}{\sectionruled}
+\titlespacing*{\section}{0pt}{8pt plus 2pt minus 2pt}{5pt}
 \titleformat{\subsection}
   {\normalfont\normalsize\bfseries\raggedright}
   {\thesubsection}{0.5ex}{}
@@ -48,10 +65,42 @@
 \setlength{\LTpre}{0.5\baselineskip}
 \setlength{\LTpost}{0.5\baselineskip}
 
+% ── Ledger entries (from prototypes/a-ledger.html) ──────────────────────────
+% \cventry{<text>}{<date>}: one paragraph per entry, date flush right on the
+% first line. That line is shortened by the date's width plus \cvdategap, so
+% text and date never collide; later lines (a wrap, or a \newline before an
+% awarding body) hang by \cvhang. Use \newline, not \\: under \raggedright,
+% \\ ends the paragraph and the second line would lose its hang.
+% \interlinepenalty keeps an entry on one page. Wrap a section's entries in
+% cvledger: it sets the gap between entries and \nobreak keeps the first entry
+% with its heading rule.
+\newcommand*{\cvhang}{1em}
+\newcommand*{\cvdategap}{1.25em}
+\newlength{\cvdatewidth}
+\newenvironment{cvledger}{\par\nobreak\setlength{\parskip}{0.3\baselineskip}}{\par}
+\newcommand{\cventry}[2]{%
+  \settowidth{\cvdatewidth}{#2}%
+  {\raggedright\interlinepenalty=10000
+   \parshape 2
+     0pt     \dimexpr\linewidth-\cvdatewidth-\cvdategap\relax
+     \cvhang \dimexpr\linewidth-\cvhang\relax
+   \noindent\rlap{\hspace*{\dimexpr\linewidth-\cvdatewidth\relax}#2}#1\par}}
+
 % ── Bibliography (replaces read_bib/format_*_vancouver in preprocess.R) ─────
 \usepackage[backend=biber,style=vancouver,maxnames=6,minnames=6,
-            defernumbers=true,sorting=none]{biblatex}
+            defernumbers=true]{biblatex}
 \addbibresource{bib/references.bib}
+
+% Every category prints newest first by full publication date (year, month,
+% day); entries with the same date keep their \cvpub line order in
+% content/publications.tex.
+\DeclareSortingTemplate{ymdcite}{%
+  \sort[direction=descending]{\field{year}}%
+  \sort[direction=descending]{\field{month}}%
+  \sort[direction=descending]{\field{day}}%
+  \sort{\citeorder}%
+}
+\ExecuteBibliographyOptions{sorting=ymdcite}
 
 % Vancouver/ICMJE output corrections (see task-5 review):
 % - drop language ("en.") and urldate ("[Accessed on: ...]") from entries
@@ -178,15 +227,16 @@
 % \input{content/research-interests}   % PLACEHOLDER
 \input{content/experience}
 % \input{content/other-experience}     % PLACEHOLDER
-\input{content/grants}               % PLACEHOLDER
+\input{content/grants}
 \input{content/awards}
 \input{content/teaching}
 \input{content/mentoring}
-% \input{content/service}              % PLACEHOLDER
 % \input{content/volunteer}            % PLACEHOLDER
 % \input{content/community}            % PLACEHOLDER
 \input{content/certifications}
+\newpage
 \input{content/publications}
+\input{content/service}
 % \input{content/memberships}
 % \input{content/outputs}              % PLACEHOLDER
 % \input{content/referees}             % PLACEHOLDER

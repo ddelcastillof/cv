@@ -1,8 +1,4 @@
 \section{Research Contributions}
-\vspace{-1.5em}
-\textcolor{darkgray}{\rule{\textwidth}{0.5pt}}
-
-Complete list of publications \href{https://www.ncbi.nlm.nih.gov/myncbi/darwin.del%20castillo%20fernandez.1/bibliography/public/}{here}
 
 \cvpub{peerreviewed}{Del-Castillo-Fernandez2021-kl}
 \cvpub{peerreviewed}{Lapidaire2023-pr}
@@ -18,7 +14,14 @@ Complete list of publications \href{https://www.ncbi.nlm.nih.gov/myncbi/darwin.d
 % cv.tex — vancouver's @misc driver reads neither eventtitle nor venue.
 \cvpub{presentation}{Del-Castillo2026-jq}
 
-\printbibliography[category=peerreviewed,title={Peer-Reviewed Publications},
+% The bibliography link rides in the title, pushed to the right margin by
+% \hfill. Written \%20, not %20: inside an argument a bare % starts a comment.
+% \texorpdfstring keeps the PDF bookmark to the plain title.
+\printbibliography[category=peerreviewed,
+                   title={\texorpdfstring{Peer-Reviewed Publications\hfill
+                          {\normalfont Complete bibliography:
+                          \href{https://www.ncbi.nlm.nih.gov/myncbi/darwin.del\%20castillo\%20fernandez.1/bibliography/public/}{MyNCBI}}}%
+                          {Peer-Reviewed Publications}},
                    heading=subbibliography,resetnumbers=true]
 
 \printbibliography[category=conference,title={Conference Abstracts},
@@ -33,8 +36,3 @@ Complete list of publications \href{https://www.ncbi.nlm.nih.gov/myncbi/darwin.d
 % \printbibliography[category=whitepaper,title={White Papers},heading=subbibliography,resetnumbers=true]
 % \printbibliography[category=preprints,title={Preprints},heading=subbibliography,resetnumbers=true]
 % \printbibliography[category=bookchapter,title={Book Chapters},heading=subbibliography,resetnumbers=true]
-
-\subsection{Reviewer Contributions}
-\begin{tabular}{ll}
-Journal & SSM - Population Health \\
-\end{tabular}
